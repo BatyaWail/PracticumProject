@@ -5,7 +5,9 @@ using EmployeeServer.Core.Entities;
 using EmployeeServer.Core.Repository;
 using EmployeeServer.Core.Services;
 using EmployeeServer.Service.Services;
+using EmployeeSrever.Data.Migrations;
 using EmployeeSrever.Data.Repository;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -14,15 +16,19 @@ namespace EmployeeServer.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    //[Authorize]
     public class EmployeeController : ControllerBase
     {
         private readonly IEmployeeService _employeeService;
         private readonly IRoleService _roleService;
+        private readonly IEmployeeRoleSrervice _employeeRoleSrervice;
         private readonly IMapper _mapper;
-        public EmployeeController(IEmployeeService employeeService,IRoleService roleService,IMapper mapper)
+        public EmployeeController(IEmployeeService employeeService,IRoleService roleService
+            ,IMapper mapper, IEmployeeRoleSrervice employeeRoleSrervice)
         {
             _employeeService = employeeService;
             _roleService = roleService;
+            _employeeRoleSrervice = employeeRoleSrervice;
             _mapper = mapper;
         }
         // GET: api/<EmployeeController>
@@ -35,7 +41,9 @@ namespace EmployeeServer.Api.Controllers
             {
                 listDto.Add(_mapper.Map<EmployeeDto>(employee));
             }
-            return Ok(listDto);
+            if(listDto!=null)
+                return Ok(listDto);
+            return NotFound();
         }
         //public ActionResult Get()
         //{
@@ -58,17 +66,24 @@ namespace EmployeeServer.Api.Controllers
         {
             // Map EmployeePostModel to Employee
             var employee = _mapper.Map<Employee>(employeePostModel);
-
             // Assuming you have current employee available, you can add EmployeeRole to it
             // Here, you might want to set EmployeeId for each EmployeeRole based on the current employee
-            foreach (var employeeRole in employee.EmployeeRoles)
+            //foreach (var employeeRole in employee.EmployeeRoles)
+            //{
+            //    //employeeRole.EmployeeId = employee.Id; // Employee.Id is of type string
+            //    employeeRole = _employeeRoleSrervice.GetByEmployeeIdAndRoleIdAsync(employee.Id, employeeRole.RoleId);
+            //}
+
+            for (int i = 0; i < employee.EmployeeRoles.Count; i++)
             {
-                employeeRole.EmployeeId = employee.Id; // Employee.Id is of type string
+                employee.EmployeeRoles[i].Role = await _roleService.GetRoleByNameAsync(employee.EmployeeRoles[i].Role.RoleName);
+                employee.EmployeeRoles[i]= await _employeeRoleSrervice.GetByEmployeeIdAndRoleIdAsync(employee.Identity, employee.EmployeeRoles[i].Role.Id);
             }
+            employee.Status = true;
+
             // Add employee to database or perform any other operation
             // dbContext.Employees.Add(employee);
             // dbContext.SaveChanges();
-            employee.Status = true;
             return Ok(_mapper.Map<EmployeeDto>(
                 await _employeeService.AddEmployeeAsync(employee)));
             ////Employee newEmployee = new Employee()

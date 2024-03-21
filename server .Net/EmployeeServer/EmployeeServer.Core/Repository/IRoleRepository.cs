@@ -12,6 +12,8 @@ namespace EmployeeServer.Core.Repository
         Task<Role> AddAsync(Role role);
 
         Task<Role> GetByIdAsync(int id);
+        Task<Role> GetByNameAsync(string name);
+
         Task<List<Role>> GetListAsync();
 
         Task RemoveAsync(int id);

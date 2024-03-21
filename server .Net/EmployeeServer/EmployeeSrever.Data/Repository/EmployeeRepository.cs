@@ -41,6 +41,7 @@ namespace EmployeeSrever.Data.Repository
         {
             return await _dataContext.Employees.Include(u => u.EmployeeRoles).FirstOrDefaultAsync(x => id == x.Identity);
         }
+        
         public  async Task<List<Employee>> GetListAsync()
         {
             //return _dataContext.Employees.Include(u => u.Station).ToList();

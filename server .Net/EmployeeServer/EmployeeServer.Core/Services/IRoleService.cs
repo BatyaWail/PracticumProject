@@ -13,6 +13,8 @@ namespace EmployeeServer.Core.Services
         Task<Role> AddRoleAsync(Role role);
 
         Task<Role> GetRoleByIdAsync(int id);
+        Task<Role> GetRoleByNameAsync(string name);
+
 
         Task<List<Role>> GetRolesListAsync();
 

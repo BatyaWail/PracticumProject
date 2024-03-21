@@ -12,7 +12,8 @@ namespace EmployeeSrever.Data
     {
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Role> Roles { get; set; }
-        //public DbSet<EmployeeRole> EmployeeRoles { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<EmployeeRole> EmployeeRoles { get; set; }
         //DbContextOptionsBuilder
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

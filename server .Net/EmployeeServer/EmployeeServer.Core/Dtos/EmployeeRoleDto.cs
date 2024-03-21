@@ -11,12 +11,8 @@ namespace EmployeeServer.Core.Dtos
     {
         public int EmployeeId { get; set; }
         //public EmployeeDto Employee { get; set; }
-
         public int RoleId { get; set; }
         //public RoleDto Role { get; set; }
-
-        // תוספת כלשהי, אם רצוי
-        // public DateTime AssignedDate { get; set; }
         public DateTime EntryDate { get; set; }
     }
 }

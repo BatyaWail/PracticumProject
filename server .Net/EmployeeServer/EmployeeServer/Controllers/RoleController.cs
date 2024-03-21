@@ -4,6 +4,7 @@ using EmployeeServer.Core.Dtos;
 using EmployeeServer.Core.Entities;
 using EmployeeServer.Core.Services;
 using EmployeeServer.Service.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -12,6 +13,7 @@ namespace EmployeeServer.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    //[Authorize]
     public class RoleController : ControllerBase
     {
         private readonly IRoleService _roleService;

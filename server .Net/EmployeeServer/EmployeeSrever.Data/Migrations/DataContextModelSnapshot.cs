@@ -37,9 +37,6 @@ namespace EmployeeSrever.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Gender")
-                        .HasColumnType("int");
-
                     b.Property<string>("Identity")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -47,6 +44,9 @@ namespace EmployeeSrever.Data.Migrations
                     b.Property<string>("LastName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("MaleOrFmale")
+                        .HasColumnType("bit");
 
                     b.Property<DateTime>("StartDate")
                         .HasColumnType("datetime2");
@@ -74,7 +74,7 @@ namespace EmployeeSrever.Data.Migrations
 
                     b.HasIndex("RoleId");
 
-                    b.ToTable("EmployeeRole");
+                    b.ToTable("EmployeeRoles");
                 });
 
             modelBuilder.Entity("EmployeeServer.Core.Entities.Role", b =>
@@ -95,6 +95,27 @@ namespace EmployeeSrever.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Roles");
+                });
+
+            modelBuilder.Entity("EmployeeServer.Core.Entities.User", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Users");
                 });
 
             modelBuilder.Entity("EmployeeServer.Core.Entities.EmployeeRole", b =>

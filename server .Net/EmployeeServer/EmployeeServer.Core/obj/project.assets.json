@@ -213,11 +213,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Documents\\!תכנות\\שנה ב\\פרקטיקום\\server .Net\\EmployeeServer\\EmployeeServer.Core\\EmployeeServer.Core.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Documents\\!תכנות\\שנה ב\\פרקטיקום\\שלי טוב --בגיט\\server .Net\\EmployeeServer\\EmployeeServer.Core\\EmployeeServer.Core.csproj",
       "projectName": "EmployeeServer.Core",
-      "projectPath": "C:\\Users\\User\\Documents\\!תכנות\\שנה ב\\פרקטיקום\\server .Net\\EmployeeServer\\EmployeeServer.Core\\EmployeeServer.Core.csproj",
+      "projectPath": "C:\\Users\\User\\Documents\\!תכנות\\שנה ב\\פרקטיקום\\שלי טוב --בגיט\\server .Net\\EmployeeServer\\EmployeeServer.Core\\EmployeeServer.Core.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Documents\\!תכנות\\שנה ב\\פרקטיקום\\server .Net\\EmployeeServer\\EmployeeServer.Core\\obj\\",
+      "outputPath": "C:\\Users\\User\\Documents\\!תכנות\\שנה ב\\פרקטיקום\\שלי טוב --בגיט\\server .Net\\EmployeeServer\\EmployeeServer.Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

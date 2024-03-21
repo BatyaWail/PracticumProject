@@ -19,6 +19,7 @@ namespace EmployeeServer.Api
                 .ForMember(dest => dest.EntryDate, opt => opt.MapFrom(src => src.EntryDate));
 
             CreateMap<RolePostModel, Role>(); // Simple mapping for Role
+            CreateMap<LoginModel, User>();
         }
 
     }

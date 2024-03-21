@@ -41,5 +41,10 @@ namespace EmployeeServer.Service.Services
         {
             return await _roleRepository.UpdateAsync(id, role);
         }
+
+        public async Task<Role> GetRoleByNameAsync(string name)
+        {
+            return await _roleRepository.GetByNameAsync(name);
+        }
     }
 }

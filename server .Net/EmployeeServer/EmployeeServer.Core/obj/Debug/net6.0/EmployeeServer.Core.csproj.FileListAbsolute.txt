@@ -10,3 +10,16 @@ C:\Users\User\Documents\!תכנות\שנה ב\פרקטיקום\server .Net\Emplo
 C:\Users\User\Documents\!תכנות\שנה ב\פרקטיקום\server .Net\EmployeeServer\EmployeeServer.Core\obj\Debug\net6.0\EmployeeServer.Core.pdb
 C:\Users\User\Documents\!תכנות\שנה ב\פרקטיקום\server .Net\EmployeeServer\EmployeeServer.Core\obj\Debug\net6.0\ref\EmployeeServer.Core.dll
 C:\Users\User\Documents\!תכנות\שנה ב\פרקטיקום\server .Net\EmployeeServer\EmployeeServer.Core\obj\Debug\net6.0\EmployeeServer.Core.csproj.AssemblyReference.cache
+C:\Users\User\Documents\!תכנות\שנה ב\פרקטיקום\שלי טוב --בגיט\server .Net\EmployeeServer\EmployeeServer.Core\bin\Debug\net6.0\EmployeeServer.Core.deps.json
+C:\Users\User\Documents\!תכנות\שנה ב\פרקטיקום\שלי טוב --בגיט\server .Net\EmployeeServer\EmployeeServer.Core\bin\Debug\net6.0\EmployeeServer.Core.dll
+C:\Users\User\Documents\!תכנות\שנה ב\פרקטיקום\שלי טוב --בגיט\server .Net\EmployeeServer\EmployeeServer.Core\bin\Debug\net6.0\EmployeeServer.Core.pdb
+C:\Users\User\Documents\!תכנות\שנה ב\פרקטיקום\שלי טוב --בגיט\server .Net\EmployeeServer\EmployeeServer.Core\obj\Debug\net6.0\EmployeeServer.Core.csproj.AssemblyReference.cache
+C:\Users\User\Documents\!תכנות\שנה ב\פרקטיקום\שלי טוב --בגיט\server .Net\EmployeeServer\EmployeeServer.Core\obj\Debug\net6.0\EmployeeServer.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Documents\!תכנות\שנה ב\פרקטיקום\שלי טוב --בגיט\server .Net\EmployeeServer\EmployeeServer.Core\obj\Debug\net6.0\EmployeeServer.Core.AssemblyInfoInputs.cache
+C:\Users\User\Documents\!תכנות\שנה ב\פרקטיקום\שלי טוב --בגיט\server .Net\EmployeeServer\EmployeeServer.Core\obj\Debug\net6.0\EmployeeServer.Core.AssemblyInfo.cs
+C:\Users\User\Documents\!תכנות\שנה ב\פרקטיקום\שלי טוב --בגיט\server .Net\EmployeeServer\EmployeeServer.Core\obj\Debug\net6.0\EmployeeServer.Core.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\!תכנות\שנה ב\פרקטיקום\שלי טוב --בגיט\server .Net\EmployeeServer\EmployeeServer.Core\obj\Debug\net6.0\EmployeeServer.Core.sourcelink.json
+C:\Users\User\Documents\!תכנות\שנה ב\פרקטיקום\שלי טוב --בגיט\server .Net\EmployeeServer\EmployeeServer.Core\obj\Debug\net6.0\EmployeeServer.Core.dll
+C:\Users\User\Documents\!תכנות\שנה ב\פרקטיקום\שלי טוב --בגיט\server .Net\EmployeeServer\EmployeeServer.Core\obj\Debug\net6.0\refint\EmployeeServer.Core.dll
+C:\Users\User\Documents\!תכנות\שנה ב\פרקטיקום\שלי טוב --בגיט\server .Net\EmployeeServer\EmployeeServer.Core\obj\Debug\net6.0\EmployeeServer.Core.pdb
+C:\Users\User\Documents\!תכנות\שנה ב\פרקטיקום\שלי טוב --בגיט\server .Net\EmployeeServer\EmployeeServer.Core\obj\Debug\net6.0\ref\EmployeeServer.Core.dll

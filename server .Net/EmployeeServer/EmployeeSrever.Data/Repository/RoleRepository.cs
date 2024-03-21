@@ -27,6 +27,10 @@ namespace EmployeeSrever.Data.Repository
         {
             return await _dataContext.Roles.Include(r => r.EmployeeRoles).FirstAsync(x => x.Id == id);
         }
+        public async Task<Role> GetByNameAsync(string name)
+        {
+            return await _dataContext.Roles.Include(r => r.EmployeeRoles).FirstOrDefaultAsync(x => x.RoleName == name);
+        }
         public async Task<List<Role>> GetListAsync()
         {
             //return _dataContext.Employees.Include(u => u.Station).ToList();
@@ -80,6 +84,6 @@ namespace EmployeeSrever.Data.Repository
             return existingRole;
         }
 
-
+       
     }
 }
