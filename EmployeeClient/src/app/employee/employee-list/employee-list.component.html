@@ -1,0 +1,111 @@
+<!-- <p>employee-list works!</p>
+<div *ngFor="let employee of employeeList">
+    {{ employee.firstName }}
+</div>
+
+<table class="table align-middle mb-0 bg-white">
+    <thead class="bg-light">
+        <tr>
+            <th>Name</th>
+            <th>Title</th>
+            <th>Status</th>
+            <th>Position</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <div class="d-flex align-items-center">
+                    <img src="https://mdbootstrap.com/img/new/avatars/8.jpg" alt="" style="width: 45px; height: 45px"
+                        class="rounded-circle" />
+                    <div class="ms-3">
+                        <p class="fw-bold mb-1">John Doe</p>
+                        <p class="text-muted mb-0">john.doe&#64;gmail.com</p> 
+                    </div>
+                </div>
+            </td>
+            <td>
+                <p class="fw-normal mb-1">Software engineer</p>
+                <p class="text-muted mb-0">IT department</p>
+            </td>
+            <td>
+                <span class="badge badge-success rounded-pill d-inline">Active</span>
+            </td>
+            <td>Senior</td>
+            <td>
+                <button type="button" class="btn btn-link btn-sm btn-rounded">Edit</button>
+            </td>
+        </tr>
+    </tbody>
+</table> -->
+
+<div class="example-button-container">
+  <button mat-icon-button color="primary" aria-label="Example icon button with a delete icon" (click)="addEmployee()">
+    <!-- <div>new-employee</div> -->
+    <mat-icon>person_add</mat-icon>
+  </button>
+</div>
+<!-- <div class="example-button-container">
+          <button mat-icon-button color="primary" aria-label="Example icon button with a delete icon" (click)="addEmployee()">
+            <mat-icon>person_add</mat-icon>
+          </button>
+        </div> -->
+
+
+<!-- <button type="button" mat-button class="myButtons">
+    <mat-icon>list</mat-icon>
+
+    All Recipes
+  </button> -->
+<table class="table align-middle mb-0 bg-white">
+  <!-- Table header -->
+  <thead class="bg-light">
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Identity</th>
+      <th>Start Date</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <!-- Table body -->
+  <tbody>
+    <!-- Loop through employeeList to populate rows -->
+
+    <tr *ngFor="let employee of filteredEmployeeList">
+      <td>{{ employee.firstName }}</td>
+      <td>{{ employee.lastName }}</td>
+      <td>{{ employee.identity }}</td>
+      <td>{{ employee.startDate }}</td>
+      <td>
+        <!-- Edit button -->
+        <!-- <button type="button" class="btn btn-primary btn-sm me-2" (click)="editEmployee(employee)">
+                    Edit
+                </button>
+                <button type="button" class="btn btn-danger btn-sm" (click)="deleteEmployee(employee)">
+                    Delete
+                </button> -->
+        <section>
+          <div class="example-button-row">
+            <div class="example-flex-container">
+              <div class="example-button-container">
+                <button mat-mini-fab color="primary" aria-label="Example icon button with a delete icon"
+                  (click)="deleteEmployee(employee)">
+                  <mat-icon>delete</mat-icon>
+                </button>
+              </div>
+              <div class="example-button-container">
+                <button mat-mini-fab color="accent" aria-label="Example icon button with a bookmark icon"
+                  (click)="editEmployee(employee)">
+                  <mat-icon>edit</mat-icon>
+                </button>
+              </div>
+
+            </div>
+          </div>
+        </section>
+      </td>
+    </tr>
+  </tbody>
+</table>
