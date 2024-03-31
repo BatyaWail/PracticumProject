@@ -53,10 +53,10 @@ namespace EmployeeServer.Api.Controllers
         //}
 
         // GET api/<EmployeeController>/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult> Get(string id)
+        [HttpGet("{identity}")]
+        public async Task<ActionResult> Get(string identity)
         {
-            var employee=await _employeeService.GetEmployeeByIdAsync(id);
+            var employee=await _employeeService.GetEmployeeByIdAsync(identity);
             var employeeDto = _mapper.Map<EmployeeDto>(employee);
             return Ok(employeeDto);
         }
@@ -182,10 +182,10 @@ namespace EmployeeServer.Api.Controllers
         //    // Return Ok response
         //    return Ok();
         //}
-        [HttpPut("{id}")]
-        public async Task<ActionResult> Put(string id, [FromBody] EmployeePostModel employeePostModel)
+        [HttpPut("{identity}")]
+        public async Task<ActionResult> Put(string identity, [FromBody] EmployeePostModel employeePostModel)
         {
-            var employee = await _employeeService.GetEmployeeByIdAsync(id);
+            var employee = await _employeeService.GetEmployeeByIdAsync(identity);
 
             // If employee doesn't exist, return NotFound
             if (employee == null)
@@ -197,7 +197,7 @@ namespace EmployeeServer.Api.Controllers
             _mapper.Map(employeePostModel, employee);
 
             // Update the employee in the database
-            var employee2= await _employeeService.UpdateEmployeeAsync(id, employee);
+            var employee2= await _employeeService.UpdateEmployeeAsync(identity, employee);
 
             // Return Ok response
             return Ok(_mapper.Map<EmployeeDto>(employee2));
@@ -268,15 +268,15 @@ namespace EmployeeServer.Api.Controllers
 
 
         // DELETE api/<EmployeeController>/5
-        [HttpDelete("{id}")]
-        public async Task<ActionResult> Delete(string id)
+        [HttpDelete("{identity}")]
+        public async Task<ActionResult> Delete(string identity)
         {
-            var employee= await _employeeService.GetEmployeeByIdAsync(id);
+            var employee= await _employeeService.GetEmployeeByIdAsync(identity);
             if (employee == null)
             {
                 return NotFound();
             }
-            await _employeeService.RemoveEmployeeAsync(id);
+            await _employeeService.RemoveEmployeeAsync(identity);
             return NoContent();
         }
     }

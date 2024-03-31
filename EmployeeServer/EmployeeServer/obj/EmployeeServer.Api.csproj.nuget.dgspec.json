@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Documents\\!תכנות\\שנה ב\\פרקטיקום\\לא בגיט לפי שרי\\PracticumProject\\EmployeeServer\\EmployeeServer\\EmployeeServer.Api.csproj": {}
+    "C:\\Users\\User\\Documents\\!תכנות\\שנה ב\\פרקטיקום\\github\\PracticumProject\\EmployeeServer\\EmployeeServer\\EmployeeServer.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Documents\\!תכנות\\שנה ב\\פרקטיקום\\לא בגיט לפי שרי\\PracticumProject\\EmployeeServer\\EmployeeServer.Core\\EmployeeServer.Core.csproj": {
+    "C:\\Users\\User\\Documents\\!תכנות\\שנה ב\\פרקטיקום\\github\\PracticumProject\\EmployeeServer\\EmployeeServer.Core\\EmployeeServer.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Documents\\!תכנות\\שנה ב\\פרקטיקום\\לא בגיט לפי שרי\\PracticumProject\\EmployeeServer\\EmployeeServer.Core\\EmployeeServer.Core.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Documents\\!תכנות\\שנה ב\\פרקטיקום\\github\\PracticumProject\\EmployeeServer\\EmployeeServer.Core\\EmployeeServer.Core.csproj",
         "projectName": "EmployeeServer.Core",
-        "projectPath": "C:\\Users\\User\\Documents\\!תכנות\\שנה ב\\פרקטיקום\\לא בגיט לפי שרי\\PracticumProject\\EmployeeServer\\EmployeeServer.Core\\EmployeeServer.Core.csproj",
+        "projectPath": "C:\\Users\\User\\Documents\\!תכנות\\שנה ב\\פרקטיקום\\github\\PracticumProject\\EmployeeServer\\EmployeeServer.Core\\EmployeeServer.Core.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Documents\\!תכנות\\שנה ב\\פרקטיקום\\לא בגיט לפי שרי\\PracticumProject\\EmployeeServer\\EmployeeServer.Core\\obj\\",
+        "outputPath": "C:\\Users\\User\\Documents\\!תכנות\\שנה ב\\פרקטיקום\\github\\PracticumProject\\EmployeeServer\\EmployeeServer.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -74,14 +74,14 @@
         }
       }
     },
-    "C:\\Users\\User\\Documents\\!תכנות\\שנה ב\\פרקטיקום\\לא בגיט לפי שרי\\PracticumProject\\EmployeeServer\\EmployeeServer.Service\\EmployeeServer.Service.csproj": {
+    "C:\\Users\\User\\Documents\\!תכנות\\שנה ב\\פרקטיקום\\github\\PracticumProject\\EmployeeServer\\EmployeeServer.Service\\EmployeeServer.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Documents\\!תכנות\\שנה ב\\פרקטיקום\\לא בגיט לפי שרי\\PracticumProject\\EmployeeServer\\EmployeeServer.Service\\EmployeeServer.Service.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Documents\\!תכנות\\שנה ב\\פרקטיקום\\github\\PracticumProject\\EmployeeServer\\EmployeeServer.Service\\EmployeeServer.Service.csproj",
         "projectName": "EmployeeServer.Service",
-        "projectPath": "C:\\Users\\User\\Documents\\!תכנות\\שנה ב\\פרקטיקום\\לא בגיט לפי שרי\\PracticumProject\\EmployeeServer\\EmployeeServer.Service\\EmployeeServer.Service.csproj",
+        "projectPath": "C:\\Users\\User\\Documents\\!תכנות\\שנה ב\\פרקטיקום\\github\\PracticumProject\\EmployeeServer\\EmployeeServer.Service\\EmployeeServer.Service.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Documents\\!תכנות\\שנה ב\\פרקטיקום\\לא בגיט לפי שרי\\PracticumProject\\EmployeeServer\\EmployeeServer.Service\\obj\\",
+        "outputPath": "C:\\Users\\User\\Documents\\!תכנות\\שנה ב\\פרקטיקום\\github\\PracticumProject\\EmployeeServer\\EmployeeServer.Service\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -102,8 +102,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\User\\Documents\\!תכנות\\שנה ב\\פרקטיקום\\לא בגיט לפי שרי\\PracticumProject\\EmployeeServer\\EmployeeServer.Core\\EmployeeServer.Core.csproj": {
-                "projectPath": "C:\\Users\\User\\Documents\\!תכנות\\שנה ב\\פרקטיקום\\לא בגיט לפי שרי\\PracticumProject\\EmployeeServer\\EmployeeServer.Core\\EmployeeServer.Core.csproj"
+              "C:\\Users\\User\\Documents\\!תכנות\\שנה ב\\פרקטיקום\\github\\PracticumProject\\EmployeeServer\\EmployeeServer.Core\\EmployeeServer.Core.csproj": {
+                "projectPath": "C:\\Users\\User\\Documents\\!תכנות\\שנה ב\\פרקטיקום\\github\\PracticumProject\\EmployeeServer\\EmployeeServer.Core\\EmployeeServer.Core.csproj"
               }
             }
           }
@@ -142,14 +142,14 @@
         }
       }
     },
-    "C:\\Users\\User\\Documents\\!תכנות\\שנה ב\\פרקטיקום\\לא בגיט לפי שרי\\PracticumProject\\EmployeeServer\\EmployeeServer\\EmployeeServer.Api.csproj": {
+    "C:\\Users\\User\\Documents\\!תכנות\\שנה ב\\פרקטיקום\\github\\PracticumProject\\EmployeeServer\\EmployeeServer\\EmployeeServer.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Documents\\!תכנות\\שנה ב\\פרקטיקום\\לא בגיט לפי שרי\\PracticumProject\\EmployeeServer\\EmployeeServer\\EmployeeServer.Api.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Documents\\!תכנות\\שנה ב\\פרקטיקום\\github\\PracticumProject\\EmployeeServer\\EmployeeServer\\EmployeeServer.Api.csproj",
         "projectName": "EmployeeServer.Api",
-        "projectPath": "C:\\Users\\User\\Documents\\!תכנות\\שנה ב\\פרקטיקום\\לא בגיט לפי שרי\\PracticumProject\\EmployeeServer\\EmployeeServer\\EmployeeServer.Api.csproj",
+        "projectPath": "C:\\Users\\User\\Documents\\!תכנות\\שנה ב\\פרקטיקום\\github\\PracticumProject\\EmployeeServer\\EmployeeServer\\EmployeeServer.Api.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Documents\\!תכנות\\שנה ב\\פרקטיקום\\לא בגיט לפי שרי\\PracticumProject\\EmployeeServer\\EmployeeServer\\obj\\",
+        "outputPath": "C:\\Users\\User\\Documents\\!תכנות\\שנה ב\\פרקטיקום\\github\\PracticumProject\\EmployeeServer\\EmployeeServer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -170,14 +170,14 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\User\\Documents\\!תכנות\\שנה ב\\פרקטיקום\\לא בגיט לפי שרי\\PracticumProject\\EmployeeServer\\EmployeeServer.Core\\EmployeeServer.Core.csproj": {
-                "projectPath": "C:\\Users\\User\\Documents\\!תכנות\\שנה ב\\פרקטיקום\\לא בגיט לפי שרי\\PracticumProject\\EmployeeServer\\EmployeeServer.Core\\EmployeeServer.Core.csproj"
+              "C:\\Users\\User\\Documents\\!תכנות\\שנה ב\\פרקטיקום\\github\\PracticumProject\\EmployeeServer\\EmployeeServer.Core\\EmployeeServer.Core.csproj": {
+                "projectPath": "C:\\Users\\User\\Documents\\!תכנות\\שנה ב\\פרקטיקום\\github\\PracticumProject\\EmployeeServer\\EmployeeServer.Core\\EmployeeServer.Core.csproj"
               },
-              "C:\\Users\\User\\Documents\\!תכנות\\שנה ב\\פרקטיקום\\לא בגיט לפי שרי\\PracticumProject\\EmployeeServer\\EmployeeServer.Service\\EmployeeServer.Service.csproj": {
-                "projectPath": "C:\\Users\\User\\Documents\\!תכנות\\שנה ב\\פרקטיקום\\לא בגיט לפי שרי\\PracticumProject\\EmployeeServer\\EmployeeServer.Service\\EmployeeServer.Service.csproj"
+              "C:\\Users\\User\\Documents\\!תכנות\\שנה ב\\פרקטיקום\\github\\PracticumProject\\EmployeeServer\\EmployeeServer.Service\\EmployeeServer.Service.csproj": {
+                "projectPath": "C:\\Users\\User\\Documents\\!תכנות\\שנה ב\\פרקטיקום\\github\\PracticumProject\\EmployeeServer\\EmployeeServer.Service\\EmployeeServer.Service.csproj"
               },
-              "C:\\Users\\User\\Documents\\!תכנות\\שנה ב\\פרקטיקום\\לא בגיט לפי שרי\\PracticumProject\\EmployeeServer\\EmployeeSrever.Data\\EmployeeSrever.Data.csproj": {
-                "projectPath": "C:\\Users\\User\\Documents\\!תכנות\\שנה ב\\פרקטיקום\\לא בגיט לפי שרי\\PracticumProject\\EmployeeServer\\EmployeeSrever.Data\\EmployeeSrever.Data.csproj"
+              "C:\\Users\\User\\Documents\\!תכנות\\שנה ב\\פרקטיקום\\github\\PracticumProject\\EmployeeServer\\EmployeeSrever.Data\\EmployeeSrever.Data.csproj": {
+                "projectPath": "C:\\Users\\User\\Documents\\!תכנות\\שנה ב\\פרקטיקום\\github\\PracticumProject\\EmployeeServer\\EmployeeSrever.Data\\EmployeeSrever.Data.csproj"
               }
             }
           }
@@ -239,14 +239,14 @@
         }
       }
     },
-    "C:\\Users\\User\\Documents\\!תכנות\\שנה ב\\פרקטיקום\\לא בגיט לפי שרי\\PracticumProject\\EmployeeServer\\EmployeeSrever.Data\\EmployeeSrever.Data.csproj": {
+    "C:\\Users\\User\\Documents\\!תכנות\\שנה ב\\פרקטיקום\\github\\PracticumProject\\EmployeeServer\\EmployeeSrever.Data\\EmployeeSrever.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Documents\\!תכנות\\שנה ב\\פרקטיקום\\לא בגיט לפי שרי\\PracticumProject\\EmployeeServer\\EmployeeSrever.Data\\EmployeeSrever.Data.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Documents\\!תכנות\\שנה ב\\פרקטיקום\\github\\PracticumProject\\EmployeeServer\\EmployeeSrever.Data\\EmployeeSrever.Data.csproj",
         "projectName": "EmployeeSrever.Data",
-        "projectPath": "C:\\Users\\User\\Documents\\!תכנות\\שנה ב\\פרקטיקום\\לא בגיט לפי שרי\\PracticumProject\\EmployeeServer\\EmployeeSrever.Data\\EmployeeSrever.Data.csproj",
+        "projectPath": "C:\\Users\\User\\Documents\\!תכנות\\שנה ב\\פרקטיקום\\github\\PracticumProject\\EmployeeServer\\EmployeeSrever.Data\\EmployeeSrever.Data.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Documents\\!תכנות\\שנה ב\\פרקטיקום\\לא בגיט לפי שרי\\PracticumProject\\EmployeeServer\\EmployeeSrever.Data\\obj\\",
+        "outputPath": "C:\\Users\\User\\Documents\\!תכנות\\שנה ב\\פרקטיקום\\github\\PracticumProject\\EmployeeServer\\EmployeeSrever.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -267,8 +267,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\User\\Documents\\!תכנות\\שנה ב\\פרקטיקום\\לא בגיט לפי שרי\\PracticumProject\\EmployeeServer\\EmployeeServer.Core\\EmployeeServer.Core.csproj": {
-                "projectPath": "C:\\Users\\User\\Documents\\!תכנות\\שנה ב\\פרקטיקום\\לא בגיט לפי שרי\\PracticumProject\\EmployeeServer\\EmployeeServer.Core\\EmployeeServer.Core.csproj"
+              "C:\\Users\\User\\Documents\\!תכנות\\שנה ב\\פרקטיקום\\github\\PracticumProject\\EmployeeServer\\EmployeeServer.Core\\EmployeeServer.Core.csproj": {
+                "projectPath": "C:\\Users\\User\\Documents\\!תכנות\\שנה ב\\פרקטיקום\\github\\PracticumProject\\EmployeeServer\\EmployeeServer.Core\\EmployeeServer.Core.csproj"
               }
             }
           }

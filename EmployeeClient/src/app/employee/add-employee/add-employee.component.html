@@ -29,18 +29,11 @@
         <mat-label>Identity</mat-label>
         <input matInput formControlName="identity" placeholder="Enter identity" type="text">
       </mat-form-field>
-
-      <!-- Start Date -->
-      <mat-form-field>
-        <mat-label>Start Date</mat-label>
-        <input matInput [matDatepicker]="picker" formControlName="startDate" placeholder="Choose a date" readonly>
-        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-        <mat-datepicker #picker></mat-datepicker>
-      </mat-form-field>
-
-      <!-- Next button -->
       <mat-action-row>
-        <button mat-button color="primary" (click)="nextStep()">Next</button>
+        <button mat-button color="primary" (click)="nextStep()">
+          Next
+          <mat-icon>keyboard_arrow_right</mat-icon>
+        </button>
       </mat-action-row>
     </mat-expansion-panel>
 
@@ -76,53 +69,56 @@
 
       <!-- Previous and next buttons -->
       <mat-action-row>
-        <button mat-button color="warn" (click)="prevStep()">Previous</button>
-        <button mat-button color="primary" (click)="nextStep()">Next</button>
+        <button mat-button color="warn" (click)="prevStep()">
+          Previous
+          <mat-icon>keyboard_arrow_left</mat-icon>
+        </button>
+        <button mat-button color="primary" (click)="nextStep()">
+          Next
+          <mat-icon>keyboard_arrow_right</mat-icon>
+
+        </button>
       </mat-action-row>
     </mat-expansion-panel>
 
-
-    <!-- <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)" hideToggle>
+    <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)" hideToggle>
       <mat-expansion-panel-header>
         <mat-panel-title>
-          Role Selection
+          Start Date
         </mat-panel-title>
         <mat-panel-description>
-          Choose your roles and provide additional information
-          <mat-icon>assignment</mat-icon>
+          Enter startDate
+          <mat-icon>date_range</mat-icon>
         </mat-panel-description>
       </mat-expansion-panel-header>
 
-      <div *ngFor="let role of employeeRoles; let i = index" class="role-selection">
-        <mat-form-field>
-          <mat-label>Select Role</mat-label>
-          <mat-select placeholder="Choose a role" [(ngModel)]="role.roleName">
-            <mat-option *ngFor="let role of rolesList" [value]="role.roleName">{{ role.roleName }}</mat-option>
-          </mat-select>
-        </mat-form-field>
+    
 
-        <mat-radio-group [(ngModel)]="role.managementStatus">
-          <mat-radio-button value="management">Management</mat-radio-button>
-          <mat-radio-button value="non-management">Non-Management</mat-radio-button>
-        </mat-radio-group>
 
-  
-        <mat-form-field>
-          <mat-label>Entry Data</mat-label>
-          <input matInput [matDatepicker]="picker" placeholder="Choose entry date" [(ngModel)]="role.entryDate"
-            readonly>
-          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-          <mat-datepicker #picker2></mat-datepicker>
-        </mat-form-field>
-      </div>
-      <button mat-button color="primary" (click)="addRole()">Add Role</button>
+      <!-- Start Date -->
+      <mat-form-field>
+        <mat-label>Start Date</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="startDate" placeholder="Choose a date" readonly>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+      <!-- Next button -->
       <mat-action-row>
-        <button mat-button color="warn" (click)="prevStep()">Previous</button>
-      </mat-action-row>
-    </mat-expansion-panel> -->
+        <button mat-button color="warn" (click)="prevStep()">
+          Previous
+          <mat-icon>keyboard_arrow_left</mat-icon>
+        </button>
+        <button mat-button color="primary" (click)="nextStep()">
+          Next
+          <mat-icon>keyboard_arrow_right</mat-icon>
 
+        </button>
+      </mat-action-row>
+    </mat-expansion-panel>
+    
   <!-- Role Selection Panel -->
-  <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)" hideToggle>
+  <mat-expansion-panel [expanded]="step === 3" (opened)="setStep(3)" hideToggle>
     <mat-expansion-panel-header>
       <mat-panel-title>
         Role Selection
@@ -165,18 +161,31 @@
     </div>
 
     <!-- Button to add new role -->
-    <button mat-button color="primary" (click)="addRole()">Add Role</button>
+    <button mat-button color="primary" (click)="addRole()">
+      Add Role
+      <mat-icon>add</mat-icon>
+    </button>
 
     <!-- Previous and submit buttons -->
     <mat-action-row>
-      <button mat-button color="warn" (click)="prevStep()">Previous</button>
+      <button mat-button color="warn" (click)="prevStep()">
+        Previous
+        <mat-icon>keyboard_arrow_left</mat-icon>
+
+      </button>
     </mat-action-row>
   </mat-expansion-panel>
 
     <!-- Previous and submit buttons -->
     <mat-action-row>
-      <button mat-button color="warn" (click)="prevStep()">Previous</button>
-      <button mat-button color="primary" type="submit" (click)="submit()">Submit</button>
+      <button mat-button color="warn" (click)="prevStep()">
+        Previous
+        <mat-icon>arrow_back</mat-icon>
+      </button>
+      <button mat-button color="primary" type="submit" (click)="submit()">
+        Submit
+        <mat-icon>save</mat-icon>
+      </button>
     </mat-action-row>
     <!-- </mat-expansion-panel> -->
   </mat-accordion>

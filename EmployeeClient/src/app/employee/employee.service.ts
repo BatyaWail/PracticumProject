@@ -8,6 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class EmployeeService {
 
+
   public baseUrlEmployee = 'https://localhost:7031/api/Employee'
 
   constructor(private http: HttpClient) { }
@@ -19,7 +20,13 @@ export class EmployeeService {
   getEmployeeList(): Observable<Employee[]> {
     return this.http.get<Employee[]>(this.baseUrlEmployee)
   }
-  deleteEmployee(employee:Employee): Observable<Employee> {
-    return this.http.delete<Employee>(this.baseUrlEmployee+"/"+employee.identity)
+  deleteEmployee(identity:string): Observable<Employee> {
+    return this.http.delete<Employee>(this.baseUrlEmployee+"/"+identity)
+  }
+  updateEmployee(employee:Employee): Observable<Employee> {
+    return this.http.put<Employee>(this.baseUrlEmployee+"/"+employee.identity,employee)
+  }
+  getEmployeeById(identity:string): Observable<Employee> {
+    return this.http.get<Employee>(this.baseUrlEmployee+"/"+identity)
   }
 }

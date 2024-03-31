@@ -1,11 +1,12 @@
 import { Component, Inject, OnInit, QueryList, ViewChildren } from '@angular/core';
 import {
-  MAT_DIALOG_DATA,
+  // MAT_DIALOG_DATA,
   MatDialogRef,
   MatDialogTitle,
   MatDialogContent,
   MatDialogActions,
   MatDialogClose,
+  MatDialog,
 } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { AbstractControl, FormArray, FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -33,12 +34,13 @@ import { MatDatepicker } from '@angular/material/datepicker';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms'; // Import form-related modules
 import { EmployeeRolePostModel } from '../../entities/employeeRole.postModel';
 import Swal from 'sweetalert2';
+import { ErrorDialogAddEmployeeComponent } from '../../errors-dialog/error-dialog-add-employee/error-dialog-add-employee.component';
+
+import { NgModule } from '@angular/core';
 
 
-
-export interface DialogData {
-  animal: string;
-  name: string;
+export interface DialogData2 {
+  errors: string[]
 }
 @Component({
   selector: 'app-add-employee',
@@ -61,7 +63,8 @@ export interface DialogData {
     MatDatepickerModule,
     MatSelectModule,
     MatOptionModule,
-    MatRadioModule, ReactiveFormsModule
+    MatRadioModule, ReactiveFormsModule,
+    CommonModule
   ],
   providers: [provideNativeDateAdapter()],
   templateUrl: './add-employee.component.html',
@@ -83,11 +86,12 @@ export class AddEmployeeComponent implements OnInit {
 
 
   constructor(
-    public dialogRef: MatDialogRef<AddEmployeeComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: DialogData,
+    // public dialogRef: MatDialogRef<AddEmployeeComponent>,
+    // @Inject(MAT_DIALOG_DATA) public data: DialogData,
     private _employeeService: EmployeeService,
     private _roleServices: RoleService,
     private fb: FormBuilder // Inject FormBuilder
+    ,public dialog: MatDialog
   ) { }
 
   ngOnInit(): void {
@@ -116,9 +120,9 @@ export class AddEmployeeComponent implements OnInit {
   }
 
 
-  onNoClick(): void {
-    this.dialogRef.close();
-  }
+  // onNoClick(): void {
+  //   this.dialogRef.close();
+  // }
   step = 0;
 
   setStep(index: number) {
@@ -186,8 +190,16 @@ export class AddEmployeeComponent implements OnInit {
     this.employeeRolesFormArray.removeAt(index);
   }
   submit() {
-    this.submitForm()
-    this.onNoClick();
+    if(!this.submitForm()){
+      this.dialog.open(ErrorDialogAddEmployeeComponent, {
+        data: {
+          errors: this.validationErrors,
+        },
+      });
+      console.log("Validation errors:", this.validationErrors);
+    }
+    
+    // this.onNoClick();
 
   }
   // submitForm() {
@@ -232,15 +244,17 @@ export class AddEmployeeComponent implements OnInit {
   //   }
   // }
 
-  submitForm() {
+  submitForm():boolean {
     this.validationErrors = []; // Reset validation errors array before checking
     this.checkAndLogControlErrors(this.employeeForm); // Check and log control errors
 
     if (this.validationErrors.length === 0) {
       this.sendData();
+      return true;
     } else {
       console.log("Validation errors:", this.validationErrors);
       console.log("Error!! Form is invalid.");
+      return false;
     }
   }
 
@@ -344,6 +358,7 @@ export class AddEmployeeComponent implements OnInit {
       }
     })
     // Call API or perform further actions
+console.log("employee after send-----", this.employee)
 
   }
 }

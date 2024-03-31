@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+if+bbaRj6GkxajmCp/YtW/fXrKi6l6+XhXSsNlun88qjNX4Ep6KMs0Q1cLSo3S+nWZg9p0J/WvdOeliF7Hn6A==",
+  "dgSpecHash": "IM7YU3uxqxiD3AjgL6NCjQ68AZg2Pr2breXu3ZfBj9MLl3glCu+uAs016aeKYVpiwK4Ovk24zIWdrMo5YtHNlQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\User\\Documents\\!תכנות\\שנה ב\\פרקטיקום\\לא בגיט לפי שרי\\PracticumProject\\EmployeeServer\\EmployeeServer\\EmployeeServer.Api.csproj",
+  "projectFilePath": "C:\\Users\\User\\Documents\\!תכנות\\שנה ב\\פרקטיקום\\github\\PracticumProject\\EmployeeServer\\EmployeeServer\\EmployeeServer.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

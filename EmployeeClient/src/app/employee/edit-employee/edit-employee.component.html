@@ -1,0 +1,160 @@
+<form [formGroup]="employeeForm" class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Company (disabled)</mat-label>
+      <input matInput disabled value="Google">
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>First name</mat-label>
+      <input matInput formControlName="firstName" placeholder="Enter first name">
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>Long Last Name That Will Be Truncated</mat-label>
+      <input matInput formControlName="lastName" placeholder="Enter last name">
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>Address</mat-label>
+      <textarea matInput placeholder="Ex. 100 Main St" formControlName="address1">1600 Amphitheatre Pkwy</textarea>
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>Address 2</mat-label>
+      <textarea matInput formControlName="identity"></textarea>
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>City</mat-label>
+      <input matInput placeholder="Ex. San Francisco" formControlName="startDate">
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>State</mat-label>
+      <input matInput placeholder="Ex. California" formControlName="dateOfBirth">
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>Postal Code</mat-label>
+      <input matInput #postalCode maxlength="5" placeholder="Ex. 94105" value="94043" formControlName="maleOrFmale">
+      <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
+    </mat-form-field>
+  </form>
+  
+   <!-- <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Company (disabled)</mat-label>
+      <input matInput disabled value="Google">
+    </mat-form-field>
+  
+    <table class="example-full-width" cellspacing="0"><tr>
+      <td><mat-form-field class="example-full-width">
+        <mat-label>First name</mat-label>
+        <input matInput>
+      </mat-form-field></td>
+      <td><mat-form-field class="example-full-width">
+        <mat-label>Long Last Name That Will Be Truncated</mat-label>
+        <input matInput>
+      </mat-form-field></td>
+    </tr></table>
+  
+    <p>
+      <mat-form-field class="example-full-width">
+        <mat-label>Address</mat-label>
+        <textarea matInput placeholder="Ex. 100 Main St">1600 Amphitheatre Pkwy</textarea>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Address 2</mat-label>
+        <textarea matInput></textarea>
+      </mat-form-field>
+    </p>
+  
+    <table class="example-full-width" cellspacing="0"><tr>
+      <td><mat-form-field class="example-full-width">
+        <mat-label>City</mat-label>
+        <input matInput placeholder="Ex. San Francisco">
+      </mat-form-field></td>
+      <td><mat-form-field class="example-full-width">
+        <mat-label>State</mat-label>
+        <input matInput placeholder="Ex. California">
+      </mat-form-field></td>
+      <td><mat-form-field class="example-full-width">
+        <mat-label>Postal Code</mat-label>
+        <input matInput #postalCode maxlength="5" placeholder="Ex. 94105" value="94043">
+        <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
+      </mat-form-field></td>
+    </tr></table>
+  </form>
+   -->
+   
+
+<!-- <form [formGroup]="recipeForm" class=recipe-form-container>
+    <mat-form-field>
+      <input matInput formControlName="name" placeholder="recipe Name" required>
+    </mat-form-field>
+  <br/>
+    <mat-form-field>
+      <mat-select formControlName="category" placeholder="category" required>
+        <mat-option *ngFor="let category of categories" [value]="category.name">
+          {{ category.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <br/>
+    <mat-form-field>
+      <input
+        matInput
+        type="number"
+        placeholder="time in minutes"
+        required
+        formControlName="minutes"
+      >
+    </mat-form-field>
+    <br/>
+    <mat-form-field>
+      <mat-select formControlName="difficultyLevel" placeholder="difficultyLevel" required>
+        <mat-option value="1">easy</mat-option>
+        <mat-option value="2">medium</mat-option>
+        <mat-option value="3">hard</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <br/>
+  
+    <button mat-raised-button color="primary" type="button" (click)="addIngredient()">add ingredient</button>
+      
+    <div formArrayName="ingredients" style="display: flex; flex-wrap: wrap;">
+  
+      <div *ngFor="let ingredient of recipeForm.get('ingredients').controls; let i = index">
+        <mat-form-field>
+          <input matInput [formControlName]="i" placeholder="ingredient" required>
+        </mat-form-field>
+          <button mat-icon-button (click)="removeIngredient(i)">
+            <mat-icon>delete</mat-icon>
+          </button>
+      </div>
+    </div>
+    <br/>
+    <button mat-raised-button color="primary" type="button" (click)="addInstruction()">add instruction</button>
+  <br/>
+    <div formArrayName="instructions" style="display: flex; flex-wrap: wrap;">
+      <div *ngFor="let instruction of recipeForm.get('instructions').controls; let i = index">
+        <mat-form-field style="flex: 1 0 auto; margin: 0; padding: 0;">
+          <input matInput [formControlName]="i" placeholder="instruction" required>
+        </mat-form-field>
+        <button mat-icon-button (click)="removeInstructions(i)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </div>
+    </div>
+    <br/>
+  
+  
+    <mat-form-field>
+      <input matInput formControlName="imgRouting" placeholder="imagePath(Optional)" required="" >
+    </mat-form-field>
+    <br/>
+  
+    <button mat-raised-button color="primary" type="submit" (click)="onSubmit()">save</button>
+  </form>  -->
+  
+  

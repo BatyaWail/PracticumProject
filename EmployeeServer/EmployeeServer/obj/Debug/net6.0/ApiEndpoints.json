@@ -44,13 +44,13 @@
   {
     "ContainingType": "EmployeeServer.Api.Controllers.EmployeeController",
     "Method": "Get",
-    "RelativePath": "api/Employee/{id}",
+    "RelativePath": "api/Employee/{identity}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
+        "Name": "identity",
         "Type": "System.String",
         "IsRequired": true
       }
@@ -60,13 +60,13 @@
   {
     "ContainingType": "EmployeeServer.Api.Controllers.EmployeeController",
     "Method": "Put",
-    "RelativePath": "api/Employee/{id}",
+    "RelativePath": "api/Employee/{identity}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
+        "Name": "identity",
         "Type": "System.String",
         "IsRequired": true
       },
@@ -81,13 +81,13 @@
   {
     "ContainingType": "EmployeeServer.Api.Controllers.EmployeeController",
     "Method": "Delete",
-    "RelativePath": "api/Employee/{id}",
+    "RelativePath": "api/Employee/{identity}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
+        "Name": "identity",
         "Type": "System.String",
         "IsRequired": true
       }
