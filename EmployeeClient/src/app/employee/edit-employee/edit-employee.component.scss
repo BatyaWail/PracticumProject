@@ -1,0 +1,14 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+form{
+  margin-top:2vh;
+  margin-left: 50vh;
+  margin-right: 50vh;
+}
+mat-form-field{
+  margin-left: 2vh;
+  margin-right: 2vh;
+}

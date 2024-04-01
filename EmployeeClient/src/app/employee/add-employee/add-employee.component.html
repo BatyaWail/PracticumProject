@@ -1,5 +1,16 @@
-<form [formGroup]="employeeForm" (ngSubmit)="submitForm()">
 
+
+<form [formGroup]="employeeForm" (ngSubmit)="submitForm()">
+  <div>
+    my buttons:
+  <button mat-flat-button (click)="accordion.openAll()">
+    <mat-icon>show_chart</mat-icon>
+    Expand All
+  </button>
+  <button mat-flat-button (click)="accordion.closeAll()">
+    <mat-icon>show_chart</mat-icon>
+    Collapse All</button>
+  </div>
   <mat-accordion class="example-headers-align">
     <!-- Personal data panel -->
     <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle>

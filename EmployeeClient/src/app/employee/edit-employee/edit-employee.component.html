@@ -1,160 +1,474 @@
-<form [formGroup]="employeeForm" class="example-form">
-    <mat-form-field class="example-full-width">
-      <mat-label>Company (disabled)</mat-label>
-      <input matInput disabled value="Google">
-    </mat-form-field>
-  
-    <mat-form-field class="example-full-width">
-      <mat-label>First name</mat-label>
-      <input matInput formControlName="firstName" placeholder="Enter first name">
-    </mat-form-field>
-  
-    <mat-form-field class="example-full-width">
-      <mat-label>Long Last Name That Will Be Truncated</mat-label>
-      <input matInput formControlName="lastName" placeholder="Enter last name">
-    </mat-form-field>
-  
-    <mat-form-field class="example-full-width">
-      <mat-label>Address</mat-label>
-      <textarea matInput placeholder="Ex. 100 Main St" formControlName="address1">1600 Amphitheatre Pkwy</textarea>
-    </mat-form-field>
-  
-    <mat-form-field class="example-full-width">
-      <mat-label>Address 2</mat-label>
-      <textarea matInput formControlName="identity"></textarea>
-    </mat-form-field>
-  
-    <mat-form-field class="example-full-width">
-      <mat-label>City</mat-label>
-      <input matInput placeholder="Ex. San Francisco" formControlName="startDate">
-    </mat-form-field>
-  
-    <mat-form-field class="example-full-width">
-      <mat-label>State</mat-label>
-      <input matInput placeholder="Ex. California" formControlName="dateOfBirth">
-    </mat-form-field>
-  
-    <mat-form-field class="example-full-width">
-      <mat-label>Postal Code</mat-label>
-      <input matInput #postalCode maxlength="5" placeholder="Ex. 94105" value="94043" formControlName="maleOrFmale">
-      <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
-    </mat-form-field>
-  </form>
-  
-   <!-- <form class="example-form">
-    <mat-form-field class="example-full-width">
-      <mat-label>Company (disabled)</mat-label>
-      <input matInput disabled value="Google">
-    </mat-form-field>
-  
-    <table class="example-full-width" cellspacing="0"><tr>
-      <td><mat-form-field class="example-full-width">
-        <mat-label>First name</mat-label>
-        <input matInput>
-      </mat-form-field></td>
-      <td><mat-form-field class="example-full-width">
-        <mat-label>Long Last Name That Will Be Truncated</mat-label>
-        <input matInput>
-      </mat-form-field></td>
-    </tr></table>
-  
-    <p>
-      <mat-form-field class="example-full-width">
-        <mat-label>Address</mat-label>
-        <textarea matInput placeholder="Ex. 100 Main St">1600 Amphitheatre Pkwy</textarea>
-      </mat-form-field>
-      <mat-form-field class="example-full-width">
-        <mat-label>Address 2</mat-label>
-        <textarea matInput></textarea>
-      </mat-form-field>
-    </p>
-  
-    <table class="example-full-width" cellspacing="0"><tr>
-      <td><mat-form-field class="example-full-width">
-        <mat-label>City</mat-label>
-        <input matInput placeholder="Ex. San Francisco">
-      </mat-form-field></td>
-      <td><mat-form-field class="example-full-width">
-        <mat-label>State</mat-label>
-        <input matInput placeholder="Ex. California">
-      </mat-form-field></td>
-      <td><mat-form-field class="example-full-width">
-        <mat-label>Postal Code</mat-label>
-        <input matInput #postalCode maxlength="5" placeholder="Ex. 94105" value="94043">
-        <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
-      </mat-form-field></td>
-    </tr></table>
-  </form>
-   -->
-   
+<!-- <form [formGroup]="employeeForm" (ngSubmit)="submitForm()">
 
-<!-- <form [formGroup]="recipeForm" class=recipe-form-container>
-    <mat-form-field>
-      <input matInput formControlName="name" placeholder="recipe Name" required>
-    </mat-form-field>
-  <br/>
-    <mat-form-field>
-      <mat-select formControlName="category" placeholder="category" required>
-        <mat-option *ngFor="let category of categories" [value]="category.name">
-          {{ category.name }}
-        </mat-option>
-      </mat-select>
-    </mat-form-field>
-    <br/>
-    <mat-form-field>
-      <input
-        matInput
-        type="number"
-        placeholder="time in minutes"
-        required
-        formControlName="minutes"
-      >
-    </mat-form-field>
-    <br/>
-    <mat-form-field>
-      <mat-select formControlName="difficultyLevel" placeholder="difficultyLevel" required>
-        <mat-option value="1">easy</mat-option>
-        <mat-option value="2">medium</mat-option>
-        <mat-option value="3">hard</mat-option>
-      </mat-select>
-    </mat-form-field>
-    <br/>
+  <mat-accordion class="example-headers-align">
+     <mat-expansion-panel >
+     <mat-expansion-panel-header>
+        <mat-panel-title>
+          Personal data
+        </mat-panel-title>
+        <mat-panel-description>
+          edit your data
+          <mat-icon>account_circle</mat-icon>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+
+      <mat-form-field>
+        <mat-label>First name</mat-label>
+        <input matInput formControlName="firstName" placeholder="Enter first name" type="text">
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Last name</mat-label>
+        <input matInput formControlName="lastName" placeholder="Enter last name" type="text">
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Identity</mat-label>
+        <input matInput formControlName="identity" placeholder="Enter identity" type="text">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Date of Birth</mat-label>
+        <input matInput [matDatepicker]="birthdatePicker" formControlName="dateOfBirth"
+          placeholder="Choose your birthdate" readonly>
+        <mat-datepicker-toggle matSuffix [for]="birthdatePicker"></mat-datepicker-toggle>
+        <mat-datepicker #birthdatePicker></mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Gender</mat-label>
+        <mat-select formControlName="maleOrFmale" placeholder="Select your gender">
+          <mat-option value="0">Male</mat-option>
+          <mat-option value="1">Female</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Start Date</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="startDate" placeholder="Choose a date" readonly>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+      <div formArrayName="employeeRoles"> 
+        <div *ngFor="let roleGroup of employeeRolesFormArray.controls; let i = index" class="role-selection">
+          <div [formGroupName]="i"> 
+            <mat-form-field>
+              <mat-label>Select Role</mat-label>
+              <mat-select placeholder="Choose a role" formControlName="roleName">
+                <mat-option *ngFor="let role of rolesList" [value]="role.id">{{ role.roleName }}</mat-option>
+              </mat-select>
+            </mat-form-field>
   
-    <button mat-raised-button color="primary" type="button" (click)="addIngredient()">add ingredient</button>
-      
-    <div formArrayName="ingredients" style="display: flex; flex-wrap: wrap;">
+            <mat-radio-group formControlName="isManagementRole">
+              <mat-radio-button value="0" color="warn">Management</mat-radio-button>
+              <mat-radio-button value="1" color="warn">Non-Management</mat-radio-button>
+            </mat-radio-group>
   
-      <div *ngFor="let ingredient of recipeForm.get('ingredients').controls; let i = index">
-        <mat-form-field>
-          <input matInput [formControlName]="i" placeholder="ingredient" required>
-        </mat-form-field>
-          <button mat-icon-button (click)="removeIngredient(i)">
-            <mat-icon>delete</mat-icon>
+            <mat-form-field>
+              <mat-label>Entry Date</mat-label>
+              <input matInput [matDatepicker]="picker" formControlName="entryDate" placeholder="Choose entry date" readonly>
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+            <button mat-icon-button color="warn" (click)="removeRole(i)">
+              <mat-icon>remove_circle</mat-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+      <button mat-button color="primary" (click)="addRole()">
+        Add Role
+        <mat-icon>add</mat-icon>
+      </button>
+      <mat-action-row>
+        <button mat-button color="primary" (click)="nextStep()">
+          Next
+          <mat-icon>keyboard_arrow_right</mat-icon>
+        </button>
+      </mat-action-row>
+    </mat-expansion-panel>
+
+    <mat-action-row>
+      <button mat-button color="warn" (click)="prevStep()">
+        Previous
+        <mat-icon>arrow_back</mat-icon>
+      </button>
+      <button mat-button color="primary" type="submit" (click)="submit()">
+        Submit
+        <mat-icon>save</mat-icon>
+      </button>
+    </mat-action-row>
+  </mat-accordion>
+</form> -->
+<!-- <form [formGroup]="employeeForm" (ngSubmit)="submitForm()" style="display: grid; grid-template-columns: 1fr; grid-gap: 10px;">
+
+  <mat-form-field>
+    <mat-label>First name</mat-label>
+    <input matInput formControlName="firstName" placeholder="Enter first name" type="text">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Last name</mat-label>
+    <input matInput formControlName="lastName" placeholder="Enter last name" type="text">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Identity</mat-label>
+    <input matInput formControlName="identity" placeholder="Enter identity" type="text">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Date of Birth</mat-label>
+    <input matInput [matDatepicker]="birthdatePicker" formControlName="dateOfBirth"
+      placeholder="Choose your birthdate" readonly>
+    <mat-datepicker-toggle matSuffix [for]="birthdatePicker"></mat-datepicker-toggle>
+    <mat-datepicker #birthdatePicker></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Gender</mat-label>
+    <mat-select formControlName="maleOrFmale" placeholder="Select your gender">
+      <mat-option value="0">Male</mat-option>
+      <mat-option value="1">Female</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Start Date</mat-label>
+    <input matInput [matDatepicker]="picker" formControlName="startDate" placeholder="Choose a date" readonly>
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+  <div style="display: grid; grid-template-columns: 1fr;">
+    <div formArrayName="employeeRoles">
+      <div *ngFor="let roleGroup of employeeRolesFormArray.controls; let i = index" class="role-selection">
+        <div [formGroupName]="i" style="display: grid; grid-template-columns: auto auto;">
+          <mat-form-field>
+            <mat-label>Select Role</mat-label>
+            <mat-select placeholder="Choose a role" formControlName="roleName">
+              <mat-option *ngFor="let role of rolesList" [value]="role.id">{{ role.roleName }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-radio-group formControlName="isManagementRole" style="display: grid; grid-template-columns: auto auto;">
+            <mat-radio-button value="0">Management</mat-radio-button>
+            <mat-radio-button value="1">Non-Management</mat-radio-button>
+          </mat-radio-group>
+
+          <mat-form-field>
+            <mat-label>Entry Date</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="entryDate" placeholder="Choose entry date" readonly>
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+
+          <button mat-icon-button color="warn" (click)="removeRole(i)">
+            <mat-icon>remove_circle</mat-icon>
           </button>
+        </div>
       </div>
     </div>
-    <br/>
-    <button mat-raised-button color="primary" type="button" (click)="addInstruction()">add instruction</button>
-  <br/>
-    <div formArrayName="instructions" style="display: flex; flex-wrap: wrap;">
-      <div *ngFor="let instruction of recipeForm.get('instructions').controls; let i = index">
-        <mat-form-field style="flex: 1 0 auto; margin: 0; padding: 0;">
-          <input matInput [formControlName]="i" placeholder="instruction" required>
+
+    <button mat-button color="primary" (click)="addRole()" style="justify-self: end;">
+      Add Role
+      <mat-icon>add</mat-icon>
+    </button>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;">
+    <button mat-button color="warn" (click)="prevStep()">
+      Previous
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <button mat-button color="primary" type="submit">
+      Submit
+      <mat-icon>save</mat-icon>
+    </button>
+  </div>
+
+</form> -->
+
+<!-- 
+<form [formGroup]="employeeForm" (ngSubmit)="submitForm()" style="display: grid; grid-template-columns: 1fr; grid-gap: 10px;">
+
+  <mat-form-field>
+    <mat-label>First name</mat-label>
+    <input matInput formControlName="firstName" placeholder="Enter first name" type="text">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Last name</mat-label>
+    <input matInput formControlName="lastName" placeholder="Enter last name" type="text">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Identity</mat-label>
+    <input matInput formControlName="identity" placeholder="Enter identity" type="text">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Date of Birth</mat-label>
+    <input matInput [matDatepicker]="birthdatePicker" formControlName="dateOfBirth"
+      placeholder="Choose your birthdate" readonly>
+    <mat-datepicker-toggle matSuffix [for]="birthdatePicker"></mat-datepicker-toggle>
+    <mat-datepicker #birthdatePicker></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Gender</mat-label>
+    <mat-select formControlName="maleOrFmale" placeholder="Select your gender">
+      <mat-option value="0">Male</mat-option>
+      <mat-option value="1">Female</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Start Date</mat-label>
+    <input matInput [matDatepicker]="picker" formControlName="startDate" placeholder="Choose a date" readonly>
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+  <div >
+    <div formArrayName="employeeRoles">
+      <div *ngFor="let roleGroup of employeeRolesFormArray.controls; let i = index" class="role-selection">
+        <div [formGroupName]="i" >
+          <mat-form-field>
+            <mat-label>Select Role</mat-label>
+            <mat-select placeholder="Choose a role" formControlName="roleName">
+              <mat-option *ngFor="let role of rolesList" [value]="role.id">{{ role.roleName }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-radio-group formControlName="isManagementRole" >
+            <mat-radio-button value="0">Management</mat-radio-button>
+            <mat-radio-button value="1">Non-Management</mat-radio-button>
+          </mat-radio-group>
+
+          <mat-form-field>
+            <mat-label>Entry Date</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="entryDate" placeholder="Choose entry date" readonly>
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+
+          <button mat-icon-button color="warn" (click)="removeRole(i)">
+            <mat-icon>remove_circle</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <button mat-button color="primary" (click)="addRole()" >
+      Add Role
+      <mat-icon>add</mat-icon>
+    </button>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;">
+    <button mat-button color="warn" (click)="prevStep()">
+      Previous
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <button mat-button color="primary" type="submit">
+      Submit
+      <mat-icon>save</mat-icon>
+    </button>
+  </div>
+
+</form>
+ -->
+ <form [formGroup]="employeeForm" (ngSubmit)="submitForm()" style="display: grid; grid-template-columns: 1fr; grid-gap: 10px;">
+  <div style="display: none;">
+    <mat-form-field>
+      <mat-label>First name</mat-label>
+      <input matInput formControlName="firstName" placeholder="Enter first name" type="text">
+    </mat-form-field>
+  
+    <mat-form-field>
+      <mat-label>Last name</mat-label>
+      <input matInput formControlName="lastName" placeholder="Enter last name" type="text">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Identity</mat-label>
+      <input matInput formControlName="identity" placeholder="Enter identity" type="text">
+    </mat-form-field>
+  </div>
+  <mat-form-field>
+    <mat-label>Identity</mat-label>
+    <input matInput formControlName="identity" placeholder="Enter identity" type="text">
+  </mat-form-field>
+<div style="display: grid; grid-template-columns: auto auto;">
+  <mat-form-field>
+    <mat-label>First name</mat-label>
+    <input matInput formControlName="firstName" placeholder="Enter first name" type="text">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Last name</mat-label>
+    <input matInput formControlName="lastName" placeholder="Enter last name" type="text">
+  </mat-form-field>
+</div>
+
+
+  <mat-form-field>
+    <mat-label>Date of Birth</mat-label>
+    <input matInput [matDatepicker]="birthdatePicker" formControlName="dateOfBirth"
+      placeholder="Choose your birthdate" readonly>
+    <mat-datepicker-toggle matSuffix [for]="birthdatePicker"></mat-datepicker-toggle>
+    <mat-datepicker #birthdatePicker></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Gender</mat-label>
+    <mat-select formControlName="maleOrFmale" placeholder="Select your gender">
+      <mat-option value="0">Male</mat-option>
+      <mat-option value="1">Female</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Start Date</mat-label>
+    <input matInput [matDatepicker]="picker" formControlName="startDate" placeholder="Choose a date" readonly>
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+  <div style="display: grid; grid-template-columns: 1fr;">
+
+    <div formArrayName="employeeRoles" >
+      <div *ngFor="let roleGroup of employeeRolesFormArray.controls; let i = index" class="role-selection">
+        <div [formGroupName]="i" style="display: grid; grid-template-columns: auto auto;">
+          <mat-form-field>
+            <mat-label>Select Role</mat-label>
+            <mat-select placeholder="Choose a role" formControlName="roleName">
+              <mat-option *ngFor="let role of rolesList" [value]="role.id">{{ role.roleName }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <div background-color="black">
+          <mat-radio-group formControlName="isManagementRole" style="background-color: #4a4a4a; display: grid; grid-template-columns: auto auto;">
+            <mat-radio-button value="0">Management</mat-radio-button>
+            <mat-radio-button value="1">Non-Management</mat-radio-button>
+          </mat-radio-group>
+</div>
+          <mat-form-field>
+            <mat-label>Entry Date</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="entryDate" placeholder="Choose entry date" readonly>
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+
+          <button mat-icon-button color="warn" (click)="removeRole(i)">
+            <mat-icon>remove_circle</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <button mat-button color="primary" (click)="addRole()" >
+      Add Role
+      <mat-icon>add</mat-icon>
+    </button>
+  </div>
+  <div style="display: flex; justify-content: space-around; ">
+    <button mat-flat-button color="warn" (click)="initializeForm()">
+      reset
+      <mat-icon>cancel</mat-icon>
+    </button>
+    <button mat-flat-button color="primary" type="submit" (click)="submit()">
+      Submit
+      <mat-icon>save</mat-icon>
+    </button>
+  </div>
+
+</form>
+
+
+
+ <!-- <form [formGroup]="employeeForm" (ngSubmit)="submitForm()" style="display: grid; grid-template-columns: 1fr; grid-gap: 10px;">
+
+  <mat-form-field>
+    <mat-label>First name</mat-label>
+    <input matInput formControlName="firstName" placeholder="Enter first name" type="text">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Last name</mat-label>
+    <input matInput formControlName="lastName" placeholder="Enter last name" type="text">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Identity</mat-label>
+    <input matInput formControlName="identity" placeholder="Enter identity" type="text">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Date of Birth</mat-label>
+    <input matInput [matDatepicker]="birthdatePicker" formControlName="dateOfBirth"
+      placeholder="Choose your birthdate" readonly>
+    <mat-datepicker-toggle matSuffix [for]="birthdatePicker"></mat-datepicker-toggle>
+    <mat-datepicker #birthdatePicker></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Gender</mat-label>
+    <mat-select formControlName="maleOrFmale" placeholder="Select your gender">
+      <mat-option value="0">Male</mat-option>
+      <mat-option value="1">Female</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Start Date</mat-label>
+    <input matInput [matDatepicker]="picker" formControlName="startDate" placeholder="Choose a date" readonly>
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+  <div formArrayName="employeeRoles" style="display: grid; grid-template-columns: 1fr; grid-gap: 10px;">
+    <div *ngFor="let roleGroup of employeeRolesFormArray.controls; let i = index" class="role-selection">
+      <div [formGroupName]="i"> 
+        <mat-form-field>
+          <mat-label>Select Role</mat-label>
+          <mat-select placeholder="Choose a role" formControlName="roleName">
+            <mat-option *ngFor="let role of rolesList" [value]="role.id">{{ role.roleName }}</mat-option>
+          </mat-select>
         </mat-form-field>
-        <button mat-icon-button (click)="removeInstructions(i)">
-          <mat-icon>delete</mat-icon>
+
+        <div style="display: grid; grid-template-columns: auto auto;">
+          <mat-radio-group formControlName="isManagementRole">
+            <mat-radio-button value="0" style="grid-column: 1;">Management</mat-radio-button>
+            <mat-radio-button value="1" style="grid-column: 2;">Non-Management</mat-radio-button>
+          </mat-radio-group>
+        </div>
+
+        <mat-form-field>
+          <mat-label>Entry Date</mat-label>
+          <input matInput [matDatepicker]="picker" formControlName="entryDate" placeholder="Choose entry date" readonly>
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+        <button mat-icon-button color="warn" (click)="removeRole(i)">
+          <mat-icon>remove_circle</mat-icon>
         </button>
       </div>
     </div>
-    <br/>
-  
-  
-    <mat-form-field>
-      <input matInput formControlName="imgRouting" placeholder="imagePath(Optional)" required="" >
-    </mat-form-field>
-    <br/>
-  
-    <button mat-raised-button color="primary" type="submit" (click)="onSubmit()">save</button>
-  </form>  -->
-  
-  
+  </div>
+
+  <button mat-button color="primary" (click)="addRole()">
+    Add Role
+    <mat-icon>add</mat-icon>
+  </button>
+
+  <div style="display: grid; grid-template-columns: auto auto; grid-gap: 10px;">
+    <button mat-button color="warn" (click)="prevStep()">
+      Previous
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <button mat-button color="primary" type="submit">
+      Submit
+      <mat-icon>save</mat-icon>
+    </button>
+  </div>
+
+</form> -->

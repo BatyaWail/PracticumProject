@@ -45,6 +45,8 @@ import {MatTableDataSource, MatTableModule} from '@angular/material/table';
 import { Router } from '@angular/router';
 import { DeleteEmployeeDialogComponent } from '../../errors-dialog/delete-employee-dialog/delete-employee-dialog.component';
 import { DialogMessegeComponent } from '../../errors-dialog/dialog-messege/dialog-messege.component';
+import * as XLSX from 'xlsx';
+
 export interface UserData {
   id: string;
   name: string;
@@ -130,7 +132,27 @@ export class EmployeeListComponent implements OnInit{
   // ngOnInit(): void {
   //   this.getFilteredEmployeeList(); // Initial call to fetch data
   // }
-
+  exportToExcel(): void {
+    const data: any[] = this.dataSource.filteredData.map((employee: Employee) => {
+      return {
+        'First Name': employee.firstName,
+        'Last Name': employee.lastName,
+        'Identity': employee.identity,
+        'Start Date': employee.startDate || 'N/A', // Provide a default value if startDate is empty
+      };
+    });
+  
+    const ws: XLSX.WorkSheet = XLSX.utils.json_to_sheet(data);
+    const wb: XLSX.WorkBook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, 'Employees');
+  
+    // Generate a file name
+    const fileName = 'employees.xlsx';
+  
+    // Save the file
+    XLSX.writeFile(wb, fileName);
+  }
+  
   getFilteredEmployeeList(): void {
     this._employeeService.getEmployeeList().subscribe({
       next: (res: Employee[]) => {
@@ -145,14 +167,35 @@ export class EmployeeListComponent implements OnInit{
     });
   }
 
-  applyFilter(event: Event) {
-    const filterValue = (event.target as HTMLInputElement).value;
-    this.dataSource.filter = filterValue.trim().toLowerCase();
+  // applyFilter(event: Event) {
+  //   const filterValue = (event.target as HTMLInputElement).value;
+  //   this.dataSource.filter = filterValue.trim().toLowerCase();
 
+  //   if (this.dataSource.paginator) {
+  //     this.dataSource.paginator.firstPage();
+  //   }
+  // }
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value.toLowerCase();
+    
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+  
+    this.dataSource.filterPredicate = (data: Employee, filter: string) => {
+      // Convert startDate to string before applying toLowerCase()
+      const startDateString = data.startDate ? data.startDate.toString().toLowerCase() : '';
+      
+      // Check if the filter value is present in any of the fields
+      return data.firstName.toLowerCase().includes(filter) ||
+             data.lastName.toLowerCase().includes(filter) ||
+             data.identity.toLowerCase().includes(filter) ||
+             startDateString.includes(filter);
+    };
+  
     if (this.dataSource.paginator) {
       this.dataSource.paginator.firstPage();
     }
   }
+  
   // displayedColumns: string[] = ['id', 'name', 'progress', 'fruit'];
   // dataSource!: MatTableDataSource<UserData>;
 

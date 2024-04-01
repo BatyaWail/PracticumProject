@@ -1,4 +1,4 @@
-import { Component, Inject, OnInit, QueryList, ViewChildren } from '@angular/core';
+import { Component, Inject, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
 import {
   // MAT_DIALOG_DATA,
   MatDialogRef,
@@ -38,6 +38,8 @@ import { ErrorDialogAddEmployeeComponent } from '../../errors-dialog/error-dialo
 
 import { NgModule } from '@angular/core';
 
+import {MatAccordion} from '@angular/material/expansion';
+import { DialogMessegeComponent } from '../../errors-dialog/dialog-messege/dialog-messege.component';
 
 export interface DialogData2 {
   errors: string[]
@@ -83,6 +85,7 @@ export class AddEmployeeComponent implements OnInit {
   entryDatePickers!: QueryList<MatDatepicker<any>>;
   employeeRolePostModel: EmployeeRolePostModel = new EmployeeRolePostModel()
   validationErrors: string[] = []; // Array to store validation errors
+  @ViewChild(MatAccordion) accordion!: MatAccordion;
 
 
   constructor(
@@ -352,9 +355,17 @@ export class AddEmployeeComponent implements OnInit {
       next: (res) => {
         console.log("res----add employee", res)
         // this.employee=res;
+        const dialogRef = this.dialog.open(DialogMessegeComponent, {
+          width: '250px',
+          data: "Employee added successfully!!"
+        });
       },
       error: (err) => {
         console.error(err)
+        const dialogRef = this.dialog.open(DialogMessegeComponent, {
+          width: '250px',
+          data: "its was error on add employee!!"
+        })
       }
     })
     // Call API or perform further actions
