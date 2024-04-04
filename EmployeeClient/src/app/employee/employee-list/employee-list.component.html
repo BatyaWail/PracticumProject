@@ -1,107 +1,13 @@
-<!-- <p>employee-list works!</p>
-<div *ngFor="let employee of employeeList">
-    {{ employee.firstName }}
-</div>
-
-<table class="table align-middle mb-0 bg-white">
-    <thead class="bg-light">
-        <tr>
-            <th>Name</th>
-            <th>Title</th>
-            <th>Status</th>
-            <th>Position</th>
-            <th>Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-                <div class="d-flex align-items-center">
-                    <img src="https://mdbootstrap.com/img/new/avatars/8.jpg" alt="" style="width: 45px; height: 45px"
-                        class="rounded-circle" />
-                    <div class="ms-3">
-                        <p class="fw-bold mb-1">John Doe</p>
-                        <p class="text-muted mb-0">john.doe&#64;gmail.com</p> 
-                    </div>
-                </div>
-            </td>
-            <td>
-                <p class="fw-normal mb-1">Software engineer</p>
-                <p class="text-muted mb-0">IT department</p>
-            </td>
-            <td>
-                <span class="badge badge-success rounded-pill d-inline">Active</span>
-            </td>
-            <td>Senior</td>
-            <td>
-                <button type="button" class="btn btn-link btn-sm btn-rounded">Edit</button>
-            </td>
-        </tr>
-    </tbody>
-</table> -->
-
 <div class="example-button-container">
   <button mat-button color="primary"  (click)="addEmployee()" >
     new employee
-    <!-- <div>new-employee</div> -->
     <mat-icon>person_add</mat-icon>
   </button>
-  <button mat-raised-button color="warn" (click)="exportToExcel()">Export to Excel</button>
+  <button mat-raised-button color="warn" (click)="exportToExcel()">Export to Excel
+    <mat-icon>download</mat-icon>
+  </button>
 
 </div>
-<!-- <div class="example-button-container">
-          <button mat-icon-button color="primary" aria-label="Example icon button with a delete icon" (click)="addEmployee()">
-            <mat-icon>person_add</mat-icon>
-          </button>
-        </div> -->
-
-
-
-<!-- <table class="table align-middle mb-0 bg-white">
-  <thead class="bg-light">
-    <tr>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Identity</th>
-      <th>Start Date</th>
-      <th>Actions</th>
-    </tr>
-  </thead>
-  <tbody>
-
-    <tr *ngFor="let employee of filteredEmployeeList">
-      <td>{{ employee.firstName }}</td>
-      <td>{{ employee.lastName }}</td>
-      <td>{{ employee.identity }}</td>
-      <td>{{ employee.startDate }}</td>
-      <td>
-      
-        <section>
-          <div class="example-button-row">
-            <div class="example-flex-container">
-              <div class="example-button-container">
-                <button mat-mini-fab color="primary" aria-label="Example icon button with a delete icon"
-                  (click)="deleteEmployee(employee)">
-                  <mat-icon>delete</mat-icon>
-                </button>
-              </div>
-              <div class="example-button-container">
-                <button mat-mini-fab color="accent" aria-label="Example icon button with a bookmark icon"
-                  (click)="editEmployee(employee)">
-                  <mat-icon>edit</mat-icon>
-                </button>
-              </div>
-
-            </div>
-          </div>
-        </section>
-      </td>
-    </tr>
-  </tbody>
-
-</table> -->
-
-
 <mat-form-field> 
   <mat-label>Filter</mat-label>
   <input matInput (keyup)="applyFilter($event)" placeholder="fiter">
@@ -151,43 +57,3 @@
 
   <mat-paginator [pageSizeOptions]="[15,10,5,3]" aria-label="Select page of users"></mat-paginator>
 </div>
-
-<!-- <mat-form-field>
-  <mat-label>Filter</mat-label>
-  <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
-</mat-form-field>
-
-<div class="mat-elevation-z8">
-  <table mat-table [dataSource]="dataSource" matSort>
-
-    <ng-container matColumnDef="id">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
-      <td mat-cell *matCellDef="let row"> {{row.id}} </td>
-    </ng-container>
-
-    <ng-container matColumnDef="progress">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header> Progress </th>
-      <td mat-cell *matCellDef="let row"> {{row.progress}}% </td>
-    </ng-container>
-
-    <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
-      <td mat-cell *matCellDef="let row"> {{row.name}} </td>
-    </ng-container>
-
-    <ng-container matColumnDef="fruit">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header> Fruit </th>
-      <td mat-cell *matCellDef="let row"> {{row.fruit}} </td>
-    </ng-container>
-
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-
-    <tr class="mat-row" *matNoDataRow>
-      <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
-    </tr>
-  </table>
-
-  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
-</div> -->
-

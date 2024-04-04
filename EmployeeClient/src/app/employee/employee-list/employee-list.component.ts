@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { EmployeeService } from '../employee.service';
-import { Employee } from '../../entities/employee.entites';
 import { CommonModule } from '@angular/common';
 
 
@@ -24,8 +23,8 @@ import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
-import {MatInputModule} from '@angular/material/input';
-import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { AddEmployeeComponent } from '../add-employee/add-employee.component';
 import {
   MatDialog,
@@ -38,14 +37,16 @@ import {
 } from '@angular/material/dialog';
 import Swal from 'sweetalert2';
 
-import {AfterViewInit, ViewChild} from '@angular/core';
-import {MatPaginator, MatPaginatorModule} from '@angular/material/paginator';
-import {MatSort, MatSortModule} from '@angular/material/sort';
-import {MatTableDataSource, MatTableModule} from '@angular/material/table';
+import { AfterViewInit, ViewChild } from '@angular/core';
+import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
+import { MatSort, MatSortModule } from '@angular/material/sort';
+import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { Router } from '@angular/router';
 import { DeleteEmployeeDialogComponent } from '../../errors-dialog/delete-employee-dialog/delete-employee-dialog.component';
 import { DialogMessegeComponent } from '../../errors-dialog/dialog-messege/dialog-messege.component';
 import * as XLSX from 'xlsx';
+import { Employee } from '../../classes/entities/employee.entites';
+import { EditEmployeeDialogComponent } from '../edit-employee-dialog/edit-employee-dialog.component';
 
 export interface UserData {
   id: string;
@@ -106,16 +107,16 @@ const NAMES: string[] = [
     MdbTabsModule,
     MdbTooltipModule,
     MdbValidationModule,
-  
+
     MatIconModule, MatButtonModule,
     MatFormFieldModule, MatInputModule, FormsModule,
-     MatInputModule, MatTableModule, MatSortModule, MatPaginatorModule
-  
+    MatInputModule, MatTableModule, MatSortModule, MatPaginatorModule
+
   ],
   templateUrl: './employee-list.component.html',
   styleUrl: './employee-list.component.scss'
 })
-export class EmployeeListComponent implements OnInit{
+export class EmployeeListComponent implements OnInit {
   displayedColumns: string[] = ['firstName', 'lastName', 'identity', 'startDate', 'actions'];
   dataSource: MatTableDataSource<Employee>;
 
@@ -124,6 +125,7 @@ export class EmployeeListComponent implements OnInit{
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
   employeeList!: Employee[];
+  employeeFromEdit: any;
 
   // constructor(private _employeeService: EmployeeService, public dialog: MatDialog) {
   //   this.dataSource = new MatTableDataSource<Employee>();
@@ -141,18 +143,18 @@ export class EmployeeListComponent implements OnInit{
         'Start Date': employee.startDate || 'N/A', // Provide a default value if startDate is empty
       };
     });
-  
+
     const ws: XLSX.WorkSheet = XLSX.utils.json_to_sheet(data);
     const wb: XLSX.WorkBook = XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(wb, ws, 'Employees');
-  
+
     // Generate a file name
     const fileName = 'employees.xlsx';
-  
+
     // Save the file
     XLSX.writeFile(wb, fileName);
   }
-  
+
   getFilteredEmployeeList(): void {
     this._employeeService.getEmployeeList().subscribe({
       next: (res: Employee[]) => {
@@ -177,25 +179,25 @@ export class EmployeeListComponent implements OnInit{
   // }
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value.toLowerCase();
-    
+
     this.dataSource.filter = filterValue.trim().toLowerCase();
-  
+
     this.dataSource.filterPredicate = (data: Employee, filter: string) => {
       // Convert startDate to string before applying toLowerCase()
       const startDateString = data.startDate ? data.startDate.toString().toLowerCase() : '';
-      
+
       // Check if the filter value is present in any of the fields
       return data.firstName.toLowerCase().includes(filter) ||
-             data.lastName.toLowerCase().includes(filter) ||
-             data.identity.toLowerCase().includes(filter) ||
-             startDateString.includes(filter);
+        data.lastName.toLowerCase().includes(filter) ||
+        data.identity.toLowerCase().includes(filter) ||
+        startDateString.includes(filter);
     };
-  
+
     if (this.dataSource.paginator) {
       this.dataSource.paginator.firstPage();
     }
   }
-  
+
   // displayedColumns: string[] = ['id', 'name', 'progress', 'fruit'];
   // dataSource!: MatTableDataSource<UserData>;
 
@@ -208,14 +210,14 @@ export class EmployeeListComponent implements OnInit{
 
   name: any;
   animal: any;
-  constructor(private _employeeService:EmployeeService,public dialog: MatDialog, private router: Router){
+  constructor(private _employeeService: EmployeeService, public dialog: MatDialog, private router: Router) {
     this.dataSource = new MatTableDataSource<Employee>();
   }
   ngOnInit(): void {
-     // Create 100 users
-     const users = Array.from({length: 100}, (_, k) => createNewUser(k + 1));
+    // Create 100 users
+    const users = Array.from({ length: 100 }, (_, k) => createNewUser(k + 1));
 
-     // Assign the data to the data source for the table to render
+    // Assign the data to the data source for the table to render
     //  this.dataSource = new MatTableDataSource(users);
     console.log("start")
     this.getEmployeeList()
@@ -233,14 +235,14 @@ export class EmployeeListComponent implements OnInit{
   //     this.dataSource.paginator.firstPage();
   //   }
   // }
-  getEmployeeList(){
+  getEmployeeList() {
     this._employeeService.getEmployeeList().subscribe({
-      next:(res)=>{
-        console.log("res",res)
-        this.employeeList=res;
+      next: (res) => {
+        console.log("res", res)
+        this.employeeList = res;
         this.getFilteredEmployeeList()
       },
-      error:(err)=>{
+      error: (err) => {
         console.log(err)
       }
     })
@@ -260,71 +262,82 @@ export class EmployeeListComponent implements OnInit{
   //     }
   //   });
   // }
-  editEmployee(employee:Employee){
-    this.router.navigate(["edit-employee", employee.identity]);
+  editEmployee(employee: Employee) {
+    // this.router.navigate(["edit-employee", employee.identity]);
+    const dialogRef = this.dialog.open(EditEmployeeDialogComponent, {
+      // data: { employee:employee },
+      data: employee,
+    });
 
-  }
-  deleteEmployee(employee:Employee){
-    const dialogRef = this.dialog.open(DeleteEmployeeDialogComponent, {
-      width: '250px',
-      data:  employee.identity  // שם הקובץ שתרצה למחוק
+    dialogRef.afterClosed().subscribe((result: any) => {
+      console.log('The dialog was closed');
+      this.employeeFromEdit = result;
+      this.getEmployeeList()
     });
   
-    dialogRef.afterClosed().subscribe(result => {
-      if (result) {
-        // אם נבחר למחוק
-        console.log('User clicked Ok');
-        this._employeeService.deleteEmployee(employee.identity).subscribe({
-          next:(res)=>{
-            console.log("res",res)
-            this.getFilteredEmployeeList()
-            const dialogRef = this.dialog.open(DialogMessegeComponent, {
-              width: '250px',
-              data: "the employee has been deleted!!!"
-            });
-          },
-          error:(err)=>{
-            console.log(err)
-          }
-        })
-        // בצע את פעולת המחיקה כאן
-      } else {
-        // אם לא נבחר למחוק
-        console.log('User clicked No');
-        // לא עשה כלום או כל פעולה אחרת שתרצה
-      }
-    });
-    // Swal.fire({
-    //   title: "Are you sure?",
-    //   text: "You won't be able to revert this!",
-    //   icon: "warning",
-    //   showCancelButton: true,
-    //   confirmButtonColor: "#3085d6",
-    //   cancelButtonColor: "#d33",
-    //   confirmButtonText: "Yes, delete it!"
-    // }).then((result) => {
-    //   if (result.isConfirmed) {
-    //     this._employeeService.deleteEmployee(employee.identity).subscribe({
-    //       next:(res)=>{
-    //         console.log("res",res)
-    //         this.getFilteredEmployeeList()
-    //         Swal.fire({
-    //           title: "Deleted!",
-    //           text: "Your file has been deleted.",
-    //           icon: "success"
-    //         });
-    //       },
-    //       error:(err)=>{
-    //         console.log(err)
-    //       }
-    //     })
-    //   }
-    // });
-    
-  }
+
+}
+deleteEmployee(employee: Employee){
+  const dialogRef = this.dialog.open(DeleteEmployeeDialogComponent, {
+    width: '250px',
+    data: employee.identity  // שם הקובץ שתרצה למחוק
+  });
+
+  dialogRef.afterClosed().subscribe(result => {
+    if (result) {
+      // אם נבחר למחוק
+      console.log('User clicked Ok');
+      this._employeeService.deleteEmployee(employee.identity).subscribe({
+        next: (res) => {
+          console.log("res", res)
+          this.getFilteredEmployeeList()
+          const dialogRef = this.dialog.open(DialogMessegeComponent, {
+            width: '250px',
+            data: "the employee has been deleted!!!"
+          });
+        },
+        error: (err) => {
+          console.log(err)
+        }
+      })
+      // בצע את פעולת המחיקה כאן
+    } else {
+      // אם לא נבחר למחוק
+      console.log('User clicked No');
+      // לא עשה כלום או כל פעולה אחרת שתרצה
+    }
+  });
+  // Swal.fire({
+  //   title: "Are you sure?",
+  //   text: "You won't be able to revert this!",
+  //   icon: "warning",
+  //   showCancelButton: true,
+  //   confirmButtonColor: "#3085d6",
+  //   cancelButtonColor: "#d33",
+  //   confirmButtonText: "Yes, delete it!"
+  // }).then((result) => {
+  //   if (result.isConfirmed) {
+  //     this._employeeService.deleteEmployee(employee.identity).subscribe({
+  //       next:(res)=>{
+  //         console.log("res",res)
+  //         this.getFilteredEmployeeList()
+  //         Swal.fire({
+  //           title: "Deleted!",
+  //           text: "Your file has been deleted.",
+  //           icon: "success"
+  //         });
+  //       },
+  //       error:(err)=>{
+  //         console.log(err)
+  //       }
+  //     })
+  //   }
+  // });
+
+}
 
 
-  addEmployee(): void {
+addEmployee(): void {
   //   const dialogRef = this.dialog.open(AddEmployeeComponent, {
   //     data: {name: this.name, animal: this.animal},
   //   });
@@ -336,7 +349,7 @@ export class EmployeeListComponent implements OnInit{
   //   });
   // }
   this.router.navigate(["add-employee"]);
-  }
+}
   
 }
 /** Builds and returns a new User. */

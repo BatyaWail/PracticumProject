@@ -7,6 +7,57 @@
       "RelativeMoniker": "D:0:0:{9B8A5BE5-58C0-49FF-8118-0200FA06486C}|EmployeeServer\\EmployeeServer.Api.csproj|solutionrelative:employeeserver\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{9B8A5BE5-58C0-49FF-8118-0200FA06486C}|EmployeeServer\\EmployeeServer.Api.csproj|c:\\users\\user\\documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\practicumproject\\employeeserver\\employeeserver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B8A5BE5-58C0-49FF-8118-0200FA06486C}|EmployeeServer\\EmployeeServer.Api.csproj|solutionrelative:employeeserver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43ADDEE1-30DE-4836-940C-5E019C917983}|EmployeeServer.Core\\EmployeeServer.Core.csproj|c:\\users\\user\\documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\practicumproject\\employeeserver\\employeeserver.core\\entities\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43ADDEE1-30DE-4836-940C-5E019C917983}|EmployeeServer.Core\\EmployeeServer.Core.csproj|solutionrelative:employeeserver.core\\entities\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B8A5BE5-58C0-49FF-8118-0200FA06486C}|EmployeeServer\\EmployeeServer.Api.csproj|c:\\users\\user\\documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\practicumproject\\employeeserver\\employeeserver\\model\\employeepostmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B8A5BE5-58C0-49FF-8118-0200FA06486C}|EmployeeServer\\EmployeeServer.Api.csproj|solutionrelative:employeeserver\\model\\employeepostmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B8A5BE5-58C0-49FF-8118-0200FA06486C}|EmployeeServer\\EmployeeServer.Api.csproj|c:\\users\\user\\documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\practicumproject\\employeeserver\\employeeserver\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B8A5BE5-58C0-49FF-8118-0200FA06486C}|EmployeeServer\\EmployeeServer.Api.csproj|solutionrelative:employeeserver\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E1245CB-2009-422B-8217-E0AFBA6F818B}|EmployeeSrever.Data\\EmployeeSrever.Data.csproj|c:\\users\\user\\documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\practicumproject\\employeeserver\\employeesrever.data\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E1245CB-2009-422B-8217-E0AFBA6F818B}|EmployeeSrever.Data\\EmployeeSrever.Data.csproj|solutionrelative:employeesrever.data\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E1245CB-2009-422B-8217-E0AFBA6F818B}|EmployeeSrever.Data\\EmployeeSrever.Data.csproj|c:\\users\\user\\documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\practicumproject\\employeeserver\\employeesrever.data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E1245CB-2009-422B-8217-E0AFBA6F818B}|EmployeeSrever.Data\\EmployeeSrever.Data.csproj|solutionrelative:employeesrever.data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/employee__Db/True/SqlTable/dbo.Users.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43ADDEE1-30DE-4836-940C-5E019C917983}|EmployeeServer.Core\\EmployeeServer.Core.csproj|c:\\users\\user\\documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\practicumproject\\employeeserver\\employeeserver.core\\dtos\\employeeroledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43ADDEE1-30DE-4836-940C-5E019C917983}|EmployeeServer.Core\\EmployeeServer.Core.csproj|solutionrelative:employeeserver.core\\dtos\\employeeroledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43ADDEE1-30DE-4836-940C-5E019C917983}|EmployeeServer.Core\\EmployeeServer.Core.csproj|c:\\users\\user\\documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\practicumproject\\employeeserver\\employeeserver.core\\dtos\\employeedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43ADDEE1-30DE-4836-940C-5E019C917983}|EmployeeServer.Core\\EmployeeServer.Core.csproj|solutionrelative:employeeserver.core\\dtos\\employeedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43ADDEE1-30DE-4836-940C-5E019C917983}|EmployeeServer.Core\\EmployeeServer.Core.csproj|c:\\users\\user\\documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\practicumproject\\employeeserver\\employeeserver.core\\entities\\employeerole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43ADDEE1-30DE-4836-940C-5E019C917983}|EmployeeServer.Core\\EmployeeServer.Core.csproj|solutionrelative:employeeserver.core\\entities\\employeerole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E1245CB-2009-422B-8217-E0AFBA6F818B}|EmployeeSrever.Data\\EmployeeSrever.Data.csproj|c:\\users\\user\\documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\practicumproject\\employeeserver\\employeesrever.data\\repository\\employeerolerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E1245CB-2009-422B-8217-E0AFBA6F818B}|EmployeeSrever.Data\\EmployeeSrever.Data.csproj|solutionrelative:employeesrever.data\\repository\\employeerolerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43ADDEE1-30DE-4836-940C-5E019C917983}|EmployeeServer.Core\\EmployeeServer.Core.csproj|c:\\users\\user\\documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\practicumproject\\employeeserver\\employeeserver.core\\entities\\enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43ADDEE1-30DE-4836-940C-5E019C917983}|EmployeeServer.Core\\EmployeeServer.Core.csproj|solutionrelative:employeeserver.core\\entities\\enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43ADDEE1-30DE-4836-940C-5E019C917983}|EmployeeServer.Core\\EmployeeServer.Core.csproj|c:\\users\\user\\documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\practicumproject\\employeeserver\\employeeserver.core\\entities\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43ADDEE1-30DE-4836-940C-5E019C917983}|EmployeeServer.Core\\EmployeeServer.Core.csproj|solutionrelative:employeeserver.core\\entities\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9B8A5BE5-58C0-49FF-8118-0200FA06486C}|EmployeeServer\\EmployeeServer.Api.csproj|c:\\users\\user\\documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\practicumproject\\employeeserver\\employeeserver\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9B8A5BE5-58C0-49FF-8118-0200FA06486C}|EmployeeServer\\EmployeeServer.Api.csproj|solutionrelative:employeeserver\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -15,47 +66,19 @@
       "RelativeMoniker": "D:0:0:{43ADDEE1-30DE-4836-940C-5E019C917983}|EmployeeServer.Core\\EmployeeServer.Core.csproj|solutionrelative:employeeserver.core\\dtos\\roledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{43ADDEE1-30DE-4836-940C-5E019C917983}|EmployeeServer.Core\\EmployeeServer.Core.csproj|c:\\users\\user\\documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\practicumproject\\employeeserver\\employeeserver.core\\dtos\\employeeroledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{43ADDEE1-30DE-4836-940C-5E019C917983}|EmployeeServer.Core\\EmployeeServer.Core.csproj|solutionrelative:employeeserver.core\\dtos\\employeeroledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/employee__Db/True/SqlTable/dbo.Employees.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1E1245CB-2009-422B-8217-E0AFBA6F818B}|EmployeeSrever.Data\\EmployeeSrever.Data.csproj|c:\\users\\user\\documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\practicumproject\\employeeserver\\employeesrever.data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E1245CB-2009-422B-8217-E0AFBA6F818B}|EmployeeSrever.Data\\EmployeeSrever.Data.csproj|solutionrelative:employeesrever.data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1E1245CB-2009-422B-8217-E0AFBA6F818B}|EmployeeSrever.Data\\EmployeeSrever.Data.csproj|c:\\users\\user\\documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\practicumproject\\employeeserver\\employeesrever.data\\repository\\employeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1E1245CB-2009-422B-8217-E0AFBA6F818B}|EmployeeSrever.Data\\EmployeeSrever.Data.csproj|solutionrelative:employeesrever.data\\repository\\employeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{43ADDEE1-30DE-4836-940C-5E019C917983}|EmployeeServer.Core\\EmployeeServer.Core.csproj|c:\\users\\user\\documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\practicumproject\\employeeserver\\employeeserver.core\\dtos\\employeedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{43ADDEE1-30DE-4836-940C-5E019C917983}|EmployeeServer.Core\\EmployeeServer.Core.csproj|solutionrelative:employeeserver.core\\dtos\\employeedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9B8A5BE5-58C0-49FF-8118-0200FA06486C}|EmployeeServer\\EmployeeServer.Api.csproj|c:\\users\\user\\documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\practicumproject\\employeeserver\\employeeserver\\model\\employeepostmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9B8A5BE5-58C0-49FF-8118-0200FA06486C}|EmployeeServer\\EmployeeServer.Api.csproj|solutionrelative:employeeserver\\model\\employeepostmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9B8A5BE5-58C0-49FF-8118-0200FA06486C}|EmployeeServer\\EmployeeServer.Api.csproj|c:\\users\\user\\documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\practicumproject\\employeeserver\\employeeserver\\model\\employeerolepostmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9B8A5BE5-58C0-49FF-8118-0200FA06486C}|EmployeeServer\\EmployeeServer.Api.csproj|solutionrelative:employeeserver\\model\\employeerolepostmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{43ADDEE1-30DE-4836-940C-5E019C917983}|EmployeeServer.Core\\EmployeeServer.Core.csproj|c:\\users\\user\\documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\practicumproject\\employeeserver\\employeeserver.core\\entities\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{43ADDEE1-30DE-4836-940C-5E019C917983}|EmployeeServer.Core\\EmployeeServer.Core.csproj|solutionrelative:employeeserver.core\\entities\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{43ADDEE1-30DE-4836-940C-5E019C917983}|EmployeeServer.Core\\EmployeeServer.Core.csproj|c:\\users\\user\\documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\practicumproject\\employeeserver\\employeeserver.core\\entities\\employeerole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{43ADDEE1-30DE-4836-940C-5E019C917983}|EmployeeServer.Core\\EmployeeServer.Core.csproj|solutionrelative:employeeserver.core\\entities\\employeerole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9B8A5BE5-58C0-49FF-8118-0200FA06486C}|EmployeeServer\\EmployeeServer.Api.csproj|c:\\users\\user\\documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\practicumproject\\employeeserver\\employeeserver\\postmodelsmapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9B8A5BE5-58C0-49FF-8118-0200FA06486C}|EmployeeServer\\EmployeeServer.Api.csproj|solutionrelative:employeeserver\\postmodelsmapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{43ADDEE1-30DE-4836-940C-5E019C917983}|EmployeeServer.Core\\EmployeeServer.Core.csproj|c:\\users\\user\\documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\practicumproject\\employeeserver\\employeeserver.core\\entities\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{43ADDEE1-30DE-4836-940C-5E019C917983}|EmployeeServer.Core\\EmployeeServer.Core.csproj|solutionrelative:employeeserver.core\\entities\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9B8A5BE5-58C0-49FF-8118-0200FA06486C}|EmployeeServer\\EmployeeServer.Api.csproj|c:\\users\\user\\documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\practicumproject\\employeeserver\\employeeserver\\model\\rolepostmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -66,10 +89,6 @@
       "RelativeMoniker": "D:0:0:{1E1245CB-2009-422B-8217-E0AFBA6F818B}|EmployeeSrever.Data\\EmployeeSrever.Data.csproj|solutionrelative:employeesrever.data\\repository\\rolerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9B8A5BE5-58C0-49FF-8118-0200FA06486C}|EmployeeServer\\EmployeeServer.Api.csproj|c:\\users\\user\\documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\practicumproject\\employeeserver\\employeeserver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9B8A5BE5-58C0-49FF-8118-0200FA06486C}|EmployeeServer\\EmployeeServer.Api.csproj|solutionrelative:employeeserver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{43ADDEE1-30DE-4836-940C-5E019C917983}|EmployeeServer.Core\\EmployeeServer.Core.csproj|c:\\users\\user\\documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\practicumproject\\employeeserver\\employeeserver.core\\services\\iemployeerolesrervice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{43ADDEE1-30DE-4836-940C-5E019C917983}|EmployeeServer.Core\\EmployeeServer.Core.csproj|solutionrelative:employeeserver.core\\services\\iemployeerolesrervice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -78,16 +97,8 @@
       "RelativeMoniker": "D:0:0:{3DF41A6B-996F-41A3-A668-6ACE2BDD265D}|EmployeeServer.Service\\EmployeeServer.Service.csproj|solutionrelative:employeeserver.service\\services\\employeeroleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1E1245CB-2009-422B-8217-E0AFBA6F818B}|EmployeeSrever.Data\\EmployeeSrever.Data.csproj|c:\\users\\user\\documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\practicumproject\\employeeserver\\employeesrever.data\\repository\\employeerolerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E1245CB-2009-422B-8217-E0AFBA6F818B}|EmployeeSrever.Data\\EmployeeSrever.Data.csproj|solutionrelative:employeesrever.data\\repository\\employeerolerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3DF41A6B-996F-41A3-A668-6ACE2BDD265D}|EmployeeServer.Service\\EmployeeServer.Service.csproj|c:\\users\\user\\documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\practicumproject\\employeeserver\\employeeserver.service\\services\\roleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3DF41A6B-996F-41A3-A668-6ACE2BDD265D}|EmployeeServer.Service\\EmployeeServer.Service.csproj|solutionrelative:employeeserver.service\\services\\roleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{43ADDEE1-30DE-4836-940C-5E019C917983}|EmployeeServer.Core\\EmployeeServer.Core.csproj|c:\\users\\user\\documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\practicumproject\\employeeserver\\employeeserver.core\\services\\iemployeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{43ADDEE1-30DE-4836-940C-5E019C917983}|EmployeeServer.Core\\EmployeeServer.Core.csproj|solutionrelative:employeeserver.core\\services\\iemployeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/employee_Db1/True/SqlTable/dbo.Roles.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
@@ -159,7 +170,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -168,51 +179,62 @@
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "dbo.Employees [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/employee__Db/True/SqlTable/dbo.Employees.sql",
-              "ToolTip": "dbo.Employees [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-04-01T14:21:02.514Z",
-              "EditorCaption": ""
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeServer\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "EmployeeServer\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeServer\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "EmployeeServer\\Controllers\\AuthController.cs",
+              "ViewState": "AQIAADcAAAAAAAAAAAAwwD8AAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-04T08:43:43.067Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "EmployeeRoleDto.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeServer.Core\\Dtos\\EmployeeRoleDto.cs",
               "RelativeDocumentMoniker": "EmployeeServer.Core\\Dtos\\EmployeeRoleDto.cs",
               "ToolTip": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeServer.Core\\Dtos\\EmployeeRoleDto.cs",
               "RelativeToolTip": "EmployeeServer.Core\\Dtos\\EmployeeRoleDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAdAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-20T13:19:20.755Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "RoleDto.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeServer.Core\\Dtos\\RoleDto.cs",
-              "RelativeDocumentMoniker": "EmployeeServer.Core\\Dtos\\RoleDto.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeServer.Core\\Dtos\\RoleDto.cs",
-              "RelativeToolTip": "EmployeeServer.Core\\Dtos\\RoleDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-20T13:02:59.422Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-20T13:19:20.755Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "RoleController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeServer\\Controllers\\RoleController.cs",
-              "RelativeDocumentMoniker": "EmployeeServer\\Controllers\\RoleController.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeServer\\Controllers\\RoleController.cs",
-              "RelativeToolTip": "EmployeeServer\\Controllers\\RoleController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEgAAAARAAAA",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeServer\\Program.cs",
+              "RelativeDocumentMoniker": "EmployeeServer\\Program.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeServer\\Program.cs",
+              "RelativeToolTip": "EmployeeServer\\Program.cs",
+              "ViewState": "AQIAADYAAAAAAAAAAAAwwEoAAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-20T13:15:48.565Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-20T23:02:58.489Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EmployeePostModel.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeServer\\Model\\EmployeePostModel.cs",
+              "RelativeDocumentMoniker": "EmployeeServer\\Model\\EmployeePostModel.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeServer\\Model\\EmployeePostModel.cs",
+              "RelativeToolTip": "EmployeeServer\\Model\\EmployeePostModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAQAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T13:05:00.23Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeServer.Core\\Entities\\Employee.cs",
+              "RelativeDocumentMoniker": "EmployeeServer.Core\\Entities\\Employee.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeServer.Core\\Entities\\Employee.cs",
+              "RelativeToolTip": "EmployeeServer.Core\\Entities\\Employee.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAA+wBIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T13:12:21.443Z"
             },
             {
               "$type": "Document",
@@ -222,47 +244,10 @@
               "RelativeDocumentMoniker": "EmployeeServer\\Controllers\\EmployeeController.cs",
               "ToolTip": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeServer\\Controllers\\EmployeeController.cs",
               "RelativeToolTip": "EmployeeServer\\Controllers\\EmployeeController.cs",
-              "ViewState": "AQIAALMAAAAAAAAAAAAiwEMAAAAlAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-20T13:15:51.035Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "DataContext.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeSrever.Data\\DataContext.cs",
-              "RelativeDocumentMoniker": "EmployeeSrever.Data\\DataContext.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeSrever.Data\\DataContext.cs",
-              "RelativeToolTip": "EmployeeSrever.Data\\DataContext.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAlwBEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-20T12:59:08.136Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "EmployeeRole.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeServer.Core\\Entities\\EmployeeRole.cs",
-              "RelativeDocumentMoniker": "EmployeeServer.Core\\Entities\\EmployeeRole.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeServer.Core\\Entities\\EmployeeRole.cs",
-              "RelativeToolTip": "EmployeeServer.Core\\Entities\\EmployeeRole.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-20T13:11:53.415Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Employee.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeServer.Core\\Entities\\Employee.cs",
-              "RelativeDocumentMoniker": "EmployeeServer.Core\\Entities\\Employee.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeServer.Core\\Entities\\Employee.cs",
-              "RelativeToolTip": "EmployeeServer.Core\\Entities\\Employee.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAuwBIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-20T13:12:21.443Z"
             },
             {
               "$type": "Bookmark",
@@ -270,87 +255,108 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "EmployeeRole.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeServer.Core\\Entities\\EmployeeRole.cs",
+              "RelativeDocumentMoniker": "EmployeeServer.Core\\Entities\\EmployeeRole.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeServer.Core\\Entities\\EmployeeRole.cs",
+              "RelativeToolTip": "EmployeeServer.Core\\Entities\\EmployeeRole.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA4AAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T13:11:53.415Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeSrever.Data\\Repository\\UserRepository.cs",
+              "RelativeDocumentMoniker": "EmployeeSrever.Data\\Repository\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeSrever.Data\\Repository\\UserRepository.cs",
+              "RelativeToolTip": "EmployeeSrever.Data\\Repository\\UserRepository.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAQwBYAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-04T09:38:48.323Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "dbo.Users [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/employee__Db/True/SqlTable/dbo.Users.sql",
+              "ToolTip": "dbo.Users [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-04-04T09:03:19.431Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DataContext.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeSrever.Data\\DataContext.cs",
+              "RelativeDocumentMoniker": "EmployeeSrever.Data\\DataContext.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeSrever.Data\\DataContext.cs",
+              "RelativeToolTip": "EmployeeSrever.Data\\DataContext.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAIA5wBgAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T12:59:08.136Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "EmployeeDto.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeServer.Core\\Dtos\\EmployeeDto.cs",
               "RelativeDocumentMoniker": "EmployeeServer.Core\\Dtos\\EmployeeDto.cs",
               "ToolTip": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeServer.Core\\Dtos\\EmployeeDto.cs",
               "RelativeToolTip": "EmployeeServer.Core\\Dtos\\EmployeeDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAuAAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAuwBIAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-20T13:18:49.512Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "EmployeeRepository.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeSrever.Data\\Repository\\EmployeeRepository.cs",
-              "RelativeDocumentMoniker": "EmployeeSrever.Data\\Repository\\EmployeeRepository.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeSrever.Data\\Repository\\EmployeeRepository.cs",
-              "RelativeToolTip": "EmployeeSrever.Data\\Repository\\EmployeeRepository.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAawCUAAAAIAAAA",
+              "DocumentIndex": 11,
+              "Title": "EmployeeRoleRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeSrever.Data\\Repository\\EmployeeRoleRepository.cs",
+              "RelativeDocumentMoniker": "EmployeeSrever.Data\\Repository\\EmployeeRoleRepository.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeSrever.Data\\Repository\\EmployeeRoleRepository.cs",
+              "RelativeToolTip": "EmployeeSrever.Data\\Repository\\EmployeeRoleRepository.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAuwBQAAABJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-21T00:35:08.876Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "EmployeePostModel.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeServer\\Model\\EmployeePostModel.cs",
-              "RelativeDocumentMoniker": "EmployeeServer\\Model\\EmployeePostModel.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeServer\\Model\\EmployeePostModel.cs",
-              "RelativeToolTip": "EmployeeServer\\Model\\EmployeePostModel.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAAAswA0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-20T13:05:00.23Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "EmployeeRolePostModel.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeServer\\Model\\EmployeeRolePostModel.cs",
-              "RelativeDocumentMoniker": "EmployeeServer\\Model\\EmployeeRolePostModel.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeServer\\Model\\EmployeeRolePostModel.cs",
-              "RelativeToolTip": "EmployeeServer\\Model\\EmployeeRolePostModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-20T20:45:57.958Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "RolePostModel.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeServer\\Model\\RolePostModel.cs",
-              "RelativeDocumentMoniker": "EmployeeServer\\Model\\RolePostModel.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeServer\\Model\\RolePostModel.cs",
-              "RelativeToolTip": "EmployeeServer\\Model\\RolePostModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-20T21:40:23.698Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "20240329002211_init.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeSrever.Data\\Migrations\\20240329002211_init.cs",
-              "RelativeDocumentMoniker": "EmployeeSrever.Data\\Migrations\\20240329002211_init.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeSrever.Data\\Migrations\\20240329002211_init.cs",
-              "RelativeToolTip": "EmployeeSrever.Data\\Migrations\\20240329002211_init.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-29T00:22:12.133Z"
+              "WhenOpened": "2024-03-21T14:03:28.737Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "PostModelsMapping.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeServer\\PostModelsMapping.cs",
-              "RelativeDocumentMoniker": "EmployeeServer\\PostModelsMapping.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeServer\\PostModelsMapping.cs",
-              "RelativeToolTip": "EmployeeServer\\PostModelsMapping.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAAwB4AAAAJAAAA",
+              "Title": "Enums.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeServer.Core\\Entities\\Enums.cs",
+              "RelativeDocumentMoniker": "EmployeeServer.Core\\Entities\\Enums.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeServer.Core\\Entities\\Enums.cs",
+              "RelativeToolTip": "EmployeeServer.Core\\Entities\\Enums.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-20T19:33:51.462Z"
+              "WhenOpened": "2024-04-02T16:13:08.476Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "RoleController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeServer\\Controllers\\RoleController.cs",
+              "RelativeDocumentMoniker": "EmployeeServer\\Controllers\\RoleController.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeServer\\Controllers\\RoleController.cs",
+              "RelativeToolTip": "EmployeeServer\\Controllers\\RoleController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEgAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T13:15:48.565Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "RoleDto.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeServer.Core\\Dtos\\RoleDto.cs",
+              "RelativeDocumentMoniker": "EmployeeServer.Core\\Dtos\\RoleDto.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeServer.Core\\Dtos\\RoleDto.cs",
+              "RelativeToolTip": "EmployeeServer.Core\\Dtos\\RoleDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T13:02:59.422Z"
             },
             {
               "$type": "Document",
@@ -366,7 +372,76 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
+              "Title": "dbo.Employees [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/employee__Db/True/SqlTable/dbo.Employees.sql",
+              "ToolTip": "dbo.Employees [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-04-01T14:21:02.514Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "EmployeeRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeSrever.Data\\Repository\\EmployeeRepository.cs",
+              "RelativeDocumentMoniker": "EmployeeSrever.Data\\Repository\\EmployeeRepository.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeSrever.Data\\Repository\\EmployeeRepository.cs",
+              "RelativeToolTip": "EmployeeSrever.Data\\Repository\\EmployeeRepository.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAawCUAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-21T00:35:08.876Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "EmployeeRolePostModel.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeServer\\Model\\EmployeeRolePostModel.cs",
+              "RelativeDocumentMoniker": "EmployeeServer\\Model\\EmployeeRolePostModel.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeServer\\Model\\EmployeeRolePostModel.cs",
+              "RelativeToolTip": "EmployeeServer\\Model\\EmployeeRolePostModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T20:45:57.958Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "RolePostModel.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeServer\\Model\\RolePostModel.cs",
+              "RelativeDocumentMoniker": "EmployeeServer\\Model\\RolePostModel.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeServer\\Model\\RolePostModel.cs",
+              "RelativeToolTip": "EmployeeServer\\Model\\RolePostModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T21:40:23.698Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "20240329002211_init.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeSrever.Data\\Migrations\\20240329002211_init.cs",
+              "RelativeDocumentMoniker": "EmployeeSrever.Data\\Migrations\\20240329002211_init.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeSrever.Data\\Migrations\\20240329002211_init.cs",
+              "RelativeToolTip": "EmployeeSrever.Data\\Migrations\\20240329002211_init.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-29T00:22:12.133Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "PostModelsMapping.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeServer\\PostModelsMapping.cs",
+              "RelativeDocumentMoniker": "EmployeeServer\\PostModelsMapping.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeServer\\PostModelsMapping.cs",
+              "RelativeToolTip": "EmployeeServer\\PostModelsMapping.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAAwB4AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T19:33:51.462Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
               "Title": "RoleRepository.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeSrever.Data\\Repository\\RoleRepository.cs",
               "RelativeDocumentMoniker": "EmployeeSrever.Data\\Repository\\RoleRepository.cs",
@@ -378,19 +453,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeServer\\Program.cs",
-              "RelativeDocumentMoniker": "EmployeeServer\\Program.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeServer\\Program.cs",
-              "RelativeToolTip": "EmployeeServer\\Program.cs",
-              "ViewState": "AQIAAGAAAAAAAAAAAAAAAGgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-20T23:02:58.489Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 22,
               "Title": "IEmployeeRoleSrervice.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeServer.Core\\Services\\IEmployeeRoleSrervice.cs",
               "RelativeDocumentMoniker": "EmployeeServer.Core\\Services\\IEmployeeRoleSrervice.cs",
@@ -402,7 +465,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 23,
               "Title": "EmployeeRoleService.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeServer.Service\\Services\\EmployeeRoleService.cs",
               "RelativeDocumentMoniker": "EmployeeServer.Service\\Services\\EmployeeRoleService.cs",
@@ -414,31 +477,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "EmployeeRoleRepository.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeSrever.Data\\Repository\\EmployeeRoleRepository.cs",
-              "RelativeDocumentMoniker": "EmployeeSrever.Data\\Repository\\EmployeeRoleRepository.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeSrever.Data\\Repository\\EmployeeRoleRepository.cs",
-              "RelativeToolTip": "EmployeeSrever.Data\\Repository\\EmployeeRoleRepository.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAawBkAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-21T14:03:28.737Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "IEmployeeService.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeServer.Core\\Services\\IEmployeeService.cs",
-              "RelativeDocumentMoniker": "EmployeeServer.Core\\Services\\IEmployeeService.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeServer.Core\\Services\\IEmployeeService.cs",
-              "RelativeToolTip": "EmployeeServer.Core\\Services\\IEmployeeService.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAMwAwAAAAnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-21T00:21:37.049Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 24,
               "Title": "RoleService.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeServer.Service\\Services\\RoleService.cs",
               "RelativeDocumentMoniker": "EmployeeServer.Service\\Services\\RoleService.cs",
@@ -450,7 +489,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 28,
               "Title": "20240320214725_init4.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\server .Net\\EmployeeServer\\EmployeeSrever.Data\\Migrations\\20240320214725_init4.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\server .Net\\EmployeeServer\\EmployeeSrever.Data\\Migrations\\20240320214725_init4.cs",
@@ -462,7 +501,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 27,
               "Title": "MappingProfile.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\github\\PracticumProject\\EmployeeServer\\EmployeeServer.Core\\MappingProfile.cs",
               "RelativeDocumentMoniker": "EmployeeServer.Core\\MappingProfile.cs",
@@ -474,7 +513,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 29,
               "Title": "20240320213850_init3.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\server .Net\\EmployeeServer\\EmployeeSrever.Data\\Migrations\\20240320213850_init3.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\server .Net\\EmployeeServer\\EmployeeSrever.Data\\Migrations\\20240320213850_init3.cs",
@@ -486,7 +525,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 30,
               "Title": "20240320205005_init2.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\server .Net\\EmployeeServer\\EmployeeSrever.Data\\Migrations\\20240320205005_init2.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\server .Net\\EmployeeServer\\EmployeeSrever.Data\\Migrations\\20240320205005_init2.cs",
@@ -498,7 +537,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 31,
               "Title": "20240320203924_init.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\server .Net\\EmployeeServer\\EmployeeSrever.Data\\Migrations\\20240320203924_init.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\server .Net\\EmployeeServer\\EmployeeSrever.Data\\Migrations\\20240320203924_init.cs",
@@ -510,7 +549,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 32,
               "Title": "20240320203831_init2.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\server .Net\\EmployeeServer\\EmployeeSrever.Data\\Migrations\\20240320203831_init2.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\server .Net\\EmployeeServer\\EmployeeSrever.Data\\Migrations\\20240320203831_init2.cs",
@@ -522,7 +561,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 33,
               "Title": "20240320203456_init.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\server .Net\\EmployeeServer\\EmployeeSrever.Data\\Migrations\\20240320203456_init.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\server .Net\\EmployeeServer\\EmployeeSrever.Data\\Migrations\\20240320203456_init.cs",
@@ -534,7 +573,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 34,
               "Title": "20240320203050_start.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\server .Net\\EmployeeServer\\EmployeeSrever.Data\\Migrations\\20240320203050_start.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\server .Net\\EmployeeServer\\EmployeeSrever.Data\\Migrations\\20240320203050_start.cs",
@@ -546,7 +585,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 36,
               "Title": "20240320200040_init.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\server .Net\\EmployeeServer\\EmployeeSrever.Data\\Migrations\\20240320200040_init.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\server .Net\\EmployeeServer\\EmployeeSrever.Data\\Migrations\\20240320200040_init.cs",
@@ -558,7 +597,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 37,
               "Title": "20240320195549_init4.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\server .Net\\EmployeeServer\\EmployeeSrever.Data\\Migrations\\20240320195549_init4.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\server .Net\\EmployeeServer\\EmployeeSrever.Data\\Migrations\\20240320195549_init4.cs",
@@ -570,7 +609,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 35,
               "Title": "20240320200415_init.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\server .Net\\EmployeeServer\\EmployeeSrever.Data\\Migrations\\20240320200415_init.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\server .Net\\EmployeeServer\\EmployeeSrever.Data\\Migrations\\20240320200415_init.cs",
@@ -582,7 +621,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 39,
               "Title": "20240320194651_init2.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\server .Net\\EmployeeServer\\EmployeeSrever.Data\\Migrations\\20240320194651_init2.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\server .Net\\EmployeeServer\\EmployeeSrever.Data\\Migrations\\20240320194651_init2.cs",
@@ -594,7 +633,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 38,
               "Title": "20240320195319_init3.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\server .Net\\EmployeeServer\\EmployeeSrever.Data\\Migrations\\20240320195319_init3.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\server .Net\\EmployeeServer\\EmployeeSrever.Data\\Migrations\\20240320195319_init3.cs",
@@ -606,7 +645,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 40,
               "Title": "20240320194301_init.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\server .Net\\EmployeeServer\\EmployeeSrever.Data\\Migrations\\20240320194301_init.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\server .Net\\EmployeeServer\\EmployeeSrever.Data\\Migrations\\20240320194301_init.cs",
@@ -618,7 +657,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 41,
               "Title": "20240320194143_init3.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\server .Net\\EmployeeServer\\EmployeeSrever.Data\\Migrations\\20240320194143_init3.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\server .Net\\EmployeeServer\\EmployeeSrever.Data\\Migrations\\20240320194143_init3.cs",
@@ -630,7 +669,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 43,
               "Title": "20240320125930_init.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\!\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\\u05E4\u05E8\u05E7\u05D8\u05D9\u05E7\u05D5\u05DD\\server .Net\\EmployeeServer\\EmployeeSrever.Data\\Migrations\\20240320125930_init.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\server .Net\\EmployeeServer\\EmployeeSrever.Data\\Migrations\\20240320125930_init.cs",
@@ -642,7 +681,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 25,
               "Title": "dbo.Roles [Data]",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/employee_Db1/True/SqlTable/dbo.Roles.sql",
               "ToolTip": "dbo.Roles [Data]",
@@ -651,7 +690,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 26,
               "Title": "dbo.EmployeeRole [Data]",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/employee_Db1/True/SqlTable/dbo.EmployeeRole.sql",
               "ToolTip": "dbo.EmployeeRole [Data]",
@@ -660,7 +699,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 42,
               "Title": "dbo.Roles [Data]",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/employeeDb3/True/SqlTable/dbo.Roles.sql",
               "ToolTip": "dbo.Roles [Data]",

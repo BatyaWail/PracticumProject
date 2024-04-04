@@ -65,38 +65,9 @@ namespace EmployeeServer.Api.Controllers
         [HttpPost]
         public async Task<ActionResult> Post([FromBody] EmployeePostModel employeePostModel)
         {
-            // Map EmployeePostModel to Employee
-            var employee = _mapper.Map<Employee>(employeePostModel);
-            // Assuming you have current employee available, you can add EmployeeRole to it
-            // Here, you might want to set EmployeeId for each EmployeeRole based on the current employee
-            //foreach (var employeeRole in employee.EmployeeRoles)
-            //{
-            //    //employeeRole.EmployeeId = employee.Id; // Employee.Id is of type string
-            //    employeeRole = _employeeRoleSrervice.GetByEmployeeIdAndRoleIdAsync(employee.Id, employeeRole.RoleId);
-            //}
-
-            //for (int i = 0; i < employee.EmployeeRoles.Count; i++)
-            //{
-            //    employee.EmployeeRoles[i].Role = await _roleService.GetRoleByNameAsync(employee.EmployeeRoles[i].Role.RoleName);
-            //    employee.EmployeeRoles[i] = await _employeeRoleSrervice.GetByEmployeeIdAndRoleIdAsync(employee.Identity, employee.EmployeeRoles[i].Role.Id);
-            //}
+            var employee = _mapper.Map<Employee>(employeePostModel);          
             employee.Status = true;
-
-            // Add employee to database or perform any other operation
-            // dbContext.Employees.Add(employee);
-            // dbContext.SaveChanges();
-            return Ok(_mapper.Map<EmployeeDto>(
-                await _employeeService.AddEmployeeAsync(employee)));
-            ////Employee newEmployee = new Employee()
-            ////{
-
-            ////};
-            ////List<EmployeeRole> employeeRoles = new List<EmployeeRole>();
-            ////foreach(var i in employee.EmployeeRoles)
-            ////{
-            ////    employeeRoles.Add(_mapper.Map<EmployeeRole>(new EmployeeRolePostModel() { EmployeeId=employee})
-            ////}
-            //Employee employee2 = _mapper.Map<Employee>(employee);
+            return Ok(_mapper.Map<EmployeeDto>( await _employeeService.AddEmployeeAsync(employee)));
             //return Ok(_employeeService.AddEmployee(employee2));
         }
 

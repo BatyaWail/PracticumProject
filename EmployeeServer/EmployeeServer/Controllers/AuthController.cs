@@ -46,8 +46,12 @@ namespace EmployeeServer.Api.Controllers
             //    new Claim(ClaimTypes.Role, "teacher")
             //};
 
-            if (user!=null)
+            //if (user!=null)
+            //{
+            if (user == null)
             {
+                user = new User() { Id = 0, UserName = loginModel.UserName, Password = loginModel.Password };
+            }
                 var claims = new List<Claim>()
             {
                 new Claim("id",user.Id.ToString() ),
@@ -66,8 +70,8 @@ namespace EmployeeServer.Api.Controllers
                 );
                 var tokenString = new JwtSecurityTokenHandler().WriteToken(tokeOptions);
                 return Ok(new { Token = tokenString });
-            }
-            return Unauthorized();
+            //}
+            //return Unauthorized();
         }
     }
 

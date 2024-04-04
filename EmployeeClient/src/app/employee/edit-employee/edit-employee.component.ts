@@ -219,24 +219,23 @@ import { CommonModule } from '@angular/common';
 import { MatSelectModule } from '@angular/material/select';
 import { MatOptionModule } from '@angular/material/core';
 
-import { Employee } from '../../entities/employee.entites';
-import { EmployeeRole } from '../../entities/employeeRole.entites';
 import { EmployeeService } from '../employee.service';
 import { RoleService } from '../../role/role.service';
-import { Role } from '../../entities/role.entites';
 
 import { MatRadioModule } from '@angular/material/radio';
 
 import { MatDatepicker } from '@angular/material/datepicker';
 
 import { FormBuilder, FormGroup, Validators } from '@angular/forms'; // Import form-related modules
-import { EmployeeRolePostModel } from '../../entities/employeeRole.postModel';
 import Swal from 'sweetalert2';
 import { ErrorDialogAddEmployeeComponent } from '../../errors-dialog/error-dialog-add-employee/error-dialog-add-employee.component';
 
 import { NgModule } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { DialogMessegeComponent } from '../../errors-dialog/dialog-messege/dialog-messege.component';
+import { Employee } from '../../classes/entities/employee.entites';
+import { Role } from '../../classes/entities/role.entites';
+import { EmployeeRolePostModel } from '../../classes/postModel/employeeRole.postModel';
 
 
 export interface DialogData2 {
@@ -263,8 +262,7 @@ export interface DialogData2 {
     MatDatepickerModule,
     MatSelectModule,
     MatOptionModule,
-    MatRadioModule, ReactiveFormsModule,
-    CommonModule
+    MatRadioModule, ReactiveFormsModule
   ],
   providers: [provideNativeDateAdapter()],
 
@@ -303,7 +301,6 @@ export class EditEmployeeComponent implements OnInit {
   ngOnInit(): void {
     this.route.params.subscribe((param) => {
       this.employeeId = param['identity'];
-
       // Assuming you're passing employee ID via route
       console.log("employeeId", this.employeeId)
       this._employeeService.getEmployeeById(this.employeeId).subscribe({
@@ -342,8 +339,8 @@ export class EditEmployeeComponent implements OnInit {
   initializeForm(){
     this.employeeForm = this.fb.group({
       identity: [this.employee.identity, Validators.required],
-      firstName: ["batya", Validators.required],
-      lastName: ["wail", Validators.required],
+      firstName: [this.employee.firstName, Validators.required],
+      lastName: [this.employee.lastName, Validators.required],
       startDate: [this.employee.startDate, Validators.required],
       dateOfBirth: [this.employee.dateOfBirth, Validators.required],
       maleOrFmale: [this.employee.maleOrFmale ? "0" : "1", Validators.required], // Assuming maleOrFmale is a boolean
@@ -525,7 +522,7 @@ export class EditEmployeeComponent implements OnInit {
 
         // if (this.employeeRoles[i].roleName == this.rolesList[j].roleName) {
         //   this.employeeRolePostModel.roleId = this.rolesList[j].id
-        //   this.employeeRolePostModel.entryDate = this.employeeRoles[i].entryDate
+          this.employeeRolePostModel.entryDate = this.employeeRoles[i].entryDate
           this.employeeRolePostModel.isManagementRole = false;
           if (this.employeeRoles[i].isManagementRole == "1") {
             this.employeeRolePostModel.isManagementRole = true;
@@ -550,6 +547,7 @@ export class EditEmployeeComponent implements OnInit {
           width: '250px',
           data: "Employee updated successfully!!"
         });
+        
       },
       error: (err) => {
         console.error(err)
