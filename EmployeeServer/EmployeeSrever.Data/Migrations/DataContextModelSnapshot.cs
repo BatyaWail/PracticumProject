@@ -57,6 +57,41 @@ namespace EmployeeSrever.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Employees");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            DateOfBirth = new DateTime(1990, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FirstName = "John",
+                            Identity = "123456789",
+                            LastName = "Doe",
+                            MaleOrFmale = true,
+                            StartDate = new DateTime(2024, 4, 7, 0, 11, 19, 147, DateTimeKind.Local).AddTicks(3893),
+                            Status = true
+                        },
+                        new
+                        {
+                            Id = 2,
+                            DateOfBirth = new DateTime(1995, 5, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FirstName = "Jane",
+                            Identity = "987654321",
+                            LastName = "Smith",
+                            MaleOrFmale = false,
+                            StartDate = new DateTime(2024, 4, 7, 0, 11, 19, 147, DateTimeKind.Local).AddTicks(3964),
+                            Status = true
+                        },
+                        new
+                        {
+                            Id = 3,
+                            DateOfBirth = new DateTime(1985, 10, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FirstName = "Alice",
+                            Identity = "456789123",
+                            LastName = "Johnson",
+                            MaleOrFmale = true,
+                            StartDate = new DateTime(2024, 4, 7, 0, 11, 19, 147, DateTimeKind.Local).AddTicks(3970),
+                            Status = false
+                        });
                 });
 
             modelBuilder.Entity("EmployeeServer.Core.Entities.EmployeeRole", b =>
@@ -78,6 +113,29 @@ namespace EmployeeSrever.Data.Migrations
                     b.HasIndex("RoleId");
 
                     b.ToTable("EmployeeRoles");
+
+                    b.HasData(
+                        new
+                        {
+                            EmployeeId = 1,
+                            RoleId = 1,
+                            EntryDate = new DateTime(2024, 4, 7, 0, 11, 19, 147, DateTimeKind.Local).AddTicks(4018),
+                            IsManagementRole = true
+                        },
+                        new
+                        {
+                            EmployeeId = 2,
+                            RoleId = 2,
+                            EntryDate = new DateTime(2024, 4, 7, 0, 11, 19, 147, DateTimeKind.Local).AddTicks(4024),
+                            IsManagementRole = false
+                        },
+                        new
+                        {
+                            EmployeeId = 3,
+                            RoleId = 3,
+                            EntryDate = new DateTime(2024, 4, 7, 0, 11, 19, 147, DateTimeKind.Local).AddTicks(4027),
+                            IsManagementRole = false
+                        });
                 });
 
             modelBuilder.Entity("EmployeeServer.Core.Entities.Role", b =>
@@ -95,6 +153,23 @@ namespace EmployeeSrever.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Roles");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            RoleName = "Manager"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            RoleName = "Developer"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            RoleName = "Designer"
+                        });
                 });
 
             modelBuilder.Entity("EmployeeServer.Core.Entities.User", b =>
@@ -116,6 +191,26 @@ namespace EmployeeSrever.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Users");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Password = "password1",
+                            UserName = "user1"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Password = "password2",
+                            UserName = "user2"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Password = "password3",
+                            UserName = "user3"
+                        });
                 });
 
             modelBuilder.Entity("EmployeeServer.Core.Entities.EmployeeRole", b =>

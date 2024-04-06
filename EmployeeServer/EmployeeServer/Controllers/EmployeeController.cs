@@ -16,7 +16,7 @@ namespace EmployeeServer.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+    //[Authorize]
     public class EmployeeController : ControllerBase
     {
         private readonly IEmployeeService _employeeService;
@@ -60,7 +60,7 @@ namespace EmployeeServer.Api.Controllers
             var employeeDto = _mapper.Map<EmployeeDto>(employee);
             return Ok(employeeDto);
         }
-
+        //[Authorize]
         // POST api/<EmployeeController>
         [HttpPost]
         public async Task<ActionResult> Post([FromBody] EmployeePostModel employeePostModel)

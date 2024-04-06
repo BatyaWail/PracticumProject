@@ -81,7 +81,9 @@ export class LoginComponent implements OnInit {
         .pipe(
           tap(response => {
             const token = response.token;
+            console.log("token", token);
             this.sendTokenToServer(token);
+            sessionStorage.setItem('token', token);
           }),
           catchError(error => {
             // Handle login error
@@ -96,14 +98,14 @@ export class LoginComponent implements OnInit {
       'Authorization': `Bearer ${token}`
     });
 
-    this.http.get('https://api.example.com/data', { headers })
-      .subscribe(data => {
-        // Handle successful token verification on the server
-        console.log('Token sent and verified successfully:', data);
-      }, error => {
-        // Handle server-side token verification error
-        console.error('Error verifying token on the server:', error);
-      });
+  //   this.http.get('https://localhost:7031/api', { headers })
+  //     .subscribe(data => {
+  //       // Handle successful token verification on the server
+  //       console.log('Token sent and verified successfully:', data);
+  //     }, error => {
+  //       // Handle server-side token verification error
+  //       console.error('Error verifying token on the server:', error);
+  //     });
   }
 }
 

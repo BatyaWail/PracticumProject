@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Employee } from '../classes/entities/employee.entites';
@@ -13,8 +13,14 @@ export class EmployeeService {
 
   constructor(private http: HttpClient) { }
 
+  // const headers = new HttpHeaders({
+  //   'Authorization': `Bearer ${sessionStorage.getItem('token')}`
+  // });
   addEmployee(employee :Employee): Observable<Employee> {
-    return this.http.post<Employee>(this.baseUrlEmployee, employee)
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${sessionStorage.getItem('token')}`
+    });
+    return this.http.post<Employee>(this.baseUrlEmployee, employee, { headers })
   }
 
   getEmployeeList(): Observable<Employee[]> {

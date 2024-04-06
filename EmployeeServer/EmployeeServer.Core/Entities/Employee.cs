@@ -15,7 +15,6 @@ namespace EmployeeServer.Core.Entities
         public string LastName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime DateOfBirth { get; set; }
-        //public Gender Gender { get; set; }
         public bool MaleOrFmale { get; set; }
         public List<EmployeeRole> EmployeeRoles { get; set; } // הוספה
         public bool Status { get; set; }

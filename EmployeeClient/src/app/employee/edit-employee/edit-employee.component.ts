@@ -349,7 +349,6 @@ export class EditEmployeeComponent implements OnInit {
   }
   initializeRoles(): FormGroup[] {
     return this.employee.employeeRoles.map(role => {
-
       return this.fb.group({
         roleName: [role.roleId, Validators.required],
         isManagementRole: [role.isManagementRole ? "0" : "1", Validators.required], // Assuming isManagementRole is a boolean
@@ -357,10 +356,7 @@ export class EditEmployeeComponent implements OnInit {
       });
     });
   }
-
-
   step = 0;
-
   setStep(index: number) {
     this.step = index;
   }

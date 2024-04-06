@@ -9,7 +9,7 @@ import {
   MatDialog,
 } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
-import { AbstractControl, FormArray, FormsModule, ReactiveFormsModule, ValidatorFn } from '@angular/forms';
+import { AbstractControl, FormArray, FormControl, FormsModule, ReactiveFormsModule, ValidatorFn } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 
@@ -43,6 +43,7 @@ import { Role } from '../../classes/entities/role.entites';
 import { EmployeeRolePostModel } from '../../classes/postModel/employeeRole.postModel';
 
 import { MatCardModule } from '@angular/material/card';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 
 export interface DialogData2 {
   errors: string[]
@@ -70,19 +71,33 @@ export interface DialogData2 {
     MatOptionModule,
     MatRadioModule, ReactiveFormsModule,
     CommonModule,
-    MatCardModule
+    MatCardModule,
+    MatSlideToggleModule
   ],
   providers: [provideNativeDateAdapter()],
   templateUrl: './add-employee.component.html',
   styleUrl: './add-employee.component.scss'
 })
 export class AddEmployeeComponent implements OnInit {
+  // this.LoginForm = new FormGroup({
+  //   "name": new FormControl(sessionStorage.getItem('currentUserName'), [Validators.required, Validators.minLength(3)]),
+  //   "password": new FormControl("", [Validators.required, Validators.minLength(6)]),
 
+  // })
+  // public employeeForm: FormGroup=new FormGroup({
+  //   "identity":new FormControl('', [Validators.required, Validators.minLength(9), Validators.maxLength(9), this.identityFormatValidator]),
+  //     "firstName":new FormControl('', Validators.required) , // Define FormControls with initial values and validators
+  //     "lastName":new FormControl('', Validators.required),
+  //     "maleOrFmale": new FormControl('',Validators.required) ,
+  //     "dateOfBirth":new FormControl(null, [Validators.required, this.dateOfBirthValidator.bind(this)]),
+  //     "startDate": new FormControl(null, [Validators.required, this.startDateValidator]),
+  //     "employeeRoles": new FormArray([], this.roleNameNotDuplicateValidator) // Initialize FormArray for employee roles
+  // })
   public employeeForm!: FormGroup; // Define FormGroup
   public employee: Employee = new Employee()
   public rolesList!: Role[]
   public newRoleList!: Role[]
-  employeeRoles: { roleName: string, isManagementRole: string, entryDate: Date | null }[] = [{ roleName: '', isManagementRole: '', entryDate: null }];
+  employeeRoles: { roleName: string, isManagementRole: boolean, entryDate: Date | null }[] = [{ roleName: '', isManagementRole: false, entryDate: null }];
   employeeRoleResult: EmployeeRolePostModel[] = []
 
   @ViewChildren(MatDatepicker)
@@ -91,6 +106,7 @@ export class AddEmployeeComponent implements OnInit {
   validationErrors: string[] = []; // Array to store validation errors
   @ViewChild(MatAccordion) accordion!: MatAccordion;
 
+  dateOfBirth:Date=new Date()
 
   constructor(
     // public dialogRef: MatDialogRef<AddEmployeeComponent>,
@@ -101,6 +117,7 @@ export class AddEmployeeComponent implements OnInit {
     , public dialog: MatDialog,
     private router: Router
   ) { }
+
   ngOnInit(): void {
     this._roleServices.getAllRoles().subscribe({
       next: (res) => {
@@ -117,9 +134,8 @@ export class AddEmployeeComponent implements OnInit {
       lastName: ['', Validators.required],
       maleOrFmale: ['', Validators.required],
       dateOfBirth: [null, [Validators.required, this.dateOfBirthValidator.bind(this)]],
-      startDate: [null, [Validators.required, this.startDateValidator]],
+      startDate: [null, [Validators.required, this.startDateValidator.bind(this)]],
       employeeRoles: this.fb.array([], this.roleNameNotDuplicateValidator) // Initialize FormArray for employee roles
-
     });
     this.addRole()
     this.employee.employeeRoles = [];
@@ -232,21 +248,20 @@ export class AddEmployeeComponent implements OnInit {
       this.employeeRolePostModel.roleId = Number(this.employeeRoles[i].roleName)
 
       this.employeeRolePostModel.entryDate = this.employeeRoles[i].entryDate
-      this.employeeRolePostModel.isManagementRole = false;
-      if (this.employeeRoles[i].isManagementRole == "1") {
-        this.employeeRolePostModel.isManagementRole = true;
-      }
+      // this.employeeRolePostModel.isManagementRole = false;
+      // if (this.employeeRoles[i].isManagementRole == "management") {
+      //   this.employeeRolePostModel.isManagementRole = true;
+      // }
+      this.employeeRolePostModel.isManagementRole = this.employeeRoles[i].isManagementRole
       this.employeeRoleResult.push(this.employeeRolePostModel)
 
 
     }
-
-
     this.employee.employeeRoles = this.employeeRoleResult
     // this.employee.dateOfBirth = this.employee.dateOfBirth.toISOString()
     // this.employee.startDate=this.
     this.employee.maleOrFmale = false;
-    if (this.employeeForm.get('maleOrFmale')?.value == "0") {
+    if (this.employeeForm.get('maleOrFmale')?.value == "male") {
       this.employee.maleOrFmale = true;
     }
     console.log("employee before send-----", this.employee)
@@ -271,7 +286,6 @@ export class AddEmployeeComponent implements OnInit {
     })
     // Call API or perform further actions
     console.log("employee after send-----", this.employee)
-
   }
   startDateBeforeEntryDateValidator(control: AbstractControl): { [key: string]: boolean } | null {
     const startDate = this.employeeForm.get('startDate');
@@ -315,43 +329,163 @@ export class AddEmployeeComponent implements OnInit {
   //   return selectedDate <= currentDate ? null : { 'futureDateOfBirth': true };
   // }
   dateOfBirthValidator(control: AbstractControl): { [key: string]: boolean } | null {
-    const selectedDate = new Date(control.value);
+    this.dateOfBirth = new Date(control.value);
     const currentDate = new Date();
     const minDateOfBirth = new Date();
     minDateOfBirth.setFullYear(currentDate.getFullYear() - 18);
 
-    if (selectedDate > currentDate || selectedDate > minDateOfBirth) {
+    if (this.dateOfBirth > currentDate || this.dateOfBirth > minDateOfBirth) {
       return { 'invalidDateOfBirth': true };
     }
     return null;
   }
-  startDateValidator(control: AbstractControl): { [key: string]: boolean } | null {
-    const selectedDate = new Date(control.value);
-    const currentDate = new Date();
-    return selectedDate >= currentDate ? null : { 'pastStartDate': true };
-  }
+  // startDateValidator(control: AbstractControl): { [key: string]: boolean } | null {
+  //   const selectedDate = new Date(control.value);
+  //   const currentDate = new Date();
+  //   return selectedDate >= currentDate ? null : { 'pastStartDate': true };
+  // }
   entryDateValidator(control: AbstractControl): { [key: string]: boolean } | null {
     const startDate = control.parent?.get('startDate')?.value;
     const entryDate = control.value;
     return startDate && entryDate && entryDate >= startDate ? null : { 'entryDateBeforeStartDate': true };
   }
-  // startDateValidator(control: AbstractControl): { [key: string]: boolean } | null {
-  //   const selectedDate = new Date(control.value);
-  //   const currentDate = new Date();
-  //   const dateOfBirth = new Date(this.employeeForm.get('dateOfBirth')?.value);
-  //   if (selectedDate < dateOfBirth || selectedDate < currentDate) {
-  //     return { 'invalidStartDate': true };
-  //   }
-  //   return null;
-  // }
-  // startDateValidator(dateOfBirth: Date): ValidatorFn {
-  //   return (control: AbstractControl): { [key: string]: boolean } | null => {
-  //     const selectedDate = new Date(control.value);
+  // Function to perform validation for startDate
+  // startDateValidator(control: AbstractControl): { [key: string]: any } | null {
+  //   const selectedDate = control.value;
+  //   if (selectedDate) {
   //     const currentDate = new Date();
-  //     if (selectedDate < dateOfBirth || selectedDate < currentDate) {
-  //       return { 'invalidStartDate': true };
+  //     const selectedDateObj = new Date(selectedDate);
+
+  //     // Retrieve the date of birth from the form
+  //     const dobValue = this.employeeForm.get('dateOfBirth')?.value;
+  //     console.log("dobValue",dobValue)
+  //     const dob = dobValue ? new Date(dobValue) : null;
+
+  //     if (dob) {
+  //       // Check if the selected date is greater than the current date
+  //       if (selectedDateObj > currentDate) {
+  //         return { futureDate: true }; // Return error if the selected date is in the future
+  //       }
+
+  //       // Check that the age is greater than 18
+  //       const ageDiff = currentDate.getFullYear() - dob.getFullYear();
+  //       if (ageDiff < 18) {
+  //         return { underAge: true }; // Return error if age is less than 18
+  //       }
   //     }
-  //     return null;
-  //   };
+  //   }
+  //   return null; // If the date passes all checks, return null (valid)
   // }
+  // Function to perform validation for startDate
+ // Function to perform validation for startDate
+// startDateValidator(control: AbstractControl): { [key: string]: any } | null {
+//   const selectedDate = control.value;
+//   if (selectedDate) {
+//     const currentDate = new Date();
+//     const selectedDateObj = new Date(selectedDate);
+    
+//     // Check if employeeForm is defined and dateOfBirth control exists
+//     if (this.employeeForm && this.employeeForm.get('dateOfBirth')) {
+//       const dobValue = this.employeeForm.get('dateOfBirth')?.value;
+//       const dob = dobValue ? new Date(dobValue) : null;
+
+//       if (dob) {
+//         // Check if the selected date is greater than the current date
+//         if (selectedDateObj > currentDate) {
+//           return { futureDate: true }; // Return error if the selected date is in the future
+//         }
+
+//         // Check that the age is greater than 18
+//         const ageDiff = currentDate.getFullYear() - dob.getFullYear();
+//         if (ageDiff < 18) {
+//           return { underAge: true }; // Return error if age is less than 18
+//         }
+//       }
+//     }
+//   }
+//   return null; // If the date passes all checks, return null (valid)
+// }
+// Function to perform validation for startDate
+// Function to perform validation for startDate
+
+// private startOfWorkValidator: ValidatorFn = (control: AbstractControl): Promise<ValidationErrors | null> => {
+//   return new Promise((resolve) => {
+//     this.startOfWorkDate = control.value;
+//     if (!this.birthDate || !this.startOfWorkDate) {
+//       console.log("null")
+//       resolve(null);
+//     }
+//     if (this.birthDate > this.startOfWorkDate)
+//     resolve({ 'tooEarlyToWork': true });
+ 
+//     const minAgeDate: Date = new Date(this.birthDate.getFullYear() + 16, this.birthDate.getMonth(), this.birthDate.getDate());
+//     console.log("minAgeDate", minAgeDate)
+//     if (this.startOfWorkDate < minAgeDate) {
+//       console.log("startOfWorkDate", this.startOfWorkDate, "minAgeDate", minAgeDate)
+//       resolve({ 'lessThan16Age': true });
+//     } else {
+//       resolve(null);
+
+//     }
+//   });
+// };
+
+startDateValidator(control: AbstractControl): { [key: string]: any } | null {
+  const selectedDate = control.value;
+  
+  if (selectedDate && this.employeeForm && this.employeeForm.get('dateOfBirth')) {
+    const currentDate = new Date();
+    const selectedDateObj = new Date(selectedDate);
+    
+    const dobControl = this.employeeForm.get('dateOfBirth');
+
+    // Check if dobControl is defined and has a value
+    if (dobControl && dobControl.value) {
+      const birthDate = new Date(dobControl.value);
+      const minAgeDate: Date = new Date(birthDate.getFullYear() + 18, birthDate.getMonth(), birthDate.getDate());
+
+      // Check if the selected date is greater than the current date
+      if (selectedDateObj > currentDate) {
+        return { futureDate: true }; // Return error if the selected date is in the future
+      }
+
+      // Check that the age is greater than 18
+      // const ageDiff = currentDate.getFullYear() - dob.getFullYear();
+      if (selectedDateObj < minAgeDate) {
+        return { underAge: true }; // Return error if age is less than 18
+      }
+    }
+  }
+  return null; // If the date passes all checks, return null (valid)
+}
+
+// startDateValidator(control: AbstractControl): { [key: string]: any } | null {
+//   const selectedDate = control.value;
+//   if (selectedDate) {
+//     const currentDate = new Date();
+//     const selectedDateObj = new Date(selectedDate);
+//     console.log("selectedDateObj-----",selectedDateObj)
+    
+//     // Check if employeeForm is defined and dateOfBirth control exists
+//     // console.log("employeeForm-----",this.employeeForm)
+//     if (selectedDate) {
+//       // const dobValue = this.employeeForm.get('dateOfBirth')?.value;
+//       const dob = this.dateOfBirth ? new Date(this.dateOfBirth) : null;
+
+//       if (dob!=new Date()) {
+//         // Check if the selected date is greater than the current date
+//         if (selectedDateObj > currentDate) {
+//           return { futureDate: true }; // Return error if the selected date is in the future
+//         }
+
+//         // Check that the age is greater than 18
+//         const ageDiff = currentDate.getFullYear() - this.dateOfBirth.getFullYear();
+//         if (ageDiff < 18) {
+//           return { underAge: true }; // Return error if age is less than 18
+//         }
+//       }
+//     }
+//   }
+//   return null; // If the date passes all checks, return null (valid)
+// }
 }
