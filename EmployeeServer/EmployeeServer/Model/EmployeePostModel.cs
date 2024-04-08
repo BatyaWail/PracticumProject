@@ -12,9 +12,7 @@ namespace EmployeeServer.Api.Model
         public DateTime DateOfBirth { get; set; }
         //public Gender Gender { get; set; }
         public bool MaleOrFmale { get; set; }
-
-        //public List<Role> Role { get; set; }
         public List<EmployeeRolePostModel> EmployeeRoles { get; set; } // הוספה
-        //public bool Status { get; set; }
+        public int CompanyId { get; set; }
     }
 }

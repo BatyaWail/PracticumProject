@@ -11,6 +11,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -20,7 +22,8 @@ import { MatCardModule } from '@angular/material/card';
     MatButtonModule,
     MatInputModule,
     MatFormFieldModule,
-    MatCardModule],
+    MatCardModule,
+    MatIconModule],
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
@@ -64,11 +67,12 @@ export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
   errorMessage: string | null = null;
 
-  constructor(private fb: FormBuilder, private http: HttpClient) { }
+  constructor(private fb: FormBuilder, private http: HttpClient, private router: Router) { }
+  hide = true;
 
   ngOnInit(): void {
     this.loginForm = this.fb.group({
-      username: ['', Validators.required],
+      name: ['', Validators.required],
       password: ['', Validators.required]
     });
   }
@@ -91,12 +95,14 @@ export class LoginComponent implements OnInit {
           })
         ).subscribe();
     }
+    this.toEmployeeList()
   }
 
   private sendTokenToServer(token: string): void {
     const headers = new HttpHeaders({
       'Authorization': `Bearer ${token}`
     });
+  
 
   //   this.http.get('https://localhost:7031/api', { headers })
   //     .subscribe(data => {
@@ -106,6 +112,9 @@ export class LoginComponent implements OnInit {
   //       // Handle server-side token verification error
   //       console.error('Error verifying token on the server:', error);
   //     });
+  }
+  toEmployeeList(){
+    this.router.navigate(['employee-list']);
   }
 }
 

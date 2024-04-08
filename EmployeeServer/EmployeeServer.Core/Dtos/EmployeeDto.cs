@@ -18,5 +18,7 @@ namespace EmployeeServer.Core.Dtos
         public bool MaleOrFmale { get; set; }
         public List<EmployeeRoleDto> EmployeeRoles { get; set; } // הוספה
         public bool Status { get; set; }
+        public int CompanyId { get; set; }
+
     }
 }

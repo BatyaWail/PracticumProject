@@ -28,9 +28,10 @@ import { MatDatepicker } from '@angular/material/datepicker';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms'; // Import form-related modules
 import Swal from 'sweetalert2';
 import { ErrorDialogAddEmployeeComponent } from '../../errors-dialog/error-dialog-add-employee/error-dialog-add-employee.component';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 import { NgModule } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { DialogMessegeComponent } from '../../errors-dialog/dialog-messege/dialog-messege.component';
 import { Employee } from '../../classes/entities/employee.entites';
 import { Role } from '../../classes/entities/role.entites';
@@ -73,12 +74,13 @@ import { EmployeeRolePostModel } from '../../classes/postModel/employeeRole.post
     MatDatepickerModule,
     MatSelectModule,
     MatOptionModule,
-    MatRadioModule, ReactiveFormsModule
+    MatRadioModule, ReactiveFormsModule, MatSlideToggleModule
   ],  
   templateUrl: './edit-employee-dialog.component.html',
   styleUrl: './edit-employee-dialog.component.scss'
 })
 export class EditEmployeeDialogComponent implements OnInit{
+  dateOfBirth: Date=new Date();
 
   onNoClick(): void {
     this.dialogRef.close();
@@ -87,7 +89,7 @@ export class EditEmployeeDialogComponent implements OnInit{
   public employee: Employee = new Employee()
   public rolesList!: Role[]
   public newRoleList!: Role[]
-  employeeRoles: { roleName: string, isManagementRole: string, entryDate: Date | null }[] = [{ roleName: '', isManagementRole: '', entryDate: null }];
+  employeeRoles: { roleName: string, isManagementRole: boolean, entryDate: Date | null }[] = [{ roleName: '', isManagementRole: false, entryDate: null }];
   employeeRoleResult: EmployeeRolePostModel[] = []
   employeeToUpdate:Employee=new Employee()
 
@@ -109,6 +111,7 @@ export class EditEmployeeDialogComponent implements OnInit{
     private route: ActivatedRoute,
     public dialogRef: MatDialogRef<EditEmployeeDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: Employee,
+    private router: Router
 
   ) { }
 
@@ -139,41 +142,42 @@ export class EditEmployeeDialogComponent implements OnInit{
     //     }
     //   });
     // });
-    this.initializeForm();
 
     this._roleServices.getAllRoles().subscribe({
-      next: (roles) => {
-        this.rolesList = roles;
+      next: (res) => {
+        this.rolesList = res;
+        // this.newRoleList = roles;
+        this.filterRoles()
       },
       error: (error) => {
         console.error(error);
         // Handle error appropriately
       }
     });
+    this.initializeForm();
+
   }
   initializeForm(){
     this.employeeForm = this.fb.group({
-      identity: [this.data.identity, Validators.required],
+      identity: [this.data.identity, [Validators.required,Validators.minLength(9), Validators.maxLength(9), this.identityFormatValidator]],
       firstName: [this.data.firstName, Validators.required],
       lastName: [this.data.lastName, Validators.required],
-      startDate: [this.data.startDate, Validators.required],
-      dateOfBirth: [this.data.dateOfBirth, Validators.required],
-      maleOrFmale: [this.data.maleOrFmale ? "0" : "1", Validators.required], // Assuming maleOrFmale is a boolean
+      maleOrFmale: [this.data.maleOrFmale ? "0" : "1", Validators.required], 
+      dateOfBirth: [this.data.dateOfBirth, [Validators.required,this.dateOfBirthValidator.bind(this)]],
+      startDate: [this.data.startDate, [Validators.required, this.startDateValidator.bind(this)]],
       employeeRoles: this.fb.array(this.initializeRoles())
     });
+    // this.filterRoles()
   }
   initializeRoles(): FormGroup[] {
     return this.data.employeeRoles.map(role => {
-
       return this.fb.group({
         roleName: [role.roleId, Validators.required],
-        isManagementRole: [role.isManagementRole ? "0" : "1", Validators.required], // Assuming isManagementRole is a boolean
+        isManagementRole: [role.isManagementRole , Validators.required], // Assuming isManagementRole is a boolean
         entryDate: [role.entryDate, Validators.required]
       });
     });
   }
-
-
   step = 0;
 
   setStep(index: number) {
@@ -191,50 +195,19 @@ export class EditEmployeeDialogComponent implements OnInit{
     return this.employeeForm.get('employeeRoles') as FormArray;
   }
 
-  startDateBeforeEntryDateValidator(control: AbstractControl): { [key: string]: boolean } | null {
-    const startDate = this.employeeForm.get('startDate');
-    const entryDate = control.value;
-
-    // Check if both startDate and entryDate are valid and entryDate is after startDate
-    if (startDate && startDate.value && entryDate && entryDate > startDate.value) {
-      return null; // Valid
-    } else {
-      return { 'startDateBeforeEntryDate': true }; // Invalid
-    }
-  }
-  roleNameNotDuplicateValidator(control: AbstractControl): { [key: string]: boolean } | null {
-    const employeeRoles = control.value as { roleName: string }[];
-    const roleNameSet = new Set();
-    for (const role of employeeRoles) {
-      if (roleNameSet.has(role.roleName)) {
-        return { 'roleNameDuplicate': true };
-      }
-      roleNameSet.add(role.roleName);
-    }
-    return null;
-  }
-
-  roleNameValidator(index: number) {
-    return (control: AbstractControl): { [key: string]: any } | null => {
-      const selectedRoleNames = this.employeeRolesFormArray.value.map((role: { roleName: string }) => role.roleName);
-      const roleName = control.value;
-      if (selectedRoleNames.slice(0, index).includes(roleName) || selectedRoleNames.slice(index + 1).includes(roleName)) {
-        return { 'roleNameDuplicate': true };
-      }
-      return null;
-    };
-  }
 
   addRole() {
     const roleFormGroup = this.fb.group({
-      roleName: ['', [Validators.required, this.roleNameValidator(this.employeeRolesFormArray.length)]], // Apply custom validator
-      isManagementRole: ['', Validators.required],
-      entryDate: [null, [Validators.required, this.startDateBeforeEntryDateValidator.bind(this)]]
+      roleName: ['', Validators.required],
+        isManagementRole: [false , Validators.required], // Assuming isManagementRole is a boolean
+        entryDate: [null, Validators.required]
     });
     this.employeeRolesFormArray.push(roleFormGroup);
+    this.filterRoles()
   }
   removeRole(index: number) {
     this.employeeRolesFormArray.removeAt(index);
+    this.filterRoles()
   }
   submit() {
     if (!this.submitForm()) {
@@ -338,10 +311,11 @@ export class EditEmployeeDialogComponent implements OnInit{
         // if (this.employeeRoles[i].roleName == this.rolesList[j].roleName) {
         //   this.employeeRolePostModel.roleId = this.rolesList[j].id
           this.employeeRolePostModel.entryDate = this.employeeRoles[i].entryDate
-          this.employeeRolePostModel.isManagementRole = false;
-          if (this.employeeRoles[i].isManagementRole == "1") {
-            this.employeeRolePostModel.isManagementRole = true;
-          }
+          // this.employeeRolePostModel.isManagementRole = false;
+          // if (this.employeeRoles[i].isManagementRole == "1") {
+          //   this.employeeRolePostModel.isManagementRole = true;
+          // }
+          this.employeeRolePostModel.isManagementRole=this.employeeRoles[i].isManagementRole
           this.employeeRoleResult.push(this.employeeRolePostModel)
 
       
@@ -353,6 +327,9 @@ export class EditEmployeeDialogComponent implements OnInit{
     if (this.employeeForm.get('maleOrFmale')?.value == "0") {
       this.employeeToUpdate.maleOrFmale = true;
     }
+    this.employeeToUpdate.companyId=this.employee.companyId
+    this.employeeToUpdate.status=this.employee.status
+
     console.log("employee before send-----", this.employeeToUpdate)
     this._employeeService.updateEmployee(this.employeeToUpdate).subscribe({
       next: (res) => {
@@ -365,12 +342,141 @@ export class EditEmployeeDialogComponent implements OnInit{
       },
       error: (err) => {
         console.error(err)
+        // const dialogRef = this.dialog.open(DialogMessegeComponent, {
+        //   width: '250px',
+        //   data: "its was error on update employee!!"
+        // });
+      //   const dialogRef = this.dialog.open(DialogMessegeComponent, {
+      //     width: '250px',
+      //     data: "you don't have permission to access!! move to login!"
+      //   })
+      // dialogRef.afterClosed().subscribe((result: any) => {
+      //   console.log('The dialog was closed');
+      //   this.toLoginPage()
+      // });
+      if (err.status === 403) {
         const dialogRef = this.dialog.open(DialogMessegeComponent, {
           width: '250px',
-          data: "its was error on update employee!!"
+          data: "you don't have permission to access!! move to login!"
+        })
+        dialogRef.afterClosed().subscribe((result: any) => {
+          console.log('The dialog was closed');
+          this.toLoginPage()
         });
+      }
+      else{
+        const dialogRef = this.dialog.open(DialogMessegeComponent, {
+          width: '250px',
+          data: "its error on update employee!!"
+        })
+        dialogRef.afterClosed().subscribe((result: any) => {
+          console.log('The dialog was closed');
+        });
+      }
       }
     })
     console.log("employee after send-----", this.employee)
+  }
+  toLoginPage() {
+    this.router.navigate(['login']);
+  }
+  filterRoles() {
+    // Get selected role IDs
+    const selectedRoleIds = this.employeeRolesFormArray.controls.map(control => control.get('roleName')?.value);
+    // Filter the roles list to exclude already selected roles
+    this.newRoleList = this.rolesList.filter(role => !selectedRoleIds.includes(role.id));
+  }
+ 
+  identityFormatValidator(control: AbstractControl): { [key: string]: boolean } | null {
+    const identityRegex = /^\d{9}$/; // Adjust this regex according to your identity format
+    return identityRegex.test(control.value) ? null : { 'invalidIdentityFormat': true };
+  }
+  dateOfBirthValidator(control: AbstractControl): { [key: string]: boolean } | null {
+    this.dateOfBirth = new Date(control.value);
+    const currentDate = new Date();
+    const minDateOfBirth = new Date();
+    minDateOfBirth.setFullYear(currentDate.getFullYear() - 18);
+
+    if (this.dateOfBirth > currentDate || this.dateOfBirth > minDateOfBirth) {
+      return { 'invalidDateOfBirth': true };
+    }
+    return null;
+  }
+
+  entryDateValidator(control: AbstractControl): { [key: string]: boolean } | null {
+    const startDate = control.parent?.get('startDate')?.value;
+    const entryDate = control.value;
+    return startDate && entryDate && entryDate >= startDate ? null : { 'entryDateBeforeStartDate': true };
+  }
+
+
+  startDateValidator(control: AbstractControl): { [key: string]: any } | null {
+    const selectedDate = control.value;
+
+    if (selectedDate && this.employeeForm && this.employeeForm.get('dateOfBirth')) {
+      const currentDate = new Date();
+      const selectedDateObj = new Date(selectedDate);
+
+      const dobControl = this.employeeForm.get('dateOfBirth');
+
+      // Check if dobControl is defined and has a value
+      if (dobControl && dobControl.value) {
+        const birthDate = new Date(dobControl.value);
+        const minAgeDate: Date = new Date(birthDate.getFullYear() + 18, birthDate.getMonth(), birthDate.getDate());
+
+        // Check if the selected date is greater than the current date
+        if (selectedDateObj > currentDate) {
+          return { futureDate: true }; // Return error if the selected date is in the future
+        }
+
+        // Check that the age is greater than 18
+        // const ageDiff = currentDate.getFullYear() - dob.getFullYear();
+        if (selectedDateObj < minAgeDate) {
+          return { underAge: true }; // Return error if age is less than 18
+        }
+      }
+    }
+    return null; // If the date passes all checks, return null (valid)
+  }
+  startDateBeforeEntryDateValidator(control: AbstractControl): { [key: string]: boolean } | null {
+    const startDate = this.employeeForm.get('startDate');
+    const entryDate = control.value;
+
+    // Check if both startDate and entryDate are valid and entryDate is after startDate
+    if (startDate && startDate.value && entryDate && entryDate > startDate.value) {
+      return null; // Valid
+    } else {
+      return { 'startDateBeforeEntryDate': true }; // Invalid
+    }
+  }
+  roleNameNotDuplicateValidator(control: AbstractControl): { [key: string]: boolean } | null {
+    const employeeRoles = control.value as { roleName: string }[];
+    const roleNameSet = new Set();
+    for (const role of employeeRoles) {
+      if (roleNameSet.has(role.roleName)) {
+        return { 'roleNameDuplicate': true };
+      }
+      roleNameSet.add(role.roleName);
+    }
+    return null;
+  }
+  roleNameValidator(index: number) {
+    return (control: AbstractControl): { [key: string]: any } | null => {
+      const selectedRoleNames = this.employeeRolesFormArray.value.map((role: { roleName: string }) => role.roleName);
+      const roleName = control.value;
+      if (selectedRoleNames.slice(0, index).includes(roleName) || selectedRoleNames.slice(index + 1).includes(roleName)) {
+        return { 'roleNameDuplicate': true };
+      }
+      return null;
+    };
+  }
+  filteredRoles(index: number): Role[] {
+    if (!this.employeeRolesFormArray||!this.rolesList) {
+      return [];
+    }
+    const selectedRoles = this.employeeRolesFormArray.controls
+      .filter((control, i) => i !== index) // סנן את התפקידים שאינם שווים לאינדקס שנמצא בפרמטר
+      .map(roleGroup => roleGroup.get('roleName')?.value);
+    return this.rolesList.filter(role => !selectedRoles.includes(role.id));
   }
 }

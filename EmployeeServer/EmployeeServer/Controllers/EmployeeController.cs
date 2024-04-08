@@ -5,7 +5,7 @@ using EmployeeServer.Core.Entities;
 using EmployeeServer.Core.Repository;
 using EmployeeServer.Core.Services;
 using EmployeeServer.Service.Services;
-using EmployeeSrever.Data.Migrations;
+//using EmployeeSrever.Data.Migrations;
 using EmployeeSrever.Data.Repository;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -31,6 +31,8 @@ namespace EmployeeServer.Api.Controllers
             _employeeRoleSrervice = employeeRoleSrervice;
             _mapper = mapper;
         }
+        [Authorize]
+
         // GET: api/<EmployeeController>
         [HttpGet]
         public async Task<ActionResult> Get()
@@ -71,107 +73,23 @@ namespace EmployeeServer.Api.Controllers
             //return Ok(_employeeService.AddEmployee(employee2));
         }
 
-        //public async Task<ActionResult> Post([FromBody] EmployeePostModel employeePostModel)
-        //{
-        //    try
-        //    {
-        //        if (employeePostModel == null)
-        //        {
-        //            return BadRequest("Employee data is null.");
-        //        }
-
-        //        var employee = _mapper.Map<Employee>(employeePostModel);
-
-        //        // Null check for EmployeeRoles
-        //        if (employee.EmployeeRoles != null)
-        //        {
-        //            foreach (var employeeRole in employee.EmployeeRoles)
-        //            {
-        //                if (employeeRole != null)
-        //                {
-        //                    // Ensure Role is loaded correctly
-        //                    employeeRole.Role = await _roleService.GetRoleByNameAsync(employeeRole.Role.RoleName);
-
-        //                    // Null check and additional logic for EmployeeRole data
-        //                    if (employee.Identity != null && employeeRole.Role != null)
-        //                    {
-        //                        var employeeRoleData = await _employeeRoleSrervice.GetByEmployeeIdAndRoleIdAsync(employee.Identity, employeeRole.Role.Id);
-        //                        if (employeeRoleData != null)
-        //                        {
-        //                            employeeRole = employeeRoleData;
-        //                        }
-        //                    }
-        //                }
-        //            }
-        //        }
-
-        //        employee.Status = true;
-
-        //        // Add employee to database or perform any other operation, such as saving the changes
-        //        // dbContext.Employees.Add(employee);
-        //        // dbContext.SaveChanges();
-
-        //        var addedEmployee = await _employeeService.AddEmployeeAsync(employee);
-
-        //        return Ok(_mapper.Map<EmployeeDto>(addedEmployee));
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        // Log the exception for debugging purposes
-        //        // Log.Error(ex, "An error occurred in the Post method");
-        //        return StatusCode(500, "An error occurred while processing the request.");
-        //    }
-        //}
-        //public  ActionResult Post([FromBody] Employee employee)
-        //{
-        //    var newEmployee =  _employeeService.AddEmployee(_mapper.Map<Employee>(employee));
-        //    if (newEmployee != null)
-        //    {
-        //        NotFound();
-        //    }
-        //    return Ok(_mapper.Map<EmployeeDto>(newEmployee));
-        //}
-
-        // PUT api/<EmployeeController>/5
-        //[HttpPut("{id}")]
-        //public ActionResult Put(string id, [FromBody] EmployeePostModel employeePostModel)
-        //{
-        //    var employee =  _employeeService.GetEmployeeById(id);
-
-        //    // If employee doesn't exist, return NotFound
-        //    if (employee == null)
-        //    {
-        //        return NotFound();
-        //    }
-
-        //    // Map updated data to the existing employee entity
-        //    _mapper.Map(employeePostModel, employee);
-
-        //    // Update the employee in the database
-        //    _employeeService.UpdateEmployee(id,employee);
-
-        //    // Return Ok response
-        //    return Ok();
-        //}
+        
         [HttpPut("{identity}")]
         public async Task<ActionResult> Put(string identity, [FromBody] EmployeePostModel employeePostModel)
         {
             var employee = await _employeeService.GetEmployeeByIdAsync(identity);
-
-            // If employee doesn't exist, return NotFound
             if (employee == null)
             {
                 return NotFound();
             }
-
-            // Map updated data from EmployeePostModel to the existing employee entity
-            _mapper.Map(employeePostModel, employee);
+            //_mapper.Map(employeePostModel, employee);
+            var employee2 = _mapper.Map<Employee>(employeePostModel);
 
             // Update the employee in the database
-            var employee2= await _employeeService.UpdateEmployeeAsync(identity, employee);
-
+            var employee3 = await _employeeService.UpdateEmployeeAsync(identity, employee2);
             // Return Ok response
-            return Ok(_mapper.Map<EmployeeDto>(employee2));
+            var employee4 = _mapper.Map<EmployeeDto>(employee3);
+            return Ok(employee4);
         }
 
         //[HttpPut("{id}")]

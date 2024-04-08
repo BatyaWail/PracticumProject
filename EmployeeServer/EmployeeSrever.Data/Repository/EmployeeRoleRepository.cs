@@ -18,7 +18,7 @@ namespace EmployeeSrever.Data.Repository
         }
         public async Task<EmployeeRole> GetByEmployeeIdAndRoleIdAsync(int employeeId,int roleId)
         {
-            var x= await _dataContext.EmployeeRoles.Include(e=>e.Employee).Include(e=>e.Role).FirstOrDefaultAsync(e => e.Employee.Id == employeeId && e.RoleId == roleId);
+            var x= await _dataContext.EmployeeRoles.FirstOrDefaultAsync(e => e.EmployeeId == employeeId && e.RoleId == roleId);
             return x;
         }
     }

@@ -10,13 +10,27 @@
     <button type="submit" [disabled]="loginForm.invalid">Login</button>
   </form> -->
 <!-- <mat-card> -->
-  <form [formGroup]="loginForm" (ngSubmit)="login()">
+  <form [formGroup]="loginForm" (ngSubmit)="login()" class="wrapper">
+    <!-- <mat-form-field>
+      <input matInput placeholder="CompanyName" formControlName="name">
+    </mat-form-field> -->
     <mat-form-field>
-      <input matInput placeholder="Username" formControlName="username">
+      <mat-label>company name</mat-label>
+      <input matInput type="text" formControlName="name">
+      <!-- <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button> -->
     </mat-form-field>
   
-    <mat-form-field>
+    <!-- <mat-form-field>
       <input matInput type="password" placeholder="Password" formControlName="password">
+    </mat-form-field> -->
+    <mat-form-field>
+      <mat-label>password</mat-label>
+      <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
     </mat-form-field>
   
     <!-- <button mat-raised-button color="primary" type="submit" [disabled]="loginForm.invalid">Login</button> -->
@@ -44,4 +58,21 @@
 <!-- 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="your-login-script.js"></script> -->
+
+  <!-- <div class="wrapper">
+    <h1>Login</h1>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Username</mat-label>
+        <input matInput placeholder="x@it-minds.dk" type="text" 
+            autocomplete="off"  />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" />
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" >Log in</button>
+</div> -->
 

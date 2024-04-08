@@ -12,6 +12,7 @@ namespace EmployeeServer.Api.Model
         // תוספת כלשהי, אם רצוי
         // public DateTime AssignedDate { get; set; }
         public DateTime EntryDate { get; set; }
+        //public int CompanyId { get; set; }
 
     }
 }

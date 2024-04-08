@@ -1,6 +1,7 @@
 ﻿using EmployeeServer.Core.Entities;
 using EmployeeServer.Core.Repository;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Query.SqlExpressions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -96,13 +97,20 @@ namespace EmployeeSrever.Data.Repository
             }
 
             //// Update existingEmployee with values from the provided employee object
-            //existingEmployee.FirstName = employee.FirstName;
-            //existingEmployee.LastName = employee.LastName;
-            //existingEmployee.StartDate = employee.StartDate;
-            //existingEmployee.DateOfBirth = employee.DateOfBirth;
-            //existingEmployee.Gender = employee.Gender;
+            existingEmployee.FirstName = employee.FirstName;
+            existingEmployee.LastName = employee.LastName;
+            existingEmployee.StartDate = employee.StartDate;
+            existingEmployee.DateOfBirth = employee.DateOfBirth;
+            existingEmployee.MaleOrFmale = employee.MaleOrFmale;
             //existingEmployee.Status = employee.Status;
-            existingEmployee = employee;
+            //existingEmployee.CompanyId = employee.CompanyId;
+            existingEmployee.EmployeeRoles = employee.EmployeeRoles;
+            existingEmployee.Status = true;
+            foreach (var item in existingEmployee.EmployeeRoles)
+            {
+                item.EmployeeId = existingEmployee.Id;
+            }
+            //existingEmployee = employee;
 
             await _dataContext.SaveChangesAsync();
 

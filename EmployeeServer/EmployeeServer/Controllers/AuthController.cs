@@ -2,12 +2,18 @@
 using EmployeeServer.Api.Model;
 using EmployeeServer.Core.Entities;
 using EmployeeServer.Core.Services;
+
+//using EmployeeServer.Api.Model;
+//using EmployeeServer.Core.Entities;
+//using EmployeeServer.Core.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
+using System.Net;
 using System.Security.Claims;
 using System.Text;
+
 
 namespace EmployeeServer.Api.Controllers
 {
@@ -23,40 +29,29 @@ namespace EmployeeServer.Api.Controllers
     {
         private readonly IConfiguration _configuration;
         private readonly IMapper _mapper;
-        private readonly IUserService _userService;
+        private readonly ICompanyService _companyService;
 
-        public AuthController(IConfiguration configuration, IMapper mapper, IUserService userService)
+        public AuthController(IConfiguration configuration, IMapper mapper, ICompanyService companyService)
         {
             _configuration = configuration;
             _mapper = mapper;
-            _userService = userService;
+            _companyService = companyService;
         }
 
         [HttpPost]
         public async Task<IActionResult> Login([FromBody] LoginModel loginModel)
         {
-            //var user = _mapper.Map<User>(loginModel);
-            var user =await _userService.GetByUserNameAndPaswword(loginModel.UserName, loginModel.Password);
-
-            //if (loginModel.UserName == "malkabr" && loginModel.Password == "123456")
-            //{
-            //    var claims = new List<Claim>()
-            //{
-            //    new Claim(ClaimTypes.Name, "malkabr"),
-            //    new Claim(ClaimTypes.Role, "teacher")
-            //};
-
-            //if (user!=null)
-            //{
-            if (user == null)
+            var company =await _companyService.GetCompanyByNameAndPaswword(loginModel.Name, loginModel.Password);
+            if (company == null)
             {
-                user = new User() { Id = 0, UserName = loginModel.UserName, Password = loginModel.Password };
+                //return Request.CreateResponse(HttpStatusCode.Forbidden);
+                return StatusCode(403); // או ניתן להחזיר BadRequest()
             }
-                var claims = new List<Claim>()
+            var claims = new List<Claim>()
             {
-                new Claim("id",user.Id.ToString() ),
-                new Claim("name",user.UserName),
-                new Claim("password",user.Password)
+                new Claim("id",company.Id.ToString() ),
+                new Claim("name",company.Name),
+                new Claim("password",company.Password)
             };
 
                 var secretKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration.GetValue<string>("JWT:Key")));

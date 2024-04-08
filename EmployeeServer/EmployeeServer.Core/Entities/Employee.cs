@@ -18,6 +18,7 @@ namespace EmployeeServer.Core.Entities
         public bool MaleOrFmale { get; set; }
         public List<EmployeeRole> EmployeeRoles { get; set; } // הוספה
         public bool Status { get; set; }
-
+        public int CompanyId { get; set; }
+        public Company Company { get; set; }
     }
 }

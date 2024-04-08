@@ -24,15 +24,27 @@ export class EmployeeService {
   }
 
   getEmployeeList(): Observable<Employee[]> {
-    return this.http.get<Employee[]>(this.baseUrlEmployee)
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${sessionStorage.getItem('token')}`
+    });
+    return this.http.get<Employee[]>(this.baseUrlEmployee, { headers })
   }
   deleteEmployee(identity:string): Observable<Employee> {
-    return this.http.delete<Employee>(this.baseUrlEmployee+"/"+identity)
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${sessionStorage.getItem('token')}`
+    });
+    return this.http.delete<Employee>(this.baseUrlEmployee+"/"+identity, { headers })
   }
   updateEmployee(employee:Employee): Observable<Employee> {
-    return this.http.put<Employee>(this.baseUrlEmployee+"/"+employee.identity,employee)
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${sessionStorage.getItem('token')}`
+    });
+    return this.http.put<Employee>(this.baseUrlEmployee+"/"+employee.identity,employee, { headers })
   }
   getEmployeeById(identity:string): Observable<Employee> {
-    return this.http.get<Employee>(this.baseUrlEmployee+"/"+identity)
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${sessionStorage.getItem('token')}`
+    });
+    return this.http.get<Employee>(this.baseUrlEmployee+"/"+identity, { headers })
   }
 }

@@ -219,7 +219,7 @@ import { CommonModule } from '@angular/common';
 import { MatSelectModule } from '@angular/material/select';
 import { MatOptionModule } from '@angular/material/core';
 
-import { EmployeeService } from '../employee.service';
+import { EmployeeService } from '../../employee/employee.service';
 import { RoleService } from '../../role/role.service';
 
 import { MatRadioModule } from '@angular/material/radio';
@@ -295,9 +295,7 @@ export class EditEmployeeComponent implements OnInit {
     private fb: FormBuilder // Inject FormBuilder
     , public dialog: MatDialog,
     private route: ActivatedRoute,
-
   ) { }
-
   ngOnInit(): void {
     this.route.params.subscribe((param) => {
       this.employeeId = param['identity'];
@@ -315,8 +313,7 @@ export class EditEmployeeComponent implements OnInit {
           console.log("employee.lastName", this.employee.lastName)
           this.initializeForm();
           // this.employeeForm.get('data').setValue(dataFormControlArray);
-          this.employeeForm.get('firstName')?.setValue(firstName);
-          this.employeeForm.get('lastName')?.setValue(lastName);
+
 
         },
         error: (error) => {
@@ -534,6 +531,7 @@ export class EditEmployeeComponent implements OnInit {
     if (this.employeeForm.get('maleOrFmale')?.value == "0") {
       this.employeeToUpdate.maleOrFmale = true;
     }
+    // this.employeeToUpdate.companyId=this.employee.companyId
     console.log("employee before send-----", this.employeeToUpdate)
     this._employeeService.updateEmployee(this.employeeToUpdate).subscribe({
       next: (res) => {
@@ -553,7 +551,7 @@ export class EditEmployeeComponent implements OnInit {
         });
       }
     })
-    console.log("employee after send-----", this.employee)
+    console.log("employee after send-----", this.employeeToUpdate)
   }
 }
 

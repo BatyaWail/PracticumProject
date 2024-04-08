@@ -98,8 +98,6 @@
                   incorrect!
                   The
                   company cannot hire an employee under the 18 year old!</mat-error>
-
-
               </mat-form-field>
 
               <!-- Gender -->
@@ -188,7 +186,6 @@
                   <mat-icon>assignment</mat-icon>
                 </mat-panel-description>
               </mat-expansion-panel-header>
-
               <!-- Role selection form fields -->
               <div formArrayName="employeeRoles"> <!-- FormArrayName directive -->
                 <div *ngFor="let roleGroup of employeeRolesFormArray.controls; let i = index" class="role-selection">
@@ -196,21 +193,16 @@
                     <mat-form-field>
                       <mat-label>Select Role</mat-label>
                       <mat-select placeholder="Choose a role" formControlName="roleName">
-                        <mat-option *ngFor="let role of rolesList" [value]="role.id">{{ role.roleName }}</mat-option>
+                        <mat-option *ngFor="let role of filteredRoles(i)" [value]="role.id">{{ role.roleName }}</mat-option>
                       </mat-select>
                       <mat-error *ngIf="roleGroup.get('roleName')?.hasError('required')">The field is
                         required!</mat-error>
-
                     </mat-form-field>
-
                     <!-- <mat-radio-group formControlName="isManagementRole">
                       <mat-radio-button value="management">Management</mat-radio-button>
                       <mat-radio-button value="non-management ">Non-Management</mat-radio-button>
                     </mat-radio-group> -->
                     <mat-slide-toggle formControlName="isManagementRole" class="example-margin">Management?</mat-slide-toggle>
-
-
-
                     <mat-form-field>
                       <mat-label>Entry Date</mat-label>
                       <input matInput [matDatepicker]="picker" formControlName="entryDate"
@@ -230,13 +222,19 @@
                     </button>
                   </div>
                 </div>
+                <mat-error *ngIf="employeeForm.get('employeeRoles')?.hasError('roleNameNotDuplicate')">Duplicate roles are not allowed"></mat-error>
               </div>
 
               <!-- Button to add new role -->
-              <button mat-button color="primary" (click)="addRole()">
+              <!-- <button mat-button color="primary" (click)="addRole()" >
+                Add Role
+                <mat-icon>add</mat-icon>
+              </button> -->
+              <button mat-button color="primary" (click)="addRole()" [disabled]="newRoleList.length === 0">
                 Add Role
                 <mat-icon>add</mat-icon>
               </button>
+              
 
               <!-- Previous and submit buttons -->
               <mat-action-row>

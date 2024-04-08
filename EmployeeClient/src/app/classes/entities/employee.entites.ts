@@ -12,4 +12,5 @@ export class Employee{
     maleOrFmale!:boolean
     employeeRoles!:EmployeeRolePostModel[]
     status!:boolean
+    companyId!:number
 }

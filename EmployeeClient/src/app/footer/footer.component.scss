@@ -1,10 +1,29 @@
-:host {
-    display: block;
-    padding-bottom: 35vh;
+
+// .footer {
+//     position: fixed;
+//     bottom: 0;
+//     width: 100%;
+// }
+
+.fill-remaining-space {
+    flex-grow: 1;
 }
-footer {
-    max-height: 20vh;
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    color: white;
+    /* Text color */
+}
+.footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+    // padding-top: 10vh; /* גובה הפוטר + מעט מרווח */
+}
+:host {
+    display: block;
+    padding-bottom: 15vh;
 }

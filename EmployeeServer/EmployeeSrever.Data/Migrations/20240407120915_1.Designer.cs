@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EmployeeSrever.Data.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20240406211119_add-data")]
-    partial class adddata
+    [Migration("20240407120915_1")]
+    partial class _1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -24,6 +24,47 @@ namespace EmployeeSrever.Data.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
+            modelBuilder.Entity("EmployeeServer.Core.Entities.Company", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Companies");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "company1",
+                            Password = "123456"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Name = "company2",
+                            Password = "123456"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Name = "company3",
+                            Password = "123456"
+                        });
+                });
+
             modelBuilder.Entity("EmployeeServer.Core.Entities.Employee", b =>
                 {
                     b.Property<int>("Id")
@@ -31,6 +72,9 @@ namespace EmployeeSrever.Data.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("CompanyId")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("DateOfBirth")
                         .HasColumnType("datetime2");
@@ -58,40 +102,45 @@ namespace EmployeeSrever.Data.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("CompanyId");
+
                     b.ToTable("Employees");
 
                     b.HasData(
                         new
                         {
                             Id = 1,
+                            CompanyId = 1,
                             DateOfBirth = new DateTime(1990, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             FirstName = "John",
                             Identity = "123456789",
                             LastName = "Doe",
                             MaleOrFmale = true,
-                            StartDate = new DateTime(2024, 4, 7, 0, 11, 19, 147, DateTimeKind.Local).AddTicks(3893),
+                            StartDate = new DateTime(2024, 4, 7, 15, 9, 14, 950, DateTimeKind.Local).AddTicks(8466),
                             Status = true
                         },
                         new
                         {
                             Id = 2,
+                            CompanyId = 2,
                             DateOfBirth = new DateTime(1995, 5, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             FirstName = "Jane",
                             Identity = "987654321",
                             LastName = "Smith",
                             MaleOrFmale = false,
-                            StartDate = new DateTime(2024, 4, 7, 0, 11, 19, 147, DateTimeKind.Local).AddTicks(3964),
+                            StartDate = new DateTime(2024, 4, 7, 15, 9, 14, 950, DateTimeKind.Local).AddTicks(8518),
                             Status = true
                         },
                         new
                         {
                             Id = 3,
+                            CompanyId = 1,
                             DateOfBirth = new DateTime(1985, 10, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             FirstName = "Alice",
                             Identity = "456789123",
                             LastName = "Johnson",
                             MaleOrFmale = true,
-                            StartDate = new DateTime(2024, 4, 7, 0, 11, 19, 147, DateTimeKind.Local).AddTicks(3970),
+                            StartDate = new DateTime(2024, 4, 7, 15, 9, 14, 950, DateTimeKind.Local).AddTicks(8521),
                             Status = false
                         });
                 });
@@ -121,21 +170,21 @@ namespace EmployeeSrever.Data.Migrations
                         {
                             EmployeeId = 1,
                             RoleId = 1,
-                            EntryDate = new DateTime(2024, 4, 7, 0, 11, 19, 147, DateTimeKind.Local).AddTicks(4018),
+                            EntryDate = new DateTime(2024, 4, 7, 15, 9, 14, 950, DateTimeKind.Local).AddTicks(8657),
                             IsManagementRole = true
                         },
                         new
                         {
                             EmployeeId = 2,
                             RoleId = 2,
-                            EntryDate = new DateTime(2024, 4, 7, 0, 11, 19, 147, DateTimeKind.Local).AddTicks(4024),
+                            EntryDate = new DateTime(2024, 4, 7, 15, 9, 14, 950, DateTimeKind.Local).AddTicks(8660),
                             IsManagementRole = false
                         },
                         new
                         {
                             EmployeeId = 3,
                             RoleId = 3,
-                            EntryDate = new DateTime(2024, 4, 7, 0, 11, 19, 147, DateTimeKind.Local).AddTicks(4027),
+                            EntryDate = new DateTime(2024, 4, 7, 15, 9, 14, 950, DateTimeKind.Local).AddTicks(8663),
                             IsManagementRole = false
                         });
                 });
@@ -174,64 +223,35 @@ namespace EmployeeSrever.Data.Migrations
                         });
                 });
 
-            modelBuilder.Entity("EmployeeServer.Core.Entities.User", b =>
+            modelBuilder.Entity("EmployeeServer.Core.Entities.Employee", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                    b.HasOne("EmployeeServer.Core.Entities.Company", "Company")
+                        .WithMany("Employees")
+                        .HasForeignKey("CompanyId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<string>("Password")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("UserName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Users");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Password = "password1",
-                            UserName = "user1"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Password = "password2",
-                            UserName = "user2"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Password = "password3",
-                            UserName = "user3"
-                        });
+                    b.Navigation("Company");
                 });
 
             modelBuilder.Entity("EmployeeServer.Core.Entities.EmployeeRole", b =>
                 {
-                    b.HasOne("EmployeeServer.Core.Entities.Employee", "Employee")
+                    b.HasOne("EmployeeServer.Core.Entities.Employee", null)
                         .WithMany("EmployeeRoles")
                         .HasForeignKey("EmployeeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("EmployeeServer.Core.Entities.Role", "Role")
+                    b.HasOne("EmployeeServer.Core.Entities.Role", null)
                         .WithMany("EmployeeRoles")
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
 
-                    b.Navigation("Employee");
-
-                    b.Navigation("Role");
+            modelBuilder.Entity("EmployeeServer.Core.Entities.Company", b =>
+                {
+                    b.Navigation("Employees");
                 });
 
             modelBuilder.Entity("EmployeeServer.Core.Entities.Employee", b =>
