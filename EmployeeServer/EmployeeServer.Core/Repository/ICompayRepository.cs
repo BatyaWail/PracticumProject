@@ -10,6 +10,7 @@ namespace EmployeeServer.Core.Repository
     public interface ICompanyRepository
     {
         Task<Company> GetCopmanyByNameAndPaswword(string name, string paswword);
+        Task<List<Company>> GetListAsync();
 
     }
 }

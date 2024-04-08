@@ -22,5 +22,10 @@ namespace EmployeeSrever.Data.Repository
         {
             return await _dataContext.Companies.FirstOrDefaultAsync(u => u.Name == name && u.Password == paswword);
         }
+
+        public async Task<List<Company>> GetListAsync()
+        {
+            return await _dataContext.Companies.ToListAsync();
+        }
     }
 }

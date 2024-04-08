@@ -29,8 +29,10 @@
       <mat-error *ngIf="this.employeeForm.get('identity')?.hasError('maxlength')">
         the identity must be at most 9 characters
       </mat-error>
-      <mat-error *ngIf="employeeForm.get('identity')?.hasError('invalidIdentityFormat')">Invalid identity
-        format</mat-error>
+      <mat-error
+      *ngIf="this.employeeForm.get('identity')?.hasError('invalidIdentityFormat')&&!employeeForm.get('identity')?.hasError('minlength')&&!employeeForm.get('identity')?.hasError('maxlength')&&!employeeForm.get('identity')?.hasError('required')">Invalid
+      identity
+      format</mat-error>
     </mat-form-field>
     <div style="display: grid; grid-template-columns: auto auto;">
       <mat-form-field>
@@ -58,9 +60,8 @@
       <mat-error *ngIf="this.employeeForm.get('dateOfBirth')?.hasError('required')">the field is
         required!</mat-error>
       <mat-error *ngIf="employeeForm.get('dateOfBirth')?.hasError('invalidDateOfBirth')">The date is
-        incorrect!
-        The
-        company cannot hire an employee under the 18 year old!</mat-error>
+        The birth date must be at least before 18 years!
+      </mat-error>
     </mat-form-field>
 
     <mat-form-field>

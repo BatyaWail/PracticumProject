@@ -10,5 +10,7 @@ namespace EmployeeServer.Core.Services
     public interface ICompanyService
     {
         Task<Company> GetCompanyByNameAndPaswword(string name, string paswword);
+        Task<List<Company>> GetCompaniesListAsync();
+
     }
 }

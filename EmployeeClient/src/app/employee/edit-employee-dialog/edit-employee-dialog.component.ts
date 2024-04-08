@@ -178,19 +178,7 @@ export class EditEmployeeDialogComponent implements OnInit{
       });
     });
   }
-  step = 0;
 
-  setStep(index: number) {
-    this.step = index;
-  }
-
-  nextStep() {
-    this.step++;
-  }
-
-  prevStep() {
-    this.step--;
-  }
   get employeeRolesFormArray() {
     return this.employeeForm.get('employeeRoles') as FormArray;
   }
@@ -410,28 +398,55 @@ export class EditEmployeeDialogComponent implements OnInit{
   }
 
 
+  // startDateValidator(control: AbstractControl): { [key: string]: any } | null {
+  //   const selectedDate = control.value;
+
+  //   if (selectedDate && this.employeeForm && this.employeeForm.get('dateOfBirth')) {
+  //     const currentDate = new Date();
+  //     const selectedDateObj = new Date(selectedDate);
+
+  //     const dobControl = this.employeeForm.get('dateOfBirth');
+
+  //     // Check if dobControl is defined and has a value
+  //     if (dobControl && dobControl.value) {
+  //       const birthDate = new Date(dobControl.value);
+  //       const minAgeDate: Date = new Date(birthDate.getFullYear() + 18, birthDate.getMonth(), birthDate.getDate());
+
+  //       // Check if the selected date is greater than the current date
+  //       if (selectedDateObj > currentDate) {
+  //         return { futureDate: true }; // Return error if the selected date is in the future
+  //       }
+
+  //       // Check that the age is greater than 18
+  //       // const ageDiff = currentDate.getFullYear() - dob.getFullYear();
+  //       if (selectedDateObj < minAgeDate) {
+  //         return { underAge: true }; // Return error if age is less than 18
+  //       }
+  //     }
+  //   }
+  //   return null; // If the date passes all checks, return null (valid)
+  // }
+  
   startDateValidator(control: AbstractControl): { [key: string]: any } | null {
     const selectedDate = control.value;
-
     if (selectedDate && this.employeeForm && this.employeeForm.get('dateOfBirth')) {
       const currentDate = new Date();
-      const selectedDateObj = new Date(selectedDate);
-
+      const startDate = new Date(selectedDate);
       const dobControl = this.employeeForm.get('dateOfBirth');
-
       // Check if dobControl is defined and has a value
       if (dobControl && dobControl.value) {
         const birthDate = new Date(dobControl.value);
         const minAgeDate: Date = new Date(birthDate.getFullYear() + 18, birthDate.getMonth(), birthDate.getDate());
 
+        // const minAgeDate: Date = new Date(birthDate.getFullYear() + 18, birthDate.getMonth(), birthDate.getDate());
         // Check if the selected date is greater than the current date
-        if (selectedDateObj > currentDate) {
+        if (startDate > currentDate) {
           return { futureDate: true }; // Return error if the selected date is in the future
         }
 
         // Check that the age is greater than 18
         // const ageDiff = currentDate.getFullYear() - dob.getFullYear();
-        if (selectedDateObj < minAgeDate) {
+        if (startDate < minAgeDate) {
           return { underAge: true }; // Return error if age is less than 18
         }
       }

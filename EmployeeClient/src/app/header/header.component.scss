@@ -1,50 +1,50 @@
-// /* Color of the links BEFORE scroll */
-// .navbar-scroll .nav-link,
-// .navbar-scroll .navbar-toggler-icon,
-// .navbar-scroll .navbar-brand {
-//   color: #424242;
-// }
-
-// /* Color of the navbar BEFORE scroll */
-// .navbar-scroll {
-//   background-color:  #c2185b; //#f44336
-// }
-
-// /* Color of the links AFTER scroll */
-// .navbar-scrolled .nav-link,
-// .navbar-scrolled .navbar-toggler-icon,
-// .navbar-scroll .navbar-brand {
-//   color: #424242;
-// }
-
-// /* Color of the navbar AFTER scroll */
-// .navbar-scrolled {
-//   background-color: #fff;
-// }
-
-// /* An optional height of the navbar AFTER scroll */
-// .navbar.navbar-scroll.navbar-scrolled {
-//   padding-top: auto;
-//   padding-bottom: auto;
-// }
-// .navbar-brand {
-//   font-size: unset;
-//   height: 3.5rem;
-// }
-// :host {
-//     display: block;
-//     padding-top: 10vh;
-// }
 .example-spacer {
   flex: 1 1 auto;
 }
-mat-toolbar{
+// :host {
+//   display: block;
+//   padding-bottom: 12vh;
+// }
+/* סגנונות עבור ההידר */
+.mat-toolbar {
+  height: 10vh;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* כדי שההידר יהיה מעל כל שאר האלמנטים */
+}
+
+// /* עיצוב עבור תוכן הדף */
+// :host {
+//   display: block;
+//   padding-top: 10vh; /* כדי למנוע חפיפה עם ההידר */
+//   padding-bottom: 12vh;
+// }
+
+
+mat-toolbar {
   height: 10vh;
   position: fixed;
   top: 0;
   width: 100%;
 }
+
+mat-toolbar mat-icon-button {
+  height: 100%; /* גובה מלא עבור כפתורי האייקונים */
+  // min-width: 40px; /* רוחב מינימלי עבור כפתורי האייקונים */
+  margin: 0; /* איפוס מרווחי פנים */
+}
+
+mat-toolbar .example-spacer {
+  flex: 1 1 auto;
+}
 :host {
   display: block;
-  padding-bottom: 10vh;
+  padding-top: 10vh; /* כדי למנוע חפיפה עם ההידר */
+  // padding-bottom: 12vh;
+  padding-bottom: 0vh;
+}
+/* עיצוב עבור תוכן הדף כאשר יש גלילה */
+:host.scrolled {
+  padding-top: 12vh; /* כדי להציג את ההידר כאשר הוא קבוע במעלה */
 }

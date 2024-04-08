@@ -114,7 +114,7 @@ namespace EmployeeSrever.Data.Migrations
                             Identity = "123456789",
                             LastName = "Doe",
                             MaleOrFmale = true,
-                            StartDate = new DateTime(2024, 4, 7, 15, 9, 14, 950, DateTimeKind.Local).AddTicks(8466),
+                            StartDate = new DateTime(2024, 4, 8, 22, 26, 15, 465, DateTimeKind.Local).AddTicks(7383),
                             Status = true
                         },
                         new
@@ -126,7 +126,7 @@ namespace EmployeeSrever.Data.Migrations
                             Identity = "987654321",
                             LastName = "Smith",
                             MaleOrFmale = false,
-                            StartDate = new DateTime(2024, 4, 7, 15, 9, 14, 950, DateTimeKind.Local).AddTicks(8518),
+                            StartDate = new DateTime(2024, 4, 8, 22, 26, 15, 465, DateTimeKind.Local).AddTicks(7431),
                             Status = true
                         },
                         new
@@ -138,7 +138,7 @@ namespace EmployeeSrever.Data.Migrations
                             Identity = "456789123",
                             LastName = "Johnson",
                             MaleOrFmale = true,
-                            StartDate = new DateTime(2024, 4, 7, 15, 9, 14, 950, DateTimeKind.Local).AddTicks(8521),
+                            StartDate = new DateTime(2024, 4, 8, 22, 26, 15, 465, DateTimeKind.Local).AddTicks(7434),
                             Status = false
                         });
                 });
@@ -168,21 +168,21 @@ namespace EmployeeSrever.Data.Migrations
                         {
                             EmployeeId = 1,
                             RoleId = 1,
-                            EntryDate = new DateTime(2024, 4, 7, 15, 9, 14, 950, DateTimeKind.Local).AddTicks(8657),
+                            EntryDate = new DateTime(2024, 4, 8, 22, 26, 15, 465, DateTimeKind.Local).AddTicks(7543),
                             IsManagementRole = true
                         },
                         new
                         {
                             EmployeeId = 2,
                             RoleId = 2,
-                            EntryDate = new DateTime(2024, 4, 7, 15, 9, 14, 950, DateTimeKind.Local).AddTicks(8660),
+                            EntryDate = new DateTime(2024, 4, 8, 22, 26, 15, 465, DateTimeKind.Local).AddTicks(7546),
                             IsManagementRole = false
                         },
                         new
                         {
                             EmployeeId = 3,
                             RoleId = 3,
-                            EntryDate = new DateTime(2024, 4, 7, 15, 9, 14, 950, DateTimeKind.Local).AddTicks(8663),
+                            EntryDate = new DateTime(2024, 4, 8, 22, 26, 15, 465, DateTimeKind.Local).AddTicks(7548),
                             IsManagementRole = false
                         });
                 });
@@ -234,17 +234,21 @@ namespace EmployeeSrever.Data.Migrations
 
             modelBuilder.Entity("EmployeeServer.Core.Entities.EmployeeRole", b =>
                 {
-                    b.HasOne("EmployeeServer.Core.Entities.Employee", null)
+                    b.HasOne("EmployeeServer.Core.Entities.Employee", "Employee")
                         .WithMany("EmployeeRoles")
                         .HasForeignKey("EmployeeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("EmployeeServer.Core.Entities.Role", null)
+                    b.HasOne("EmployeeServer.Core.Entities.Role", "Role")
                         .WithMany("EmployeeRoles")
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Employee");
+
+                    b.Navigation("Role");
                 });
 
             modelBuilder.Entity("EmployeeServer.Core.Entities.Company", b =>

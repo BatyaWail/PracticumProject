@@ -16,6 +16,7 @@ namespace EmployeeServer.Core
             CreateMap<EmployeeDto, Employee>().ReverseMap();
             CreateMap<Role, RoleDto>().ReverseMap();
             CreateMap<EmployeeRole, EmployeeRoleDto>().ReverseMap();
+            CreateMap<Company, CopmanyDto>().ReverseMap();
         }
 
     }

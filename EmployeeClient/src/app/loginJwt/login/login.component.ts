@@ -1,6 +1,6 @@
 
 
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError, map, tap } from 'rxjs/operators';
@@ -13,6 +13,13 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { Router } from '@angular/router';
+import { CompanyService } from '../../company.service';
+import { Company } from '../../classes/entities/company.entites';
+import { MatSelectModule } from '@angular/material/select';
+import { CommonModule } from '@angular/common';
+import { MatOptionModule } from '@angular/material/core';
+import { HeaderComponent } from '../../header/header.component';
+import { SessionStorageService } from '../../session-storage.service';
 
 @Component({
   selector: 'app-login',
@@ -23,7 +30,9 @@ import { Router } from '@angular/router';
     MatInputModule,
     MatFormFieldModule,
     MatCardModule,
-    MatIconModule],
+    MatIconModule, MatSelectModule, CommonModule, FormsModule, CommonModule,
+    MatOptionModule
+  ],
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
@@ -67,16 +76,57 @@ export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
   errorMessage: string | null = null;
 
-  constructor(private fb: FormBuilder, private http: HttpClient, private router: Router) { }
+  constructor(private fb: FormBuilder,
+    private http: HttpClient,
+    //  private header: HeaderComponent,
+    private router: Router,
+    private companyService: CompanyService,
+    // private sessionStorageService: SessionStorageService
+  ) { }
   hide = true;
+  companies: Company[] = [];
+  @Output() tokenSaved = new EventEmitter<string>();
 
   ngOnInit(): void {
+    // this._employeeService.getEmployeeList().subscribe({
+    //   next: (res) => {
+    this.companyService.getAllCompanies().subscribe({
+      next: (res) => {
+        console.log(res);
+        this.companies = res;
+      },
+      error: (err) => {
+        console.log(err);
+      }
+    })
     this.loginForm = this.fb.group({
       name: ['', Validators.required],
       password: ['', Validators.required]
     });
   }
 
+  // login(): void {
+  //   if (this.loginForm.valid) {
+  //     const loginModel = this.loginForm.value;
+
+  //     this.http.post<any>('https://localhost:7031/api/Auth', loginModel)
+  //       .pipe(
+  //         tap(response => {
+  //           const token = response.token;
+  //           console.log("token", token);
+  //           this.sendTokenToServer(token);
+  //           sessionStorage.setItem('token', token);
+  //           // this.sessionStorageService.setToken(token);
+  //           // this.header.foundCompanyNameFromToken();
+  //         }),
+  //         catchError(error => {
+  //           // Handle login error
+  //           return throwError(error);
+  //         })
+  //       ).subscribe();
+  //   }
+  //   this.toEmployeeList()
+  // }
   login(): void {
     if (this.loginForm.valid) {
       const loginModel = this.loginForm.value;
@@ -88,6 +138,7 @@ export class LoginComponent implements OnInit {
             console.log("token", token);
             this.sendTokenToServer(token);
             sessionStorage.setItem('token', token);
+            this.tokenSaved.emit(token); // Emit the token after storing it
           }),
           catchError(error => {
             // Handle login error
@@ -95,25 +146,25 @@ export class LoginComponent implements OnInit {
           })
         ).subscribe();
     }
-    this.toEmployeeList()
+    this.toEmployeeList();
   }
 
   private sendTokenToServer(token: string): void {
     const headers = new HttpHeaders({
       'Authorization': `Bearer ${token}`
     });
-  
 
-  //   this.http.get('https://localhost:7031/api', { headers })
-  //     .subscribe(data => {
-  //       // Handle successful token verification on the server
-  //       console.log('Token sent and verified successfully:', data);
-  //     }, error => {
-  //       // Handle server-side token verification error
-  //       console.error('Error verifying token on the server:', error);
-  //     });
+
+    //   this.http.get('https://localhost:7031/api', { headers })
+    //     .subscribe(data => {
+    //       // Handle successful token verification on the server
+    //       console.log('Token sent and verified successfully:', data);
+    //     }, error => {
+    //       // Handle server-side token verification error
+    //       console.error('Error verifying token on the server:', error);
+    //     });
   }
-  toEmployeeList(){
+  toEmployeeList() {
     this.router.navigate(['employee-list']);
   }
 }

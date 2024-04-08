@@ -16,12 +16,18 @@ namespace EmployeeServer.Service.Services
         {
             _companyRepository = companyRepository;
         }
+
+        public async Task<List<Company>> GetCompaniesListAsync()
+        {
+            return await _companyRepository.GetListAsync();
+        }
+
         //public async Task<User> GetByUserNameAndPaswword(string userName, string paswword)
         //{
         //    return await _userRepository.GetByUserNameAndPaswword(userName, paswword);
         //}
 
-       public async Task<Company> GetCompanyByNameAndPaswword(string name, string paswword)
+        public async Task<Company> GetCompanyByNameAndPaswword(string name, string paswword)
         {
             return await _companyRepository.GetCopmanyByNameAndPaswword(name, paswword);
         }

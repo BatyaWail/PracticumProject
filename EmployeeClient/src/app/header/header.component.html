@@ -1,70 +1,15 @@
-<!-- <nav class="navbar navbar-expand-lg navbar-scroll fixed-top shadow-0 border-bottom border-dark">
-    <div class="container">
-      <a class="navbar-brand" href="#!"><i class="fab fa-mdb fa-4x"></i></a>
-      <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
-        data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-        aria-label="Toggle navigation">
-        <i class="fas fa-bars"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <button class="nav-link" (click)="aboutUs()">about us!</button>
-          </li>
-          <li class="nav-item">
-            <button class="nav-link" (click)="addEmployee()">add-employee</button>
-          </li>
-          <li class="nav-item">
-            <button class="nav-link" (click)="employeeList()">employee-list</button>
-          </li>
-          <li class="nav-item">
-            <button class="nav-link" (click)="login()">Sign In</button>
-          </li>
-          <button type="button" class="btn btn-dark ms-3">Get Started</button>
-        </ul>
-      </div>
-    </div>
-</nav> -->
-  <!-- <mat-toolbar color="primary">
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-      <mat-icon>menu</mat-icon>
-    </button>
-    <span>My App</span>
-    <span class="example-spacer"></span>
-    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-      <mat-icon>favorite</mat-icon>
-    </button>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-      <mat-icon>share</mat-icon>
-    </button>
-    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" (click)="aboutUs()">
-      <mat-icon>info</mat-icon>
-    </button>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon" (click)="addEmployee()">
-      <mat-icon>person_add</mat-icon>
-    </button>
-    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" (click)="employeeList()">
-      <mat-icon>list</mat-icon>
-    </button>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon" (click)="login()">
-      <mat-icon>login</mat-icon>
-    </button>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon" (click)="logOut()">
-      <mat-icon>exit_to_app</mat-icon>
-    </button>
-  </mat-toolbar> -->
   <mat-toolbar color="primary">
     <button mat-icon-button matTooltip="Menu" class="example-icon" aria-label="Menu button">
       <mat-icon>menu</mat-icon>
     </button>
     <span>Employee Web</span>
     <span class="example-spacer"></span>
-    <button mat-icon-button matTooltip="Favorite" class="example-icon favorite-icon" aria-label="Favorite button">
+    <!-- <button mat-icon-button matTooltip="Favorite" class="example-icon favorite-icon" aria-label="Favorite button">
       <mat-icon>favorite</mat-icon>
     </button>
     <button mat-icon-button matTooltip="Share" class="example-icon" aria-label="Share button">
       <mat-icon>share</mat-icon>
-    </button>
+    </button> -->
     <button mat-icon-button matTooltip="About Us" class="example-icon favorite-icon" aria-label="About Us button" (click)="aboutUs()">
       <mat-icon>info</mat-icon>
     </button>
@@ -82,6 +27,11 @@
     </button>
     <button mat-icon-button matTooltip="Home" class="example-icon" aria-label="Log Out button" (click)="home()">
       <mat-icon>home</mat-icon>
+    </button>
+    <!-- <button mat-mini-fab color="warn" aria-label="yourCompany" (click)="personalArea()"> -->
+      <button mat-flat-button color="warn" aria-label="yourCompany" (click)="foundCompanyNameFromToken()">
+        {{companyName}}
+      <mat-icon>business</mat-icon>
     </button>
   </mat-toolbar>
   

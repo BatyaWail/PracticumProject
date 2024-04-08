@@ -431,7 +431,7 @@ export class EmployeeListComponent implements OnInit {
       },
       error: (err) => {
         console.log(err)
-        if (err.status === 403) {
+        if (err.status !== 500) {
           const dialogRef = this.dialog.open(DialogMessegeComponent, {
             width: '250px',
             data: "you don't have permission to access!! move to login!"

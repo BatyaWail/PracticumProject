@@ -108,40 +108,6 @@ export class AddEmployeeComponent implements OnInit {
     , public dialog: MatDialog,
     private router: Router
   ) { }
-  // foundCompanyIdFromToken(){
-  //   // this.token = sessionStorage.getItem('token');
-
-  //   // if (this.token) {
-  //   //   // Decode the token
-  //   //   const decodedToken: any = jwt_decode(this.token);
-  //   //   // Access the id property
-  //   //   this.companyId = Number(decodedToken.id);
-  //   //   console.log("Company ID:", this.companyId);
-  //   // } else {
-  //   //   console.error("Token not found in sessionStorage");
-  //   // }
-    
-  //   // Assuming the token is stored in sessionStorage under the name "token"
-  //   this.token = sessionStorage.getItem('token');
-
-  //   if (this.token) {
-  //     // Decode the token
-  //     try {
-  //       const decodedToken: any = jwt.decode(this.token);
-  //       // Access the id property
-  //       if (decodedToken && typeof decodedToken === 'object' && 'id' in decodedToken) {
-  //         this.companyId = decodedToken.id;
-  //         console.log("Company ID:", this.companyId);
-  //       } else {
-  //         console.error("Invalid token format or missing id property");
-  //       }
-  //     } catch (error) {
-  //       console.error("Error decoding token:", error);
-  //     }
-  //   } else {
-  //     console.error("Token not found in sessionStorage");
-  //   }
-  // }
   foundCompanyIdFromToken(){
     this.token = sessionStorage.getItem('token');
   
@@ -188,6 +154,7 @@ export class AddEmployeeComponent implements OnInit {
     this.employee.employeeRoles = [];
     // this.filterRoles()
   }
+  
   addRole() {
     // this.filterRoles()
 
@@ -293,9 +260,7 @@ export class AddEmployeeComponent implements OnInit {
     console.log("Form data:", this.employeeForm.value);
     this.employee = this.employeeForm.value
     this.employeeRoles = this.employeeForm.get('employeeRoles')?.value;
-
     console.log("employee----- ", this.employee, "role-----", this.employeeRoles)
-
     for (let i = 0; i < this.employeeRoles.length; i++) {
 
       this.employeeRolePostModel.roleId = Number(this.employeeRoles[i].roleName)
@@ -422,32 +387,52 @@ export class AddEmployeeComponent implements OnInit {
   }
   startDateValidator(control: AbstractControl): { [key: string]: any } | null {
     const selectedDate = control.value;
-
     if (selectedDate && this.employeeForm && this.employeeForm.get('dateOfBirth')) {
       const currentDate = new Date();
-      const selectedDateObj = new Date(selectedDate);
-
+      const startDate = new Date(selectedDate);
       const dobControl = this.employeeForm.get('dateOfBirth');
-
       // Check if dobControl is defined and has a value
       if (dobControl && dobControl.value) {
         const birthDate = new Date(dobControl.value);
         const minAgeDate: Date = new Date(birthDate.getFullYear() + 18, birthDate.getMonth(), birthDate.getDate());
 
+        // const minAgeDate: Date = new Date(birthDate.getFullYear() + 18, birthDate.getMonth(), birthDate.getDate());
         // Check if the selected date is greater than the current date
-        if (selectedDateObj > currentDate) {
+        if (startDate > currentDate) {
           return { futureDate: true }; // Return error if the selected date is in the future
         }
 
         // Check that the age is greater than 18
         // const ageDiff = currentDate.getFullYear() - dob.getFullYear();
-        if (selectedDateObj < minAgeDate) {
+        if (startDate < minAgeDate) {
           return { underAge: true }; // Return error if age is less than 18
         }
       }
     }
     return null; // If the date passes all checks, return null (valid)
   }
+  // private startOfWorkValidator: ValidatorFn = (control: AbstractControl): Promise<ValidationErrors | null> => {
+
+  //   return new Promise((resolve) => {
+  //     this.startOfWorkDate = control.value;
+  //     if (!this.birthDate || !this.startOfWorkDate) {
+  //       console.log("null")
+  //       resolve(null);
+  //     }
+  //     if (this.birthDate > this.startOfWorkDate)
+  //       resolve({ 'tooEarlyToWork': true });
+
+  //     const minAgeDate: Date = new Date(this.birthDate.getFullYear() + 16, this.birthDate.getMonth(), this.birthDate.getDate());
+  //     console.log("minAgeDate", minAgeDate)
+  //     if (this.startOfWorkDate < minAgeDate) {
+  //       console.log("startOfWorkDate", this.startOfWorkDate, "minAgeDate", minAgeDate)
+  //       resolve({ 'lessThan16Age': true });
+  //     } else {
+  //       resolve(null);
+
+  //     }
+  //   });
+  // };
 
 
   filterRoles() {

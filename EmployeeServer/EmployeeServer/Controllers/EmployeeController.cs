@@ -16,7 +16,7 @@ namespace EmployeeServer.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    //[Authorize]
+    [Authorize]
     public class EmployeeController : ControllerBase
     {
         private readonly IEmployeeService _employeeService;
@@ -31,7 +31,7 @@ namespace EmployeeServer.Api.Controllers
             _employeeRoleSrervice = employeeRoleSrervice;
             _mapper = mapper;
         }
-        [Authorize]
+        //[Authorize]
 
         // GET: api/<EmployeeController>
         [HttpGet]
