@@ -99,6 +99,7 @@ export class AddEmployeeComponent implements OnInit {
   dateOfBirth: Date = new Date()
   token: any; 
   companyId: any;
+  isRolesListEmpty!: boolean;
 
   constructor(
     private _employeeService: EmployeeService,
@@ -130,6 +131,7 @@ export class AddEmployeeComponent implements OnInit {
   }
   
   ngOnInit(): void {
+    this.isRolesListEmpty= false
     this._roleServices.getAllRoles().subscribe({
       next: (res) => {
         console.log("res- roles", res)
@@ -162,6 +164,12 @@ export class AddEmployeeComponent implements OnInit {
     //   console.log("Cannot add more roles. No roles available.");
     //   return;
     // }
+    console.log("this.isRolesListEmpty", this.isRolesListEmpty)
+    if(this.isRolesListEmpty==true){
+      console.log("Cannot add more roles. No roles available.", this.isRolesListEmpty);
+      return
+    }
+
     const roleFormGroup = this.fb.group({
       roleId: ['', [Validators.required, this.roleNameValidator(this.employeeRolesFormArray.length)]], // Apply custom validator
       isManagementRole: [false, Validators.required],
@@ -286,7 +294,11 @@ export class AddEmployeeComponent implements OnInit {
         // this.employee=res;
         const dialogRef = this.dialog.open(DialogMessegeComponent, {
           width: '250px',
-          data: "Employee added successfully!!"
+          // data: {title:"you succed!!",messege:Employee added successfully!!"}
+          data: {title: "success", messege: "Employee added successfully!!" ,icon: "check_circle"},
+        });
+        dialogRef.afterClosed().subscribe(result => {
+          console.log('The dialog was closed');
         });
         this.router.navigate(["employee-list"]);
 
@@ -306,11 +318,13 @@ export class AddEmployeeComponent implements OnInit {
       //   console.log('The dialog was closed');
       //   this.toLoginPage()
       // });
-      if (err.status === 403) {
+      if (err.status!=500) {
         const dialogRef = this.dialog.open(DialogMessegeComponent, {
           width: '250px',
-          data: "you don't have permission to access!! move to login!"
-        })
+          // data: "you don't have permission to access!! move to login!"
+          data: {title: "error", messege: "you don't have permission to access!! move to login!"},
+
+        });
         dialogRef.afterClosed().subscribe((result: any) => {
           console.log('The dialog was closed');
           this.toLoginPage()
@@ -319,8 +333,9 @@ export class AddEmployeeComponent implements OnInit {
       else{
         const dialogRef = this.dialog.open(DialogMessegeComponent, {
           width: '250px',
-          data: "you don't have error on add employee"
-        })
+          // data: "you don't have error on add employee"
+          data: {title: "error", messege: "you have error on add employee"},
+        });
         dialogRef.afterClosed().subscribe((result: any) => {
           console.log('The dialog was closed');
         });
@@ -438,17 +453,26 @@ export class AddEmployeeComponent implements OnInit {
 
   filterRoles() {
     // Get selected role IDs
-    const selectedRoleIds = this.employeeRolesFormArray.controls.map(control => control.get('roleName')?.value);
+    const selectedRoleIds = this.employeeRolesFormArray.controls.map(control => control.get('roleId')?.value);
     // Filter the roles list to exclude already selected roles
     this.newRoleList = this.rolesList.filter(role => !selectedRoleIds.includes(role.roleId));
   }
   filteredRoles(index: number): Role[] {
-    if (!this.employeeRolesFormArray||!this.rolesList) {
+    if (!this.employeeRolesFormArray || !this.rolesList) {
+      console.log("rolesList-check", this.rolesList, this.employeeRolesFormArray)
+      // this.isRolesListEmpty=true;
       return [];
     }
     const selectedRoles = this.employeeRolesFormArray.controls
       .filter((control, i) => i !== index) // סנן את התפקידים שאינם שווים לאינדקס שנמצא בפרמטר
-      .map(roleGroup => roleGroup.get('roleName')?.value);
-    return this.rolesList.filter(role => !selectedRoles.includes(role.roleId));
-  }
+      .map(roleGroup => roleGroup.get('roleId')?.value);
+    this.newRoleList = this.rolesList.filter(role => !selectedRoles.includes(role.roleId));
+    // return this.rolesList.filter(role => !selectedRoles.includes(role.roleId));
+    if (this.newRoleList.length == 1) {
+      console.log("the roles are finished")
+      this.isRolesListEmpty = true;
+    }
+
+    return this.newRoleList;
+}
 }

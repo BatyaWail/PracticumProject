@@ -81,6 +81,7 @@ import { EmployeeRolePostModel } from '../../classes/postModel/employeeRole.post
 })
 export class EditEmployeeDialogComponent implements OnInit{
   dateOfBirth: Date=new Date();
+  isRolesListEmpty: boolean=false;
 
   onNoClick(): void {
     this.dialogRef.close();
@@ -325,7 +326,11 @@ export class EditEmployeeDialogComponent implements OnInit{
         // Swal.fire('Success', 'Employee updated successfully', 'success');},
         const dialogRef = this.dialog.open(DialogMessegeComponent, {
           width: '250px',
-          data: "Employee updated successfully!!"
+          // data: "Employee updated successfully!!"
+          data: {title:"success",messege:"Employee updated successfully!!",icon:"check_circle"}
+        });
+        dialogRef.afterClosed().subscribe(result => {
+          console.log('The dialog was closed');
         });
       },
       error: (err) => {
@@ -342,11 +347,12 @@ export class EditEmployeeDialogComponent implements OnInit{
       //   console.log('The dialog was closed');
       //   this.toLoginPage()
       // });
-      if (err.status === 403) {
+      if (err.status !=500 ) {
         const dialogRef = this.dialog.open(DialogMessegeComponent, {
           width: '250px',
-          data: "you don't have permission to access!! move to login!"
-        })
+          // data: "you don't have permission to access!! move to login!"
+          data: {title: "error", messege: "you don't have permission to access!! move to login!",icon:"error"},
+        });
         dialogRef.afterClosed().subscribe((result: any) => {
           console.log('The dialog was closed');
           this.toLoginPage()
@@ -355,8 +361,9 @@ export class EditEmployeeDialogComponent implements OnInit{
       else{
         const dialogRef = this.dialog.open(DialogMessegeComponent, {
           width: '250px',
-          data: "its error on update employee!!"
-        })
+          // data: "its error on update employee!!"
+          data: {title: "error", messege: "its error on update employee!!",icon:"error"},
+        });
         dialogRef.afterClosed().subscribe((result: any) => {
           console.log('The dialog was closed');
         });
@@ -485,13 +492,31 @@ export class EditEmployeeDialogComponent implements OnInit{
       return null;
     };
   }
+  // filteredRoles(index: number): Role[] {
+  //   if (!this.employeeRolesFormArray||!this.rolesList) {
+  //     return [];
+  //   }
+  //   const selectedRoles = this.employeeRolesFormArray.controls
+  //     .filter((control, i) => i !== index) // סנן את התפקידים שאינם שווים לאינדקס שנמצא בפרמטר
+  //     .map(roleGroup => roleGroup.get('roleName')?.value);
+  //   return this.rolesList.filter(role => !selectedRoles.includes(role.roleId));
+  // }
   filteredRoles(index: number): Role[] {
-    if (!this.employeeRolesFormArray||!this.rolesList) {
+    if (!this.employeeRolesFormArray || !this.rolesList) {
+      console.log("rolesList-check", this.rolesList, this.employeeRolesFormArray)
+      // this.isRolesListEmpty=true;
       return [];
     }
     const selectedRoles = this.employeeRolesFormArray.controls
       .filter((control, i) => i !== index) // סנן את התפקידים שאינם שווים לאינדקס שנמצא בפרמטר
-      .map(roleGroup => roleGroup.get('roleName')?.value);
-    return this.rolesList.filter(role => !selectedRoles.includes(role.roleId));
-  }
+      .map(roleGroup => roleGroup.get('roleId')?.value);
+    this.newRoleList = this.rolesList.filter(role => !selectedRoles.includes(role.roleId));
+    // return this.rolesList.filter(role => !selectedRoles.includes(role.roleId));
+    if (this.newRoleList.length == 1) {
+      console.log("the roles are finished")
+      this.isRolesListEmpty = true;
+    }
+
+    return this.newRoleList;
+}
 }

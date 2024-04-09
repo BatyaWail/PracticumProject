@@ -35,9 +35,9 @@
       format</mat-error>
     </mat-form-field>
     <div style="display: grid; grid-template-columns: auto auto;">
-      <mat-form-field>
+      <mat-form-field style="margin-right: 2vh;">
         <mat-label>First name</mat-label>
-        <input matInput formControlName="firstName" placeholder="Enter first name" type="text">
+        <input matInput formControlName="firstName" placeholder="Enter first name" type="text" >
         <mat-error *ngIf="this.employeeForm.get('firstName')?.hasError('required')">the field is
           required!</mat-error>
       </mat-form-field>
@@ -96,11 +96,12 @@
 
       <div formArrayName="employeeRoles">
         <div *ngFor="let roleGroup of employeeRolesFormArray.controls; let i = index" class="role-selection">
+          <!-- <div style="display: grid; grid-template-columns: auto auto;"> -->
           <div [formGroupName]="i" style="display: grid; grid-template-columns: auto auto;">
-            <mat-form-field>
+            <mat-form-field style="display: grid; grid-template-columns: auto auto;">
               <mat-label>Select Role</mat-label>
               <mat-select placeholder="Choose a role" formControlName="roleId">
-                <mat-option *ngFor="let role of rolesList" [value]="role.roleId">{{ role.roleName }}</mat-option>
+                <mat-option *ngFor="let role of filteredRoles(i)" [value]="role.roleId">{{ role.roleName }}</mat-option>
               </mat-select>
               <mat-error *ngIf="roleGroup.get('roleId')?.hasError('required')">The field is
                 required!</mat-error>
@@ -130,11 +131,12 @@
             <button mat-icon-button color="warn" (click)="removeRole(i)">
               <mat-icon>remove_circle</mat-icon>
             </button>
+          <!-- </div> -->
           </div>
         </div>
       </div>
 
-      <button mat-button color="primary" (click)="addRole()">
+      <button mat-button color="primary" (click)="addRole()" [disabled]="this.isRolesListEmpty===true">
         Add Role
         <mat-icon>add</mat-icon>
       </button>

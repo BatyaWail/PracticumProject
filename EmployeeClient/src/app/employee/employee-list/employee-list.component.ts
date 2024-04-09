@@ -444,11 +444,12 @@ export class EmployeeListComponent implements OnInit {
       },
       error: (err) => {
         console.log(err)
-        if (err.status !== 500) {
+        if (err.status!=500) {
           const dialogRef = this.dialog.open(DialogMessegeComponent, {
             width: '250px',
-            data: "you don't have permission to access!! move to login!"
-          })
+            // data: "you don't have permission to access!! move to login!"
+            data:{title:"error",messege:"you don't have permission to access!! move to login!",icon:"error"}
+          });
           dialogRef.afterClosed().subscribe((result: any) => {
             console.log('The dialog was closed');
             this.toLoginPage()
@@ -457,8 +458,9 @@ export class EmployeeListComponent implements OnInit {
         else {
           const dialogRef = this.dialog.open(DialogMessegeComponent, {
             width: '250px',
-            data: "its error on get-employee-list"
-          })
+            // data: "its error on get-employee-list"
+            data: {title:"error",messege:"its error on get-employee-list", icon:"error"}
+          });
           dialogRef.afterClosed().subscribe((result: any) => {
             console.log('The dialog was closed');
           });
@@ -498,6 +500,7 @@ export class EmployeeListComponent implements OnInit {
   editEmployee(employee: Employee) {
     // this.router.navigate(["edit-employee", employee.identity]);
     const dialogRef = this.dialog.open(EditEmployeeDialogComponent, {
+      width: '600px',
       // data: { employee:employee },
       data: employee,
     });
@@ -509,9 +512,12 @@ export class EmployeeListComponent implements OnInit {
     });
   }
   deleteEmployee(employee: Employee) {
-    const dialogRef = this.dialog.open(DeleteEmployeeDialogComponent, {
+    var message=" Would you like to delete this employee with identity "+employee.identity+"?"
+    const dialogRef = this.dialog.open(DialogMessegeComponent, {
       width: '250px',
-      data: employee.identity  // שם הקובץ שתרצה למחוק
+      // data: employee.identity  // שם הקובץ שתרצה למחוק
+      data:{title:"delete ",messege:message,icon:"delete",isCancelButon:true}
+
     });
 
     dialogRef.afterClosed().subscribe(result => {
@@ -525,7 +531,11 @@ export class EmployeeListComponent implements OnInit {
             this.getEmployeeList()
             const dialogRef = this.dialog.open(DialogMessegeComponent, {
               width: '250px',
-              data: "the employee has been deleted!!!"
+              // data: "the employee has been deleted!!!"
+              data:{title:"success",messege:"the employee has been deleted!!",icon:"check_circle"}
+            });
+            dialogRef.afterClosed().subscribe(result => {
+              console.log('The dialog was closed');
             });
           },
           error: (err) => {

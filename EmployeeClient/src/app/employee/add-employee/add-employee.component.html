@@ -126,7 +126,7 @@
                     <mat-form-field>
                       <mat-label>Select Role</mat-label>
                       <mat-select placeholder="Choose a role" formControlName="roleId">
-                        <mat-option *ngFor="let role of rolesList" [value]="role.roleId">{{ role.roleName
+                        <mat-option *ngFor="let role of filteredRoles(i)" [value]="role.roleId">{{ role.roleName
                           }}</mat-option>
                       </mat-select>
                       <mat-error *ngIf="roleGroup.get('roleName')?.hasError('required')">The field is
@@ -161,7 +161,7 @@
               </div>
 
 
-              <button mat-button color="primary" (click)="addRole()" [disabled]="newRoleList.length === 0">
+              <button mat-button color="primary" (click)="addRole()" [disabled]="this.isRolesListEmpty===true">
                 Add Role
                 <mat-icon>add</mat-icon>
               </button>
