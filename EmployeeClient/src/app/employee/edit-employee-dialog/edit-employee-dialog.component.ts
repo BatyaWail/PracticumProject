@@ -172,7 +172,7 @@ export class EditEmployeeDialogComponent implements OnInit{
   initializeRoles(): FormGroup[] {
     return this.data.employeeRoles.map(role => {
       return this.fb.group({
-        roleName: [role.roleId, Validators.required],
+        roleId: [role.roleId, Validators.required],
         isManagementRole: [role.isManagementRole , Validators.required], // Assuming isManagementRole is a boolean
         entryDate: [role.entryDate, Validators.required]
       });
@@ -186,7 +186,7 @@ export class EditEmployeeDialogComponent implements OnInit{
 
   addRole() {
     const roleFormGroup = this.fb.group({
-      roleName: ['', Validators.required],
+      roleId: ['', Validators.required],
         isManagementRole: [false , Validators.required], // Assuming isManagementRole is a boolean
         entryDate: [null, Validators.required]
     });
@@ -310,7 +310,7 @@ export class EditEmployeeDialogComponent implements OnInit{
         
       }
     console.log("this.employeeRoleResult----", this.employeeRoleResult)
-    this.employeeToUpdate.employeeRoles = this.employeeRoleResult
+    // this.employeeToUpdate.employeeRoles = this.employeeRoleResult
     this.employeeToUpdate.maleOrFmale=this.employee.maleOrFmale
     if (this.employeeForm.get('maleOrFmale')?.value == "0") {
       this.employeeToUpdate.maleOrFmale = true;
@@ -372,7 +372,7 @@ export class EditEmployeeDialogComponent implements OnInit{
     // Get selected role IDs
     const selectedRoleIds = this.employeeRolesFormArray.controls.map(control => control.get('roleName')?.value);
     // Filter the roles list to exclude already selected roles
-    this.newRoleList = this.rolesList.filter(role => !selectedRoleIds.includes(role.id));
+    this.newRoleList = this.rolesList.filter(role => !selectedRoleIds.includes(role.roleId));
   }
  
   identityFormatValidator(control: AbstractControl): { [key: string]: boolean } | null {
@@ -492,6 +492,6 @@ export class EditEmployeeDialogComponent implements OnInit{
     const selectedRoles = this.employeeRolesFormArray.controls
       .filter((control, i) => i !== index) // סנן את התפקידים שאינם שווים לאינדקס שנמצא בפרמטר
       .map(roleGroup => roleGroup.get('roleName')?.value);
-    return this.rolesList.filter(role => !selectedRoles.includes(role.id));
+    return this.rolesList.filter(role => !selectedRoles.includes(role.roleId));
   }
 }

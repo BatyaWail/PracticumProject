@@ -25,7 +25,7 @@ namespace EmployeeSrever.Data.Repository
 
         public async Task<Role> GetByIdAsync(int id)
         {
-            return await _dataContext.Roles.Include(r => r.EmployeeRoles).FirstAsync(x => x.Id == id);
+            return await _dataContext.Roles.Include(r => r.EmployeeRoles).FirstAsync(x => x.RoleId == id);
         }
         public async Task<Role> GetByNameAsync(string name)
         {
@@ -39,7 +39,7 @@ namespace EmployeeSrever.Data.Repository
 
         public async Task RemoveAsync(int id)
         {
-            _dataContext.Roles.Remove(_dataContext.Roles.ToList().Find(x => x.Id == id));
+            _dataContext.Roles.Remove(_dataContext.Roles.ToList().Find(x => x.RoleId == id));
            await _dataContext.SaveChangesAsync();
         }
 

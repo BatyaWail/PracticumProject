@@ -9,7 +9,7 @@ namespace EmployeeServer.Core.Entities
 
     public class Role
     {
-        public int Id { get; set; }
+        public int RoleId { get; set; }
         public string RoleName { get; set; }
         public List<EmployeeRole> EmployeeRoles { get; set; }
     }

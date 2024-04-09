@@ -1,7 +1,7 @@
 import { EmployeeRole } from "./employeeRole.entites"
 
 export class Role {
-    id!: number
+    roleId!: number
     roleName!: string
     // isManagementRole!: boolean
     employeeRoles!: EmployeeRole[]

@@ -83,12 +83,11 @@ export interface DialogData2 {
   styleUrl: './add-employee.component.scss'
 })
 export class AddEmployeeComponent implements OnInit {
-
   public employeeForm!: FormGroup; // Define FormGroup
   public employee: Employee = new Employee()
   public rolesList!: Role[]
   public newRoleList!: Role[]
-  employeeRoles: { roleName: string, isManagementRole: boolean, entryDate: Date | null }[] = [{ roleName: '', isManagementRole: false, entryDate: null }];
+  employeeRoles: { roleId: number, isManagementRole: boolean, entryDate: Date | null }[] = [{ roleId: 0, isManagementRole: false, entryDate: null }];
   employeeRoleResult: EmployeeRolePostModel[] = []
 
   @ViewChildren(MatDatepicker)
@@ -133,8 +132,9 @@ export class AddEmployeeComponent implements OnInit {
   ngOnInit(): void {
     this._roleServices.getAllRoles().subscribe({
       next: (res) => {
-        console.log("res", res)
+        console.log("res- roles", res)
         this.rolesList = res;
+        console.log("rolesList", this.rolesList[0].roleId)
         this.filterRoles()
       },
       error: (err) => {
@@ -163,7 +163,7 @@ export class AddEmployeeComponent implements OnInit {
     //   return;
     // }
     const roleFormGroup = this.fb.group({
-      roleName: ['', [Validators.required, this.roleNameValidator(this.employeeRolesFormArray.length)]], // Apply custom validator
+      roleId: ['', [Validators.required, this.roleNameValidator(this.employeeRolesFormArray.length)]], // Apply custom validator
       isManagementRole: [false, Validators.required],
       entryDate: [null, [Validators.required, this.startDateBeforeEntryDateValidator.bind(this)]]
     });
@@ -259,18 +259,19 @@ export class AddEmployeeComponent implements OnInit {
   sendData() {
     console.log("Form data:", this.employeeForm.value);
     this.employee = this.employeeForm.value
+    console.log("employeeForm.value ", this.employeeForm.value)
     this.employeeRoles = this.employeeForm.get('employeeRoles')?.value;
     console.log("employee----- ", this.employee, "role-----", this.employeeRoles)
     for (let i = 0; i < this.employeeRoles.length; i++) {
 
-      this.employeeRolePostModel.roleId = Number(this.employeeRoles[i].roleName)
+      this.employeeRolePostModel.roleId = this.employeeRoles[i].roleId
 
       this.employeeRolePostModel.entryDate = this.employeeRoles[i].entryDate
 
       this.employeeRolePostModel.isManagementRole = this.employeeRoles[i].isManagementRole
       this.employeeRoleResult.push(this.employeeRolePostModel)
     }
-    this.employee.employeeRoles = this.employeeRoleResult
+    // this.employee.employeeRoles = this.employeeRoleResult
 
     this.employee.maleOrFmale = false;
     if (this.employeeForm.get('maleOrFmale')?.value == "male") {
@@ -439,7 +440,7 @@ export class AddEmployeeComponent implements OnInit {
     // Get selected role IDs
     const selectedRoleIds = this.employeeRolesFormArray.controls.map(control => control.get('roleName')?.value);
     // Filter the roles list to exclude already selected roles
-    this.newRoleList = this.rolesList.filter(role => !selectedRoleIds.includes(role.id));
+    this.newRoleList = this.rolesList.filter(role => !selectedRoleIds.includes(role.roleId));
   }
   filteredRoles(index: number): Role[] {
     if (!this.employeeRolesFormArray||!this.rolesList) {
@@ -448,6 +449,6 @@ export class AddEmployeeComponent implements OnInit {
     const selectedRoles = this.employeeRolesFormArray.controls
       .filter((control, i) => i !== index) // סנן את התפקידים שאינם שווים לאינדקס שנמצא בפרמטר
       .map(roleGroup => roleGroup.get('roleName')?.value);
-    return this.rolesList.filter(role => !selectedRoles.includes(role.id));
+    return this.rolesList.filter(role => !selectedRoles.includes(role.roleId));
   }
 }

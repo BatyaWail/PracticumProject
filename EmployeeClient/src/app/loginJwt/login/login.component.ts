@@ -130,7 +130,6 @@ export class LoginComponent implements OnInit {
   login(): void {
     if (this.loginForm.valid) {
       const loginModel = this.loginForm.value;
-
       this.http.post<any>('https://localhost:7031/api/Auth', loginModel)
         .pipe(
           tap(response => {
@@ -138,7 +137,7 @@ export class LoginComponent implements OnInit {
             console.log("token", token);
             this.sendTokenToServer(token);
             sessionStorage.setItem('token', token);
-            this.tokenSaved.emit(token); // Emit the token after storing it
+            // this.tokenSaved.emit(token); // Emit the token after storing it
           }),
           catchError(error => {
             // Handle login error

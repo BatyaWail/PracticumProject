@@ -99,10 +99,10 @@
           <div [formGroupName]="i" style="display: grid; grid-template-columns: auto auto;">
             <mat-form-field>
               <mat-label>Select Role</mat-label>
-              <mat-select placeholder="Choose a role" formControlName="roleName">
-                <mat-option *ngFor="let role of filteredRoles(i)" [value]="role.id">{{ role.roleName }}</mat-option>
+              <mat-select placeholder="Choose a role" formControlName="roleId">
+                <mat-option *ngFor="let role of rolesList" [value]="role.roleId">{{ role.roleName }}</mat-option>
               </mat-select>
-              <mat-error *ngIf="roleGroup.get('roleName')?.hasError('required')">The field is
+              <mat-error *ngIf="roleGroup.get('roleId')?.hasError('required')">The field is
                 required!</mat-error>
             </mat-form-field>
             <!-- <div background-color="black">

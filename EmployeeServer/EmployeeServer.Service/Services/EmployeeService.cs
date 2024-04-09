@@ -65,15 +65,15 @@ namespace EmployeeServer.Service.Services
                 throw new ArgumentException("Start date cannot be in the future.");
             }
             // Check for duplicate role names
-            if (employee.EmployeeRoles != null && employee.EmployeeRoles.Any())
-            {
-                var roleNames = employee.EmployeeRoles.Select(r => r.RoleId).ToList();
-                var duplicateRoleNames = roleNames.GroupBy(x => x).Where(g => g.Count() > 1).Select(g => g.Key);
-                if (duplicateRoleNames.Any())
-                {
-                    throw new ArgumentException($"Duplicate role names found: {string.Join(", ", duplicateRoleNames)}. Role names must be unique.");
-                }
-            }
+            //if (employee.EmployeeRoles != null && employee.EmployeeRoles.Any())
+            //{
+            //    var roleNames = employee.EmployeeRoles.Select(r => r.RoleId).ToList();
+            //    var duplicateRoleNames = roleNames.GroupBy(x => x).Where(g => g.Count() > 1).Select(g => g.Key);
+            //    if (duplicateRoleNames.Any())
+            //    {
+            //        throw new ArgumentException($"Duplicate role names found: {string.Join(", ", duplicateRoleNames)}. Role names must be unique.");
+            //    }
+            //}
             // Entry Date validation (assuming Entry Date cannot be before Start Date)
             if (employee.EmployeeRoles != null && employee.EmployeeRoles.Any())
             {

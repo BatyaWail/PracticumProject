@@ -322,6 +322,8 @@ import { DialogMessegeComponent } from '../../errors-dialog/dialog-messege/dialo
 import * as XLSX from 'xlsx';
 import { Employee } from '../../classes/entities/employee.entites';
 import { EditEmployeeDialogComponent } from '../edit-employee-dialog/edit-employee-dialog.component';
+import { RoleService } from '../../role/role.service';
+import { Role } from '../../classes/entities/role.entites';
 @Component({
   selector: 'app-employee-list',
   standalone: true,
@@ -362,7 +364,7 @@ export class EmployeeListComponent implements OnInit {
   employeeFromEdit: any;
   token: any;
   companyId: any;
-
+  rolesList!: Role[];
 
   // getStatusFilteredEmployeeList(): void {
   //   this._employeeService.getEmployeeList().subscribe({
@@ -401,10 +403,21 @@ export class EmployeeListComponent implements OnInit {
       this.dataSource.paginator.firstPage();
     }
   }
-  constructor(private _employeeService: EmployeeService, public dialog: MatDialog, private router: Router) {
+  constructor(private _employeeService: EmployeeService, public dialog: MatDialog
+    , private router: Router, private _roleServices: RoleService) {
     this.dataSource = new MatTableDataSource<Employee>();
   }
   ngOnInit(): void {
+    this._roleServices.getAllRoles().subscribe({
+      next: (res) => {
+        this.rolesList = res;
+        // this.newRoleList = roles;
+      },
+      error: (error) => {
+        console.error(error);
+        // Handle error appropriately
+      }
+    });
     console.log("start")
     setTimeout(() => {
       this.getEmployeeList()
@@ -441,7 +454,7 @@ export class EmployeeListComponent implements OnInit {
             this.toLoginPage()
           });
         }
-        else{
+        else {
           const dialogRef = this.dialog.open(DialogMessegeComponent, {
             width: '250px',
             data: "its error on get-employee-list"
@@ -531,24 +544,73 @@ export class EmployeeListComponent implements OnInit {
     this.router.navigate(["add-employee"]);
   }
   exportToExcel(): void {
+    // const data: any[] = this.dataSource.filteredData.map((employee: Employee) => {
+    //   return {
+    //     // 'Identity': employee.identity,
+    //     // 'First Name': employee.firstName,
+    //     // 'Last Name': employee.lastName,
+    //     // 'Start Date': employee.startDate || 'N/A', // Provide a default value if startDate is empty
+
+    //     'Identity': employee.identity,
+    //     'First Name': employee.firstName,
+    //     'Last Name': employee.lastName,
+    //     'Start Date': employee.startDate || 'N/A',
+    //     'Date of Birth': employee.dateOfBirth || 'N/A',
+    //     'Gender': employee.maleOrFmale ? 'Male' : 'Female',
+    //     // 'Status': employee.status ? 'Active' : 'Inactive',
+    //     // Add other properties
+    //     'Company ID': employee.companyId,
+    //     'Roles': employee.employeeRoles.map(role => role.roleName).join(', '), // Joining roles if exists
+
+    //   };
+    // });
+    // const ws: XLSX.WorkSheet = XLSX.utils.json_to_sheet(data);
+    // const wb: XLSX.WorkBook = XLSX.utils.book_new();
+    // XLSX.utils.book_append_sheet(wb, ws, 'Employees');
+
+    // // Generate a file name
+    // const fileName = 'employees.xlsx';
+
+    // // Save the file
+    // XLSX.writeFile(wb, fileName);
     const data: any[] = this.dataSource.filteredData.map((employee: Employee) => {
+      let roles: string = '';
+      // if (employee.employeeRoles && employee.employeeRoles.length > 0) {
+      //   roles = employee.employeeRoles.map(role => role.roleId).join(', ');
+      // }
+      if (employee.employeeRoles && employee.employeeRoles.length > 0) {
+        roles = employee.employeeRoles.map(role => this.getRoleName(role.roleId)).join(', ');
+        console.log("roles list", roles)
+      }
+      
       return {
+        'Identity': employee.identity,
         'First Name': employee.firstName,
         'Last Name': employee.lastName,
-        'Identity': employee.identity,
-        'Start Date': employee.startDate || 'N/A', // Provide a default value if startDate is empty
+        'Date of Birth': employee.dateOfBirth || 'N/A',
+        'Gender': employee.maleOrFmale ? 'Male' : 'Female',
+        'Start Date Working': employee.startDate || 'N/A',
+        // 'Status': employee.status ? 'Active' : 'Inactive',
+        'Company ID': employee.companyId,
+        'Roles': roles,
       };
     });
-
+  
     const ws: XLSX.WorkSheet = XLSX.utils.json_to_sheet(data);
     const wb: XLSX.WorkBook = XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(wb, ws, 'Employees');
-
+  
     // Generate a file name
     const fileName = 'employees.xlsx';
-
+  
     // Save the file
     XLSX.writeFile(wb, fileName);
+  }
+  getRoleName(roleId: number): string {
+    // Assuming rolesList is an array containing objects with roleId and roleName properties
+    const role = this.rolesList.find(role => role.roleId === roleId);
+    console.log("role", role?.roleName)
+    return role ? role.roleName : '';
   }
 
 }
