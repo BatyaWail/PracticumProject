@@ -1,4 +1,5 @@
 # Employee Management System
+![image](https://github.com/BatyaWail/PracticumProject/assets/149001923/f7426246-5ac0-4154-9545-1a9954903018)
 
 ## Project Overview
 
@@ -23,7 +24,7 @@ Welcome to the Employee Management System project! This web application is desig
 3. Ensure all necessary NuGet packages are installed.
 4. Open the "Package Manager Console."
 5. Initialize the database by executing `add-migration init` followed by `update-database`.
-6. Build and run the backend application.
+6. Build and run the backend application by `dotnet run`
 
 ## Project Structure
 
@@ -81,6 +82,6 @@ Additionally, the system is filtered based on the company ID. Users can only vie
 
 ## Conclusion
 
-The Employee Management System provides a user-friendly interface for organizations to efficiently manage employee data. For further assistance or queries, refer to the project documentation or contact the development team.
+The Employee Management System provides a user-friendly interface for organizations to efficiently manage employee data. For further assistance or queries, refer to the project documentation or contact the development team on batya4119712@gmail.com
 
 Enjoy using the Employee Management System!
