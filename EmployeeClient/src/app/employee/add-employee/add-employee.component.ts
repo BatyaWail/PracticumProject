@@ -38,9 +38,9 @@ import { NgModule } from '@angular/core';
 import { MatAccordion } from '@angular/material/expansion';
 import { DialogMessegeComponent } from '../../errors-dialog/dialog-messege/dialog-messege.component';
 import { Router } from '@angular/router';
-import { Employee } from '../../classes/entities/employee.entites';
-import { Role } from '../../classes/entities/role.entites';
-import { EmployeeRolePostModel } from '../../classes/postModel/employeeRole.postModel';
+import { Employee } from '../../entities/employee.entites';
+import { Role } from '../../entities/role.entites';
+import { EmployeeRolePostModel } from '../../entities/employeeRole.postModel';
 
 import { MatCardModule } from '@angular/material/card';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
@@ -109,7 +109,13 @@ export class AddEmployeeComponent implements OnInit {
     private router: Router
   ) { }
   foundCompanyIdFromToken(){
-    this.token = sessionStorage.getItem('token');
+    // if (typeof sessionStorage !== 'undefined') {    
+      this.token = sessionStorage.getItem('token');
+
+    // }
+    // else{
+    //   console.error('sessionStorage is not available');
+    // }
   
     if (this.token) {
       // Decode the token

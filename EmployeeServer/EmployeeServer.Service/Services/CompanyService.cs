@@ -17,6 +17,11 @@ namespace EmployeeServer.Service.Services
             _companyRepository = companyRepository;
         }
 
+        public async Task<Company> AddCompanyAsync(Company company)
+        {
+            return await _companyRepository.AddCompanyAsync(company);
+        }
+
         public async Task<List<Company>> GetCompaniesListAsync()
         {
             return await _companyRepository.GetListAsync();

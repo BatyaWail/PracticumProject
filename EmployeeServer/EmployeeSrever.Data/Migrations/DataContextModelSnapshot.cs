@@ -114,7 +114,7 @@ namespace EmployeeSrever.Data.Migrations
                             Identity = "123456789",
                             LastName = "Doe",
                             MaleOrFmale = true,
-                            StartDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(5792),
+                            StartDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5125),
                             Status = true
                         },
                         new
@@ -126,7 +126,7 @@ namespace EmployeeSrever.Data.Migrations
                             Identity = "987654321",
                             LastName = "Smith",
                             MaleOrFmale = false,
-                            StartDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(5826),
+                            StartDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5161),
                             Status = true
                         },
                         new
@@ -138,7 +138,7 @@ namespace EmployeeSrever.Data.Migrations
                             Identity = "456789123",
                             LastName = "Johnson",
                             MaleOrFmale = true,
-                            StartDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(5828),
+                            StartDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5163),
                             Status = false
                         },
                         new
@@ -150,7 +150,7 @@ namespace EmployeeSrever.Data.Migrations
                             Identity = "111111111",
                             LastName = "Brown",
                             MaleOrFmale = true,
-                            StartDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(5830),
+                            StartDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5164),
                             Status = true
                         },
                         new
@@ -162,7 +162,7 @@ namespace EmployeeSrever.Data.Migrations
                             Identity = "222222222",
                             LastName = "Jones",
                             MaleOrFmale = false,
-                            StartDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(5832),
+                            StartDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5166),
                             Status = true
                         },
                         new
@@ -174,7 +174,7 @@ namespace EmployeeSrever.Data.Migrations
                             Identity = "333333333",
                             LastName = "Wilson",
                             MaleOrFmale = true,
-                            StartDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(5833),
+                            StartDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5172),
                             Status = true
                         },
                         new
@@ -186,7 +186,7 @@ namespace EmployeeSrever.Data.Migrations
                             Identity = "444444444",
                             LastName = "Taylor",
                             MaleOrFmale = false,
-                            StartDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(5835),
+                            StartDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5173),
                             Status = true
                         },
                         new
@@ -198,7 +198,7 @@ namespace EmployeeSrever.Data.Migrations
                             Identity = "555555555",
                             LastName = "Anderson",
                             MaleOrFmale = false,
-                            StartDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(5836),
+                            StartDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5175),
                             Status = true
                         },
                         new
@@ -210,7 +210,7 @@ namespace EmployeeSrever.Data.Migrations
                             Identity = "666666666",
                             LastName = "Martinez",
                             MaleOrFmale = true,
-                            StartDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(5839),
+                            StartDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5177),
                             Status = true
                         },
                         new
@@ -222,7 +222,7 @@ namespace EmployeeSrever.Data.Migrations
                             Identity = "777777777",
                             LastName = "Garcia",
                             MaleOrFmale = false,
-                            StartDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(5841),
+                            StartDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5179),
                             Status = true
                         },
                         new
@@ -234,7 +234,7 @@ namespace EmployeeSrever.Data.Migrations
                             Identity = "888888888",
                             LastName = "Rodriguez",
                             MaleOrFmale = true,
-                            StartDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(5842),
+                            StartDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5180),
                             Status = true
                         },
                         new
@@ -246,7 +246,7 @@ namespace EmployeeSrever.Data.Migrations
                             Identity = "999999999",
                             LastName = "Lopez",
                             MaleOrFmale = false,
-                            StartDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(5844),
+                            StartDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5182),
                             Status = true
                         },
                         new
@@ -258,7 +258,7 @@ namespace EmployeeSrever.Data.Migrations
                             Identity = "101010101",
                             LastName = "Hernandez",
                             MaleOrFmale = true,
-                            StartDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(5845),
+                            StartDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5184),
                             Status = true
                         },
                         new
@@ -270,7 +270,7 @@ namespace EmployeeSrever.Data.Migrations
                             Identity = "121212121",
                             LastName = "Gonzalez",
                             MaleOrFmale = false,
-                            StartDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(5847),
+                            StartDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5186),
                             Status = true
                         },
                         new
@@ -282,7 +282,7 @@ namespace EmployeeSrever.Data.Migrations
                             Identity = "131313131",
                             LastName = "Perez",
                             MaleOrFmale = true,
-                            StartDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(5849),
+                            StartDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5187),
                             Status = true
                         },
                         new
@@ -294,7 +294,7 @@ namespace EmployeeSrever.Data.Migrations
                             Identity = "141414141",
                             LastName = "Sanchez",
                             MaleOrFmale = false,
-                            StartDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(5851),
+                            StartDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5189),
                             Status = true
                         },
                         new
@@ -306,7 +306,7 @@ namespace EmployeeSrever.Data.Migrations
                             Identity = "151515151",
                             LastName = "Ramirez",
                             MaleOrFmale = true,
-                            StartDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(5852),
+                            StartDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5190),
                             Status = true
                         },
                         new
@@ -318,7 +318,7 @@ namespace EmployeeSrever.Data.Migrations
                             Identity = "161616161",
                             LastName = "Torres",
                             MaleOrFmale = false,
-                            StartDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(5854),
+                            StartDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5192),
                             Status = true
                         },
                         new
@@ -330,7 +330,7 @@ namespace EmployeeSrever.Data.Migrations
                             Identity = "171717171",
                             LastName = "Nguyen",
                             MaleOrFmale = true,
-                            StartDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(5855),
+                            StartDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5193),
                             Status = true
                         },
                         new
@@ -342,7 +342,7 @@ namespace EmployeeSrever.Data.Migrations
                             Identity = "181818181",
                             LastName = "Kim",
                             MaleOrFmale = false,
-                            StartDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(5857),
+                            StartDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5195),
                             Status = true
                         },
                         new
@@ -354,7 +354,7 @@ namespace EmployeeSrever.Data.Migrations
                             Identity = "191919191",
                             LastName = "Tran",
                             MaleOrFmale = true,
-                            StartDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(5862),
+                            StartDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5197),
                             Status = true
                         },
                         new
@@ -366,7 +366,7 @@ namespace EmployeeSrever.Data.Migrations
                             Identity = "202020202",
                             LastName = "Chen",
                             MaleOrFmale = false,
-                            StartDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(5864),
+                            StartDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5199),
                             Status = true
                         },
                         new
@@ -378,7 +378,7 @@ namespace EmployeeSrever.Data.Migrations
                             Identity = "212121212",
                             LastName = "Wang",
                             MaleOrFmale = true,
-                            StartDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(5865),
+                            StartDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5200),
                             Status = true
                         },
                         new
@@ -390,7 +390,7 @@ namespace EmployeeSrever.Data.Migrations
                             Identity = "222222222",
                             LastName = "Wu",
                             MaleOrFmale = false,
-                            StartDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(5867),
+                            StartDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5202),
                             Status = true
                         });
                 });
@@ -420,525 +420,525 @@ namespace EmployeeSrever.Data.Migrations
                         {
                             EmployeeId = 1,
                             RoleId = 1,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6032),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5281),
                             IsManagementRole = true
                         },
                         new
                         {
                             EmployeeId = 1,
                             RoleId = 2,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6034),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5283),
                             IsManagementRole = false
                         },
                         new
                         {
                             EmployeeId = 1,
                             RoleId = 3,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6036),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5285),
                             IsManagementRole = false
                         },
                         new
                         {
                             EmployeeId = 2,
                             RoleId = 4,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6037),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5286),
                             IsManagementRole = true
                         },
                         new
                         {
                             EmployeeId = 2,
                             RoleId = 5,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6038),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5288),
                             IsManagementRole = false
                         },
                         new
                         {
                             EmployeeId = 2,
                             RoleId = 6,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6040),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5330),
                             IsManagementRole = false
                         },
                         new
                         {
                             EmployeeId = 3,
                             RoleId = 1,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6041),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5333),
                             IsManagementRole = true
                         },
                         new
                         {
                             EmployeeId = 3,
                             RoleId = 2,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6042),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5334),
                             IsManagementRole = false
                         },
                         new
                         {
                             EmployeeId = 3,
                             RoleId = 3,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6044),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5336),
                             IsManagementRole = false
                         },
                         new
                         {
                             EmployeeId = 3,
                             RoleId = 4,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6046),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5337),
                             IsManagementRole = true
                         },
                         new
                         {
                             EmployeeId = 3,
                             RoleId = 5,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6047),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5339),
                             IsManagementRole = false
                         },
                         new
                         {
                             EmployeeId = 3,
                             RoleId = 6,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6049),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5340),
                             IsManagementRole = false
                         },
                         new
                         {
                             EmployeeId = 4,
                             RoleId = 1,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6050),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5341),
                             IsManagementRole = true
                         },
                         new
                         {
                             EmployeeId = 4,
                             RoleId = 2,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6052),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5342),
                             IsManagementRole = false
                         },
                         new
                         {
                             EmployeeId = 4,
                             RoleId = 3,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6053),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5344),
                             IsManagementRole = false
                         },
                         new
                         {
                             EmployeeId = 5,
                             RoleId = 4,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6054),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5345),
                             IsManagementRole = true
                         },
                         new
                         {
                             EmployeeId = 5,
                             RoleId = 5,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6056),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5346),
                             IsManagementRole = false
                         },
                         new
                         {
                             EmployeeId = 5,
                             RoleId = 6,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6057),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5348),
                             IsManagementRole = false
                         },
                         new
                         {
                             EmployeeId = 6,
                             RoleId = 1,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6059),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5349),
                             IsManagementRole = true
                         },
                         new
                         {
                             EmployeeId = 6,
                             RoleId = 2,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6060),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5351),
                             IsManagementRole = false
                         },
                         new
                         {
                             EmployeeId = 6,
                             RoleId = 3,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6061),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5352),
                             IsManagementRole = false
                         },
                         new
                         {
                             EmployeeId = 7,
                             RoleId = 4,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6063),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5353),
                             IsManagementRole = true
                         },
                         new
                         {
                             EmployeeId = 7,
                             RoleId = 5,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6064),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5354),
                             IsManagementRole = false
                         },
                         new
                         {
                             EmployeeId = 7,
                             RoleId = 6,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6065),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5355),
                             IsManagementRole = false
                         },
                         new
                         {
                             EmployeeId = 8,
                             RoleId = 1,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6066),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5358),
                             IsManagementRole = true
                         },
                         new
                         {
                             EmployeeId = 8,
                             RoleId = 2,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6068),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5359),
                             IsManagementRole = false
                         },
                         new
                         {
                             EmployeeId = 9,
                             RoleId = 3,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6069),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5360),
                             IsManagementRole = false
                         },
                         new
                         {
                             EmployeeId = 9,
                             RoleId = 4,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6070),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5361),
                             IsManagementRole = true
                         },
                         new
                         {
                             EmployeeId = 10,
                             RoleId = 5,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6072),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5362),
                             IsManagementRole = false
                         },
                         new
                         {
                             EmployeeId = 10,
                             RoleId = 6,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6073),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5364),
                             IsManagementRole = false
                         },
                         new
                         {
                             EmployeeId = 11,
                             RoleId = 1,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6074),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5365),
                             IsManagementRole = true
                         },
                         new
                         {
                             EmployeeId = 11,
                             RoleId = 2,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6076),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5366),
                             IsManagementRole = false
                         },
                         new
                         {
                             EmployeeId = 11,
                             RoleId = 3,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6077),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5367),
                             IsManagementRole = false
                         },
                         new
                         {
                             EmployeeId = 12,
                             RoleId = 4,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6078),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5369),
                             IsManagementRole = true
                         },
                         new
                         {
                             EmployeeId = 12,
                             RoleId = 5,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6080),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5370),
                             IsManagementRole = false
                         },
                         new
                         {
                             EmployeeId = 12,
                             RoleId = 6,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6082),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5372),
                             IsManagementRole = false
                         },
                         new
                         {
                             EmployeeId = 13,
                             RoleId = 1,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6083),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5373),
                             IsManagementRole = true
                         },
                         new
                         {
                             EmployeeId = 13,
                             RoleId = 2,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6084),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5374),
                             IsManagementRole = false
                         },
                         new
                         {
                             EmployeeId = 13,
                             RoleId = 3,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6086),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5376),
                             IsManagementRole = false
                         },
                         new
                         {
                             EmployeeId = 13,
                             RoleId = 4,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6087),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5377),
                             IsManagementRole = true
                         },
                         new
                         {
                             EmployeeId = 13,
                             RoleId = 5,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6088),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5378),
                             IsManagementRole = false
                         },
                         new
                         {
                             EmployeeId = 13,
                             RoleId = 6,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6089),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5380),
                             IsManagementRole = false
                         },
                         new
                         {
                             EmployeeId = 14,
                             RoleId = 1,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6091),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5381),
                             IsManagementRole = true
                         },
                         new
                         {
                             EmployeeId = 14,
                             RoleId = 2,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6092),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5383),
                             IsManagementRole = false
                         },
                         new
                         {
                             EmployeeId = 14,
                             RoleId = 3,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6093),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5384),
                             IsManagementRole = false
                         },
                         new
                         {
                             EmployeeId = 15,
                             RoleId = 4,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6095),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5385),
                             IsManagementRole = true
                         },
                         new
                         {
                             EmployeeId = 15,
                             RoleId = 5,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6096),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5386),
                             IsManagementRole = false
                         },
                         new
                         {
                             EmployeeId = 15,
                             RoleId = 6,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6100),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5387),
                             IsManagementRole = false
                         },
                         new
                         {
                             EmployeeId = 16,
                             RoleId = 1,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6101),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5389),
                             IsManagementRole = true
                         },
                         new
                         {
                             EmployeeId = 16,
                             RoleId = 2,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6102),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5390),
                             IsManagementRole = false
                         },
                         new
                         {
                             EmployeeId = 16,
                             RoleId = 3,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6104),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5392),
                             IsManagementRole = false
                         },
                         new
                         {
                             EmployeeId = 17,
                             RoleId = 4,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6105),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5393),
                             IsManagementRole = true
                         },
                         new
                         {
                             EmployeeId = 17,
                             RoleId = 5,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6106),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5394),
                             IsManagementRole = false
                         },
                         new
                         {
                             EmployeeId = 17,
                             RoleId = 6,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6108),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5395),
                             IsManagementRole = false
                         },
                         new
                         {
                             EmployeeId = 18,
                             RoleId = 1,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6109),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5396),
                             IsManagementRole = true
                         },
                         new
                         {
                             EmployeeId = 18,
                             RoleId = 2,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6110),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5398),
                             IsManagementRole = false
                         },
                         new
                         {
                             EmployeeId = 19,
                             RoleId = 3,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6112),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5399),
                             IsManagementRole = false
                         },
                         new
                         {
                             EmployeeId = 19,
                             RoleId = 4,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6113),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5400),
                             IsManagementRole = true
                         },
                         new
                         {
                             EmployeeId = 20,
                             RoleId = 5,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6114),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5401),
                             IsManagementRole = false
                         },
                         new
                         {
                             EmployeeId = 20,
                             RoleId = 6,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6116),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5402),
                             IsManagementRole = false
                         },
                         new
                         {
                             EmployeeId = 21,
                             RoleId = 1,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6117),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5403),
                             IsManagementRole = true
                         },
                         new
                         {
                             EmployeeId = 21,
                             RoleId = 2,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6118),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5407),
                             IsManagementRole = false
                         },
                         new
                         {
                             EmployeeId = 21,
                             RoleId = 3,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6120),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5408),
                             IsManagementRole = false
                         },
                         new
                         {
                             EmployeeId = 22,
                             RoleId = 4,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6121),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5409),
                             IsManagementRole = true
                         },
                         new
                         {
                             EmployeeId = 22,
                             RoleId = 5,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6123),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5410),
                             IsManagementRole = false
                         },
                         new
                         {
                             EmployeeId = 22,
                             RoleId = 6,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6124),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5411),
                             IsManagementRole = false
                         },
                         new
                         {
                             EmployeeId = 23,
                             RoleId = 1,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6125),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5412),
                             IsManagementRole = true
                         },
                         new
                         {
                             EmployeeId = 23,
                             RoleId = 2,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6127),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5414),
                             IsManagementRole = false
                         },
                         new
                         {
                             EmployeeId = 23,
                             RoleId = 3,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6128),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5415),
                             IsManagementRole = false
                         },
                         new
                         {
                             EmployeeId = 23,
                             RoleId = 4,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6129),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5416),
                             IsManagementRole = true
                         },
                         new
                         {
                             EmployeeId = 23,
                             RoleId = 5,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6130),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5417),
                             IsManagementRole = false
                         },
                         new
                         {
                             EmployeeId = 23,
                             RoleId = 6,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6132),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5418),
                             IsManagementRole = false
                         },
                         new
                         {
                             EmployeeId = 24,
                             RoleId = 1,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6133),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5420),
                             IsManagementRole = true
                         },
                         new
                         {
                             EmployeeId = 24,
                             RoleId = 2,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6134),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5421),
                             IsManagementRole = false
                         },
                         new
                         {
                             EmployeeId = 24,
                             RoleId = 3,
-                            EntryDate = new DateTime(2024, 4, 9, 3, 29, 10, 830, DateTimeKind.Local).AddTicks(6136),
+                            EntryDate = new DateTime(2024, 4, 10, 1, 12, 19, 628, DateTimeKind.Local).AddTicks(5422),
                             IsManagementRole = false
                         });
                 });

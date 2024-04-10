@@ -7,7 +7,9 @@ export const routes: Routes = [
     { path: 'add-employee', loadComponent: () => import('./employee/add-employee/add-employee.component').then(c => c.AddEmployeeComponent) },
     // { path: 'edit-employee/:identity', loadComponent: () => import('./temp/edit-employee/edit-employee.component').then(c => c.EditEmployeeComponent) },
     {path:'about-us',loadComponent:()=>import('./about-us/about-us.component').then(c=>c.AboutUsComponent)},
-    {path:'login',loadComponent:()=>import('./loginJwt/login/login.component').then(c=>c.LoginComponent)},
-    {path:'**',loadComponent:()=>import('./not-found/not-found.component').then(c=>c.NotFoundComponent)}
+    {path:'login',loadComponent:()=>import('./login/login.component').then(c=>c.LoginComponent)},
+    {path:'add-company',loadComponent:()=>import('./add-company/add-company.component').then(c=>c.AddCompanyComponent)},
+    {path:'**',loadComponent:()=>import('./not-found/not-found.component').then(c=>c.NotFoundComponent)},
+
 
 ];

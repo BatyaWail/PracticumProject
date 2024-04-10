@@ -28,11 +28,22 @@
       </mat-select>
     </mat-form-field>
    -->
+   <!-- <div>login to company
+    <mat-icon>domain</mat-icon>
+   </div> -->
    <mat-form-field>
+
     <mat-label>choose your company</mat-label>
    <mat-select placeholder="choose your company" formControlName="name">
     <mat-option *ngFor="let company of companies" [value]="company.name">{{ company.name }}</mat-option>
+    <mat-option (click)="AddCompany()">
+      Add New Company
+      <mat-icon>add</mat-icon>
+    </mat-option>
   </mat-select>
+  <mat-error *ngIf="loginForm.get('name')?.hasError('required')">The field is required!</mat-error>
+
+  <!-- <mat-icon>domain</mat-icon> -->
   </mat-form-field>
     <!-- <mat-form-field>
       <input matInput type="password" placeholder="Password" formControlName="password">
@@ -43,10 +54,14 @@
       <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
         <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
       </button>
+      <mat-error *ngIf="loginForm.get('password')?.hasError('required')">The field is required!</mat-error>
     </mat-form-field>
   
     <!-- <button mat-raised-button color="primary" type="submit" [disabled]="loginForm.invalid">Login</button> -->
-    <button mat-raised-button color="primary" type="submit" >Login</button>
+    <button mat-raised-button color="primary" type="submit">
+      Login
+      <mat-icon>login</mat-icon>
+    </button>
 
   </form>
 <!-- </mat-card> -->

@@ -1,8 +1,9 @@
-
+import { Data } from "@angular/router"
+import { EmployeeRole } from "./employeeRole.entites"
 import { EmployeeRolePostModel } from "./employeeRole.postModel"
 
-export class EmployeePostModel{
-    // id!:number
+export class Employee{
+    id!:number
     identity!:string
     firstName!:string
     lastName!:string
@@ -11,4 +12,5 @@ export class EmployeePostModel{
     maleOrFmale!:boolean
     employeeRoles!:EmployeeRolePostModel[]
     status!:boolean
+    companyId!:number
 }

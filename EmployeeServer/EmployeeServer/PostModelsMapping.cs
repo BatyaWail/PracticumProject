@@ -28,7 +28,9 @@ namespace EmployeeServer.Api
 
             CreateMap<RolePostModel, Role>(); // Simple mapping for Role
             CreateMap<LoginModel, Company>();
-            CreateMap<CopmanyPostModel, Company>();
+            CreateMap<CompanyPostModel, Company>();
+            CreateMap<CompanyToPost, Company>();
+
         }
 
     }

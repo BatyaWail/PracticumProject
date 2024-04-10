@@ -19,7 +19,7 @@ import { DateAdapter, provideNativeDateAdapter } from '@angular/material/core';
 import { CommonModule } from '@angular/common';
 import { MatSelectModule } from '@angular/material/select';
 import { MatOptionModule } from '@angular/material/core';
-import { EmployeeService } from '../employee.service';
+// import { EmployeeService } from '../employee.service';
 import { RoleService } from '../../role/role.service';
 import { MatRadioModule } from '@angular/material/radio';
 
@@ -33,9 +33,11 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { NgModule } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DialogMessegeComponent } from '../../errors-dialog/dialog-messege/dialog-messege.component';
-import { Employee } from '../../classes/entities/employee.entites';
-import { Role } from '../../classes/entities/role.entites';
-import { EmployeeRolePostModel } from '../../classes/postModel/employeeRole.postModel';
+import { Employee } from '../../entities/employee.entites';
+import { Role } from '../../entities/role.entites';
+import { EmployeeRolePostModel } from '../../entities/employeeRole.postModel';
+import { MatCard, MatCardModule } from '@angular/material/card';
+import { EmployeeService } from '../employee.service';
 @Component({
   selector: 'app-edit-employee-dialog',
   standalone: true,
@@ -74,7 +76,7 @@ import { EmployeeRolePostModel } from '../../classes/postModel/employeeRole.post
     MatDatepickerModule,
     MatSelectModule,
     MatOptionModule,
-    MatRadioModule, ReactiveFormsModule, MatSlideToggleModule
+    MatRadioModule, ReactiveFormsModule, MatSlideToggleModule, MatCardModule
   ],  
   templateUrl: './edit-employee-dialog.component.html',
   styleUrl: './edit-employee-dialog.component.scss'

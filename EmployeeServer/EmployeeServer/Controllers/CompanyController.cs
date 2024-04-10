@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using EmployeeServer.Api.Model;
 using EmployeeServer.Core.Dtos;
 using EmployeeServer.Core.Entities;
 using EmployeeServer.Core.Services;
@@ -29,30 +30,14 @@ namespace EmployeeServer.Api.Controllers
 
             return Ok(companiesDto);
         }
-
-        // GET api/<CompanyController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }
-
         // POST api/<CompanyController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public async Task<ActionResult> Post([FromBody] CompanyToPost value)
         {
-        }
-
-        // PUT api/<CompanyController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/<CompanyController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
+            Company company = _mapper.Map<Company>(value);
+            var x = await _companyService.AddCompanyAsync(_mapper.Map<Company>(value));
+            var company3= _mapper.Map<CopmanyDto>(x);
+            return Ok(company3);
         }
     }
 }

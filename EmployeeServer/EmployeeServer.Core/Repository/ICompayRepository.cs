@@ -11,6 +11,7 @@ namespace EmployeeServer.Core.Repository
     {
         Task<Company> GetCopmanyByNameAndPaswword(string name, string paswword);
         Task<List<Company>> GetListAsync();
+        Task<Company> AddCompanyAsync(Company company);
 
     }
 }

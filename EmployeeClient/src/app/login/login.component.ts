@@ -1,11 +1,8 @@
-
-
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError, map, tap } from 'rxjs/operators';
 import { throwError } from 'rxjs';
-import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
@@ -13,13 +10,16 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { Router } from '@angular/router';
-import { CompanyService } from '../../company.service';
-import { Company } from '../../classes/entities/company.entites';
+import { CompanyService } from '../company.service';
+import { Company } from '../entities/company.entites';
 import { MatSelectModule } from '@angular/material/select';
 import { CommonModule } from '@angular/common';
 import { MatOptionModule } from '@angular/material/core';
-import { HeaderComponent } from '../../header/header.component';
-import { SessionStorageService } from '../../session-storage.service';
+import { SessionStorageService } from '../session-storage.service';
+import { LoginModel } from '../entities/login.model';
+import { AuthService } from '../auth.service';
+import { DialogMessegeComponent } from '../errors-dialog/dialog-messege/dialog-messege.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-login',
@@ -37,6 +37,7 @@ import { SessionStorageService } from '../../session-storage.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
+
   // loginForm!: FormGroup;
   // errorMessage: string | null = null;
 
@@ -80,12 +81,13 @@ export class LoginComponent implements OnInit {
     private http: HttpClient,
     //  private header: HeaderComponent,
     private router: Router,
-    private companyService: CompanyService,
-    // private sessionStorageService: SessionStorageService
+    private companyService: CompanyService,private authService: AuthService,public dialog: MatDialog,
+    private sessionStorageService: SessionStorageService
   ) { }
   hide = true;
   companies: Company[] = [];
   @Output() tokenSaved = new EventEmitter<string>();
+  isNameAndPasswordValid: boolean=false;
 
   ngOnInit(): void {
     // this._employeeService.getEmployeeList().subscribe({
@@ -104,64 +106,66 @@ export class LoginComponent implements OnInit {
       password: ['', Validators.required]
     });
   }
-
-  // login(): void {
-  //   if (this.loginForm.valid) {
-  //     const loginModel = this.loginForm.value;
-
-  //     this.http.post<any>('https://localhost:7031/api/Auth', loginModel)
-  //       .pipe(
-  //         tap(response => {
-  //           const token = response.token;
-  //           console.log("token", token);
-  //           this.sendTokenToServer(token);
-  //           sessionStorage.setItem('token', token);
-  //           // this.sessionStorageService.setToken(token);
-  //           // this.header.foundCompanyNameFromToken();
-  //         }),
-  //         catchError(error => {
-  //           // Handle login error
-  //           return throwError(error);
-  //         })
-  //       ).subscribe();
-  //   }
-  //   this.toEmployeeList()
-  // }
+  AddCompany() {
+    this.router.navigate(['/add-company']);
+  }
   login(): void {
     if (this.loginForm.valid) {
-      const loginModel = this.loginForm.value;
-      this.http.post<any>('https://localhost:7031/api/Auth', loginModel)
-        .pipe(
-          tap(response => {
-            const token = response.token;
-            console.log("token", token);
-            this.sendTokenToServer(token);
-            sessionStorage.setItem('token', token);
-            // this.tokenSaved.emit(token); // Emit the token after storing it
-          }),
-          catchError(error => {
-            // Handle login error
-            return throwError(error);
-          })
-        ).subscribe();
+      const loginModel: LoginModel = this.loginForm.value;
+      this.authService.login(loginModel).subscribe(
+        (response) => {
+          const token = response.token;
+          console.log("token", token);
+          sessionStorage.setItem('token', token);
+
+          // this.checkNameAndPassword();
+          this.router.navigate(['/employee-list']);
+        },
+        (error) => {
+          const dialogRef = this.dialog.open(DialogMessegeComponent, {
+            width: '250px',
+            // data: "the employee has been deleted!!!"
+            data:{title:"error",messege:"the password is not correct!!",icon:"error"}
+          });
+          dialogRef.afterClosed().subscribe(result => {
+            console.log('The dialog was closed');
+          });
+        }
+      );
     }
-    this.toEmployeeList();
   }
+  // checkNameAndPassword() {
+  //   this.authService.getIsValidToken().subscribe(
+  //     (response) => {
+  //       console.log(response);
+  //       this.isNameAndPasswordValid = response;
+  //       // this.sendTokenToServer(token);
+  //     },
+  //     (error) => {
+  //       console.error('Login failed:', error);
+
+  //     }
+  //   );
+  //   if(!this.isNameAndPasswordValid){
+  //     const dialogRef = this.dialog.open(DialogMessegeComponent, {
+  //       width: '250px',
+  //       // data: "the employee has been deleted!!!"
+  //       data:{title:"error",messege:"the password or name is not correct!!",icon:"error"}
+  //     });
+  //     dialogRef.afterClosed().subscribe(result => {
+  //       console.log('The dialog was closed');
+  //     });
+  //   }
+  //   else{
+  //     this.router.navigate(['/employee-list']);
+  //   }
+  // }
+  
 
   private sendTokenToServer(token: string): void {
     const headers = new HttpHeaders({
       'Authorization': `Bearer ${token}`
     });
-
-
-    //   this.http.get('https://localhost:7031/api', { headers })
-    //     .subscribe(data => {
-    //       // Handle successful token verification on the server
-    //       console.log('Token sent and verified successfully:', data);
-    //     }, error => {
-    //       // Handle server-side token verification error
-    //       console.error('Error verifying token on the server:', error);
-    //     });
   }
   toEmployeeList() {
     this.router.navigate(['employee-list']);

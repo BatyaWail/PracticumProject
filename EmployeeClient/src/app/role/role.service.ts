@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Role } from '../classes/entities/role.entites';
+import { Role } from '../entities/role.entites';
 
 @Injectable({
   providedIn: 'root'

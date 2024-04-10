@@ -27,5 +27,11 @@ namespace EmployeeSrever.Data.Repository
         {
             return await _dataContext.Companies.ToListAsync();
         }
+        public async Task<Company> AddCompanyAsync(Company company)
+        {
+            _dataContext.Companies.Add(company);
+            await _dataContext.SaveChangesAsync();
+            return company;
+        }
     }
 }

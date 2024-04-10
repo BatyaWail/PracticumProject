@@ -1,14 +1,21 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Employee } from '../classes/entities/employee.entites';
+import { Employee } from '../entities/employee.entites';
 
 @Injectable({
   providedIn: 'root'
 })
-export class EmployeeService {
-
-
+export class EmployeeService {  
+  returnTokenFromSesionStorage(){
+    // if (typeof sessionStorage !== 'undefined') {
+      return sessionStorage.getItem('token');
+    // }
+    // else{
+    //   console.error('sessionStorage is not available');
+    //   return null
+    // }
+  }
   public baseUrlEmployee = 'https://localhost:7031/api/Employee'
 
   constructor(private http: HttpClient) { }
