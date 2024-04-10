@@ -13,11 +13,6 @@ namespace EmployeeServer.Service.Services
 {
     public class EmployeeService:IEmployeeService
     {
-        //private readonly IClientRepository _clientRepository;
-        //public ClientServices(IClientRepository clientRepository)
-        //{
-        //    _clientRepository = clientRepository;
-        //}
         private readonly IEmployeeRepository _employeeRepository;
         private readonly IRoleRepository _roleRepository;
         public EmployeeService(IEmployeeRepository employeeRepository, IRoleRepository roleRepository)
@@ -25,20 +20,6 @@ namespace EmployeeServer.Service.Services
             _employeeRepository = employeeRepository;
             _roleRepository = roleRepository;
         }
-        //public async Task<Employee> AddEmployeeAsync(Employee employee)
-        //{
-        //    if (employee.Identity.Length != 9)
-        //    {
-        //        //return new HttpResponseMessage(HttpStatusCode.BadRequest);
-        //        throw new ArgumentException("Invalid identity length. Identity must be 9 characters long.");
-        //    }
-        //    //if(employee.Identity.)
-        //    foreach (var digit in employee.Identity)
-        //    {
-        //        if(digit)
-        //    }
-        //    return await _employeeRepository.AddAsync(employee);
-        //}
         public async Task<Employee> AddEmployeeAsync(Employee employee)
         {
             // Identity validation
@@ -64,17 +45,6 @@ namespace EmployeeServer.Service.Services
             {
                 throw new ArgumentException("Start date cannot be in the future.");
             }
-            // Check for duplicate role names
-            //if (employee.EmployeeRoles != null && employee.EmployeeRoles.Any())
-            //{
-            //    var roleNames = employee.EmployeeRoles.Select(r => r.RoleId).ToList();
-            //    var duplicateRoleNames = roleNames.GroupBy(x => x).Where(g => g.Count() > 1).Select(g => g.Key);
-            //    if (duplicateRoleNames.Any())
-            //    {
-            //        throw new ArgumentException($"Duplicate role names found: {string.Join(", ", duplicateRoleNames)}. Role names must be unique.");
-            //    }
-            //}
-            // Entry Date validation (assuming Entry Date cannot be before Start Date)
             if (employee.EmployeeRoles != null && employee.EmployeeRoles.Any())
             {
                 foreach (var role in employee.EmployeeRoles)
@@ -85,36 +55,8 @@ namespace EmployeeServer.Service.Services
                     }
                 }
             }
-
-            // Role Name duplicates validation (assuming validation happens before adding employee)
-            // This logic requires access to existing employee roles in the database
-            // Implement logic to check for duplicate role names among existing roles and new roles
-            //var existingRole = await _roleRepository.GetListAsync();
-            //int[] exisitingRoleId = new int[existingRole.Count];
-            //for (int i = 0; i < exisitingRoleId.Length; i++)
-            //{
-            //    exisitingRoleId[i] = existingRole[i].Id;
-            //}
-            //var newRoleIds = employee.EmployeeRoles.Select(r => r.RoleId);
-            //if (newRoleIds.Intersect(exisitingRoleId).Any())
-            //{
-            //    throw new ArgumentException("Duplicate role names found. Role names must be unique.");
-            //}
-            // If all validations pass, add the employee
             return await _employeeRepository.AddAsync(employee);
         }
-        //private async Task<bool> RoleNameDuplicate(Employee employee)
-        //{
-        //    var existingRoleNames = await _roleRepository.GetListAsync();
-        //    var newRoleNames = employee.EmployeeRoles.Select(r => r.RoleName);
-        //    if (newRoleNames.Intersect(existingRoleNames).Any())
-        //    {
-        //        throw new ArgumentException("Duplicate role names found. Role names must be unique.");
-        //    }
-
-        //    // If all validations pass, add the employee
-        //    //return await _employeeRepository.AddAsync(employee);
-        //}
         private bool IsValidIdentity(string identity)
         {
             // Adjust the regex according to your specific identity format

@@ -11,7 +11,6 @@ namespace EmployeeServer.Core.Dtos
     {
         public int RoleId { get; set; }
         public string RoleName { get; set; }
-        //public bool IsManagementRole { get; set; }
         public List<EmployeeRoleDto> EmployeeRoles { get; set; }
     }
 }

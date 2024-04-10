@@ -33,7 +33,6 @@ namespace EmployeeSrever.Data.Repository
         }
         public async Task<List<Role>> GetListAsync()
         {
-            //return _dataContext.Employees.Include(u => u.Station).ToList();
             return await _dataContext.Roles.Include(r=>r.EmployeeRoles).ToListAsync();
         }
 
@@ -43,29 +42,7 @@ namespace EmployeeSrever.Data.Repository
            await _dataContext.SaveChangesAsync();
         }
 
-        //public Role Update(int id, Role role)
-        //{
-        //    int x = _dataContext.Roles.ToList().FindIndex(x => x.Id == id);
-        //    _dataContext.Roles.ToList()[x] = role;
-        //    _dataContext.SaveChanges();
-        //    return role;
-        //}
-        //public Role Update(int id, Role role)
-        //{
-        //    var existingRole = _dataContext.Roles.Find(id);
-        //    if (existingRole == null)
-        //    {
-        //        throw new InvalidOperationException($"Role with ID {id} not found.");
-        //    }
-        //    // Update existingRole with values from the provided role object
-        //    existingRole.RoleName = role.RoleName;
-        //    existingRole.IsManagementRole = role.IsManagementRole;
-        //    existingRole.EntryDate = role.EntryDate;
 
-        //    _dataContext.SaveChanges();
-
-        //    return existingRole;
-        //}
         public async Task<Role> UpdateAsync(int id, Role role)
         {
             var existingRole = _dataContext.Roles.Find(id);
@@ -74,10 +51,8 @@ namespace EmployeeSrever.Data.Repository
                 throw new InvalidOperationException($"Role with ID {id} not found.");
             }
 
-            // Update existingRole with values from the provided role object
             existingRole.RoleName = role.RoleName;
-            //existingRole.IsManagementRole = role.IsManagementRole;
-            //existingRole.EntryDate = role.EntryDate;
+
 
             await _dataContext.SaveChangesAsync();
 

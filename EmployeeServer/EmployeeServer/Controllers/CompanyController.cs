@@ -32,7 +32,7 @@ namespace EmployeeServer.Api.Controllers
         }
         // POST api/<CompanyController>
         [HttpPost]
-        public async Task<ActionResult> Post([FromBody] CompanyToPost value)
+        public async Task<ActionResult> Post([FromBody] CompanyPostModel value)
         {
             Company company = _mapper.Map<Company>(value);
             var x = await _companyService.AddCompanyAsync(_mapper.Map<Company>(value));

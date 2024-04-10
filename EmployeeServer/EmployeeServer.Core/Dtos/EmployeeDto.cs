@@ -16,7 +16,7 @@ namespace EmployeeServer.Core.Dtos
         public DateTime StartDate { get; set; }
         public DateTime DateOfBirth { get; set; }
         public bool MaleOrFmale { get; set; }
-        public List<EmployeeRoleDto> EmployeeRoles { get; set; } // הוספה
+        public List<EmployeeRoleDto> EmployeeRoles { get; set; } 
         public bool Status { get; set; }
         public int CompanyId { get; set; }
 

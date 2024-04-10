@@ -1,4 +1,4 @@
-using EmployeeServer.Api;
+using EmployeeServer.Api.mapping;
 using EmployeeServer.Core;
 using EmployeeServer.Core.Repository;
 using EmployeeServer.Core.Services;
@@ -87,7 +87,6 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 app.UseHttpsRedirection();
-//app.UseAuthorization();
 app.UseAuthentication();
 app.UseAuthorization();
 app.UseCors(policy);

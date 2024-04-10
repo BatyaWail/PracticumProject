@@ -45,7 +45,7 @@
     "Parameters": [
       {
         "Name": "value",
-        "Type": "EmployeeServer.Api.Model.CompanyToPost",
+        "Type": "EmployeeServer.Api.Model.CompanyPostModel",
         "IsRequired": true
       }
     ],
