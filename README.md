@@ -1,5 +1,6 @@
 # Employee Management System
-![image](https://github.com/BatyaWail/PracticumProject/assets/149001923/f7426246-5ac0-4154-9545-1a9954903018)
+
+![employee-list](https://github.com/BatyaWail/PracticumProject/assets/149001923/50048c27-2f22-4df9-8bad-d35557d1de4b)
 
 ## Project Overview
 
@@ -23,7 +24,7 @@ Welcome to the Employee Management System project! This web application is desig
 2. Open the solution file in Visual Studio.
 3. Ensure all necessary NuGet packages are installed.
 4. Open the "Package Manager Console."
-5. Initialize the database by executing `add-migration init` followed by `update-database`.
+5. Initialize the database by executing `update-database`.
 6. Build and run the backend application by `dotnet run`
 
 ## Project Structure
@@ -37,11 +38,11 @@ The project is structured as follows:
 
 The Employee Management System offers the following features:
 
-1. **Employee List Page:** Displaying detailed information about employees and supporting CRUD operations.
-2. **Employee Editing:** Allows users to modify employee details and assign roles dynamically.
-3. **Employee Addition:** Facilitating the addition of new employees with role assignments.
-4. **Search Functionality:** Filters employees based on entered text for ease of navigation.
-5. **Export to Excel:** Allows exporting the employee list to an Excel file for further analysis.
+1. **Employee List Page:** Displaying partial information about employees.
+2. **Adding a New Employee and Editing Employee Details:** Enables adding and editing an employee through an expanding dynamic form, which can include multiple roles per employee (for example, an employee can be both a Designer and a Developer). Strong emphasis is placed on input validation in both cases, for example, the birth date must be at least 18 years prior to the current date to ensure no underage employment.
+3. **Search Functionality:** Filters employees based on entered text for ease of navigation.
+4. **Export to Excel:** Allows exporting the employee list to an Excel file for further analysis.
+
 
 ## Authentication and Company Management
 
@@ -63,12 +64,6 @@ The Employee Management System offers the following features:
 - There is also a component for editing an employee, allowing users to edit employee details and roles.
 - Users can log out of the system using the logout button.
 
-## Notes
-
-- All fields are mandatory with implemented input validation to ensure data integrity.
-- Proper data validation and error handling are implemented to enhance user experience.
-- Deleted employees are logically removed by changing their status to inactive, preserving historical data.
-
 ## Company Information
 
 To access the system, use the following company credentials:
@@ -76,12 +71,20 @@ To access the system, use the following company credentials:
 - **Company Name:** company1
 - **Password:** 123456
 
-Please make sure to use the provided company name and password for authentication. Without proper authentication, access to the system will be denied. 
+  ![login](https://github.com/BatyaWail/PracticumProject/assets/149001923/eb1a339b-9e4c-4e66-8c53-d79e68eb5f32)
+  
+- **Note:** This is one of the companies in the system. You can add more companies and set passwords for them!                          
+Please make sure to use the provided company name and password for authentication. Without proper authentication, access to the system will be denied.       
+Additionally, the system is filtered based on the company ID. Users can only view and manage employees associated with their respective company.        
 
-Additionally, the system is filtered based on the company ID. Users can only view and manage employees associated with their respective company. 
+## Notes
+
+- All fields are mandatory with implemented input validation to ensure data integrity.
+- Proper data validation and error handling are implemented to enhance user experience.
+- Deleted employees are logically removed by changing their status to inactive, preserving historical data.
 
 ## Conclusion
 
-The Employee Management System provides a user-friendly interface for organizations to efficiently manage employee data. For further assistance or queries, refer to the project documentation or contact the development team on batya4119712@gmail.com
+The Employee Management System provides a user-friendly interface for organizations to efficiently manage employee data. For further assistance or queries, refer to the project documentation or contact the development team on batya4119712@gmail.com or on phone 0504119712
 
 Enjoy using the Employee Management System!
