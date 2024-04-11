@@ -8,7 +8,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { Subscription } from 'rxjs';
 import { Router } from '@angular/router';
 import { Company } from '../../entities/company.entites';
-import { CompanyService } from '../../services/company.service';
+import { CompanyService } from '../../services/company/company.service';
 import { DialogMessegeComponent } from '../dialogs/dialog-messege/dialog-messege.component';
 // import { DialogMessegeComponent } from '../../dialog-messege/dialog-messege.component';
 

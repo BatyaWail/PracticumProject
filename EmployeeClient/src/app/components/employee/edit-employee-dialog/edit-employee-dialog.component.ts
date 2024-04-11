@@ -29,10 +29,10 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Employee } from '../../../entities/employee.entites';
 import { Role } from '../../../entities/role.entites';
 import { EmployeeRolePostModel } from '../../../entities/employeeRole.postModel';
-import { EmployeeService } from '../../../services/employee.service';
+import { EmployeeService } from '../../../services/employee/employee.service';
 import { ErrorDialogAddEmployeeComponent } from '../../dialogs/error-dialog-add-employee/error-dialog-add-employee.component';
-import { RoleService } from '../../../services/role.service';
 import { DialogMessegeComponent } from '../../dialogs/dialog-messege/dialog-messege.component';
+import { RoleService } from '../../../services/role/role.service';
 @Component({
   selector: 'app-edit-employee-dialog',
   standalone: true,

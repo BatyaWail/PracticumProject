@@ -36,9 +36,9 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import * as XLSX from 'xlsx';
 import { Employee } from '../../../entities/employee.entites';
 import { EditEmployeeDialogComponent } from '../edit-employee-dialog/edit-employee-dialog.component';
-import { RoleService } from '../../../services/role.service';
+import { RoleService } from '../../../services/role/role.service';
 import { Role } from '../../../entities/role.entites';
-import { EmployeeService } from '../../../services/employee.service';
+import { EmployeeService } from '../../../services/employee/employee.service';
 import { DialogMessegeComponent } from '../../dialogs/dialog-messege/dialog-messege.component';
 @Component({
   selector: 'app-employee-list',
@@ -69,7 +69,7 @@ import { DialogMessegeComponent } from '../../dialogs/dialog-messege/dialog-mess
   styleUrl: './employee-list.component.scss'
 })
 export class EmployeeListComponent implements OnInit {
-  displayedColumns: string[] = ['firstName', 'lastName', 'identity', 'startDate', 'actions'];
+  displayedColumns: string[] = [ 'identity','firstName', 'lastName', 'startDate', 'actions'];
   dataSource: MatTableDataSource<Employee>;
 
   filteredStatusEmployeeList: Employee[] = [];

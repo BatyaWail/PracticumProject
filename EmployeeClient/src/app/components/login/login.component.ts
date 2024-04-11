@@ -14,8 +14,8 @@ import { MatOptionModule } from '@angular/material/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { LoginModel } from '../../entities/login.model';
-import { AuthService } from '../../services/auth.service';
-import { CompanyService } from '../../services/company.service';
+import { AuthService } from '../../services/auth/auth.service';
+import { CompanyService } from '../../services/company/company.service';
 import { Company } from '../../entities/company.entites';
 import { DialogMessegeComponent } from '../dialogs/dialog-messege/dialog-messege.component';
 

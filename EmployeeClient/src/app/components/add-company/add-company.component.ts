@@ -9,7 +9,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { CommonModule } from '@angular/common';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
-import { CompanyService } from '../../services/company.service';
+import { CompanyService } from '../../services/company/company.service';
 import { Company } from '../../entities/company.entites';
 import { DialogMessegeComponent } from '../dialogs/dialog-messege/dialog-messege.component';
 // import { DialogMessegeComponent } from '../../dialog-messege/dialog-messege.component';
