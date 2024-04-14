@@ -9,23 +9,47 @@ Welcome to the Employee Management System project! This web application is desig
 ## Installation
 
 1. Clone the repository from [GitHub](https://github.com/BatyaWail/PracticumProject).
+```bash
+git clone https://github.com/BatyaWail/PracticumProject.git
+```
 2. Navigate to the project directory.
+```bash
+cd practicumProject
+```
 
 ### Frontend
 
-1. Navigate to the frontend directory (`/EmployeeClient`).
-2. Run `npm install` to install dependencies.
-3. Start the development server with `ng serve`.
-4. Access the application at http://localhost:4200.
+1. Navigate to the frontend directory.
+```bash
+cd EmployeeClient
+```
+2. Run to install dependencies.
+```bash
+npm install
+```
+3. Start the development server with:
+```bash
+ng serve
+```
+5. Access the application at http://localhost:4200.
 
 ### Backend
 
-1. Navigate to the backend directory (`/EmployeeServer`).
+1. Navigate to the backend directory.
+```bash
+cd EmployeeServer
+```
 2. Open the solution file in Visual Studio.
 3. Ensure all necessary NuGet packages are installed.
-4. Open the "Package Manager Console."
-5. Initialize the database by executing `update-database`.
-6. Build and run the backend application by `dotnet run`
+4. Open the "Package Manager Console".
+5. Initialize the database by executing:
+```bash
+update-database
+```
+6. Build and run the backend application by:
+```bash
+dotnet run
+```
 
 ## Project Structure
 
@@ -85,6 +109,6 @@ Additionally, the system is filtered based on the company ID. Users can only vie
 
 ## Conclusion
 
-The Employee Management System provides a user-friendly interface for organizations to efficiently manage employee data. For further assistance or queries, refer to the project documentation or contact the development team on batya4119712@gmail.com or on phone 0504119712
+The Employee Management System provides a user-friendly interface for organizations to efficiently manage employee data. For further assistance or queries, refer to the project documentation or contact the development team on batya4119712@gmail.com or on phone 0504119712.
 
 Enjoy using the Employee Management System!
