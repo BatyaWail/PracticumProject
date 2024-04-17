@@ -109,6 +109,6 @@ Additionally, the system is filtered based on the company ID. Users can only vie
 
 ## Conclusion
 
-The Employee Management System provides a user-friendly interface for organizations to efficiently manage employee data. For further assistance or queries, refer to the project documentation or contact the development team on batya4119712@gmail.com or on phone 0504119712.
+The Employee Management System provides a user-friendly interface for organizations to efficiently manage employee data. For further assistance or queries, refer to the project documentation or contact the development team on batya4119712@gmail.com.
 
 Enjoy using the Employee Management System!
